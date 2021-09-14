@@ -146,12 +146,6 @@ public static class GlobalMembers
 	}
 
 	// A utility function to swap two elements
-
-
-
-
-
-
 	// ----------------------------------------------------------------------------------------------------------------------- //
 	/*
 	    same as above but heap
@@ -198,14 +192,6 @@ public static class GlobalMembers
 	// Standard partition process of QuickSort(). It considers the last
 	// element as pivot and moves all smaller element to left of it
 	// and greater elements to right
-
-
-
-
-
-
-
-
 
 	// ----------------------------------------------------------------------------------------------------------------------- //
 	/*
