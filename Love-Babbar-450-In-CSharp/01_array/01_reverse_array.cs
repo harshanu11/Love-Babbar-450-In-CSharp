@@ -1,33 +1,47 @@
-/*
-    link: https://www.geeksforgeeks.org/write-a-program-to-reverse-an-array-or-string/
+﻿using Xunit;
 
-    note: array is pass by reference so no need to worry while changing value it will change in original array.
-*/
-// TC: O(N)
-private void rvereseArray(int[] arr, int start, int end)
+namespace Love_Babbar_450_In_CSharp._01_array
 {
-	while (start < end)
-	{
-		int temp = arr[start];
-		arr[start] = arr[end];
-		arr[end] = temp;
-		start++;
-		end--;
-	}
-}
-// ----------------------------------------------------------------------------------------------------------------------- //
-// TC: O(N)
-private void rvereseArray(int[] arr, int start, int end)
-{
-	if (start >= end)
-	{
-		return;
-	}
+    /*
+        link: https://www.geeksforgeeks.org/write-a-program-to-reverse-an-array-or-string/
+        note: array is pass by reference so no need to worry while changing value it will change in original array.
+    */
 
-	int temp = arr[start];
-	arr[start] = arr[end];
-	arr[end] = temp;
+    public class _01_reverse_array
+    {
+        [Fact]
+        public void reverse_arrayTest()
+        {
+            int[] arr = { 1000, 11, 445, 1, 330, 3000 };
+            rvereseArray(arr, 0, arr.Length - 1);
+            rvereseArrayRecursion(arr, 0, arr.Length - 1);
+        }
+        // TC: O(N)
+        private void rvereseArray(int[] arr, int start, int end)
+        {
+            while (start < end)
+            {
+                int temp = arr[start];
+                arr[start] = arr[end];
+                arr[end] = temp;
+                start++;
+                end--;
+            }
+        }
+        // TC: O(N)
+        private void rvereseArrayRecursion(int[] arr, int start, int end)
+        {
+            if (start >= end)
+            {
+                return;
+            }
 
-	// Recursive Function calling
-	rvereseArray(arr, start + 1, end - 1);
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+
+            // Recursive Function calling
+            rvereseArrayRecursion(arr, start + 1, end - 1);
+        }
+    }
 }
