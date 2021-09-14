@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Love-Babbar-450-In-CSharp", "Love-Babbar-450-In-CSharp.csproj", "{985A0C49-080F-4BE7-88FA-EF2C8D92C69B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{985A0C49-080F-4BE7-88FA-EF2C8D92C69B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{985A0C49-080F-4BE7-88FA-EF2C8D92C69B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{985A0C49-080F-4BE7-88FA-EF2C8D92C69B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{985A0C49-080F-4BE7-88FA-EF2C8D92C69B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E0B086CD-0F45-4843-AF46-5F36A7E15D0B}
+	EndGlobalSection
+EndGlobal
