@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Love-Babbar-450-In-CSharp", "Love-Babbar-450-In-CSharp.csproj", "{985A0C49-080F-4BE7-88FA-EF2C8D92C69B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Love-Babbar-450-Console", "..\Love-Babbar-450-Console\Love-Babbar-450-Console.csproj", "{FF19858A-2378-4E7B-AAFD-5D93711F290D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{985A0C49-080F-4BE7-88FA-EF2C8D92C69B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{985A0C49-080F-4BE7-88FA-EF2C8D92C69B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{985A0C49-080F-4BE7-88FA-EF2C8D92C69B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF19858A-2378-4E7B-AAFD-5D93711F290D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF19858A-2378-4E7B-AAFD-5D93711F290D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF19858A-2378-4E7B-AAFD-5D93711F290D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF19858A-2378-4E7B-AAFD-5D93711F290D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
