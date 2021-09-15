@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using Xunit;
 
-namespace Love_Babbar_450_In_CSharp._08_greedy
+namespace greedy
 {
     internal class pair
     {
@@ -14,65 +15,31 @@ namespace Love_Babbar_450_In_CSharp._08_greedy
             this.second = finish;
         }
     }
+    class ComparatorAnonymousInnerClass : IComparer<pair>
+    {
+        public int Compare(pair s1, pair s2)
+        {
+            return s1.second - s2.second;
+        }
+    }
     public class _01_activity_selection_problem
     {
-        [Fact]
-        public void greedy_arrayTest()
-        {
-
-        }
-
         /*
             link: https://practice.geeksforgeeks.org/problems/n-meetings-in-one-room-1587115620/1
+            editorial https://www.geeksforgeeks.org/activity-selection-problem-greedy-algo-1/
 
             custom sort function to sort the finishing time.
             why static ?
             in some online judge platform we have to keep it static so it wont change in lifetime of the program.
         */
-
-
-        // ----------------------------------------------------------------------------------------------------------------------- //
-        private bool compare(Tuple<int, int> meeting1, Tuple<int, int> meeting2)
+        [Fact]
+        public void greedy_arrayTest()
         {
-            if (meeting1.Item2 == meeting2.Item2)
-            {
-                return meeting1.Item1 < meeting2.Item1;
-            }
-            return meeting1.Item2 < meeting2.Item2;
+           var ans = maxMeetings1(new int[] { 1, 3, 0, 5, 8, 5 }, new int[] { 2, 4, 6, 7, 9, 9 }, 6);
+            ans = printMaxActivities(new int[] { 1, 3, 0, 5, 8, 5 }, new int[] { 2, 4, 6, 7, 9, 9 }, 6);
         }
 
-        private int maxMeetings(int[] start, int[] end, int n)
-        {
-            // using vector pair as we want to sort acc. to the finishing time
-            List<Tuple<int, int>> timeTable = new List<Tuple<int, int>>(n);
-            for (int i = 0; i < n; i++)
-            {
-                timeTable[i] = new Tuple<int, int>(start[i], end[i]);
-            }
 
-            //C++ TO C# CONVERTER TODO TASK: The 'Compare' parameter of std::sort produces a boolean value, while the .NET Comparison parameter produces a tri-state result:
-            //ORIGINAL LINE: sort(timeTable.begin(), timeTable.end(), compare);
-            // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& issue
-            //timeTable.Sort(compare);
-
-
-            int temp = int.MinValue;
-            int meetings = 0;
-            foreach (Tuple<int, int> p in timeTable)
-            {
-                // whenever we have starting time larger than prev. finishing time add meeting to room
-                if (p.Item1 > temp)
-                {
-                    temp = p.Item2;
-                    meetings++;
-                }
-            }
-            return meetings;
-        }
-
-        //------------------------------------------------------------------------------------------------------------------------//
-        //Function to find the maximum number of meetings that can
-        //be performed in a meeting room.
         public static int maxMeetings1(int[] start, int[] end, int n)
         {
             pair[] x = new pair[n];
@@ -105,22 +72,32 @@ namespace Love_Babbar_450_In_CSharp._08_greedy
             return res;
         }
 
-        private class ComparatorAnonymousInnerClass : IComparer<pair>
+        public int printMaxActivities(int[] start,int[] end, int len)
         {
-            public int Compare(pair s1, pair s2)
+            int i, j;
+            int result = 1;
+            Console.Write("Following activities are selected : ");
+
+            // The first activity always gets selected
+            i = 0;
+            Debug.Write(i + " ");
+
+            // Consider rest of the activities
+            for (j = 1; j < len; j++)
             {
-                return s1.second - s2.second;
+                // If this activity has start time greater than or
+                // equal to the finish time of previously selected
+                // activity, then select it
+                if (start[j] >= end[i])
+                {
+                    Debug.Write(j + " ");
+                    i = j;
+                    result++;
+                }
             }
+            return result;
         }
 
     }
     
-}
-
-
-
-
-internal class Solution
-{
-
 }

@@ -1,10 +1,11 @@
 ﻿using Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using Xunit;
 
-namespace Love_Babbar_450_In_CSharp._06_binary_trees
+namespace binary_trees
 {
     public class _01_level_order_traversal
     {
@@ -33,36 +34,20 @@ namespace Love_Babbar_450_In_CSharp._06_binary_trees
         */
         private void printLevelOrderQueue(NodeBinary root)
         {
-            // Base Case
-            if (root == null)
+            if (root == null) return;
+            Queue<NodeBinary> queue = new Queue<NodeBinary>();
+            queue.Enqueue(root);
+            while (queue.Count != 0)
             {
-                return;
-            }
-
-            // Create an empty queue for level order traversal
-            Queue<NodeBinary> q = new Queue<NodeBinary>();
-
-            // Enqueue Root and initialize height
-            q.Enqueue(root);
-
-            while (q.Count > 0)
-            {
-                // Print front of queue and remove it from queue
-                NodeBinary node = q.Peek();
-                Console.Write(node.data);
-                Console.Write(" ");
-                q.Dequeue();
-
-                /* Enqueue left child */
-                if (node.left != null)
+                NodeBinary tempNode = queue.Dequeue();
+                Debug.Write(tempNode.data + " ");
+                if (tempNode.left != null)
                 {
-                    q.Enqueue(node.left);
+                    queue.Enqueue(tempNode.left);
                 }
-
-                /*Enqueue right child */
-                if (node.right != null)
+                if (tempNode.right != null)
                 {
-                    q.Enqueue(node.right);
+                    queue.Enqueue(tempNode.right);
                 }
             }
         }

@@ -1,8 +1,7 @@
-﻿using Love_Babbar_450_In_CSharp._06_binary_trees;
-using Model;
+﻿using Model;
 using Xunit;
 
-namespace Love_Babbar_450_In_CSharp._07_binary_search_trees
+namespace binary_search_trees
 {
     public class _01_find_a_value_in_BST
     {
@@ -21,19 +20,8 @@ namespace Love_Babbar_450_In_CSharp._07_binary_search_trees
         // C++ function to search a given key in a given BST
         private NodeBinary search(NodeBinary root, int key)
         {
-            // Base Cases: root is null or key is present at root
-            if (root == null || root.data == key)
-            {
-                return root;
-            }
-
-            // Key is greater than root's key
-            if (root.data < key)
-            {
-                return search(root.right, key);
-            }
-
-            // Key is smaller than root's key
+            if (root == null || root.data == key) return root;
+            if (root.data < key) return search(root.right, key);
             return search(root.left, key);
         }
 
@@ -46,30 +34,10 @@ namespace Love_Babbar_450_In_CSharp._07_binary_search_trees
         // Insert function definition.
         private NodeBinary Insert(NodeBinary root, int key)
         {
-            if (root == null)
-            {
-                // Insert the first node, if root is NULL.
-                return new NodeBinary(key);
-            }
-
+            if (root == null) return new NodeBinary(key);
             // Insert data.
-            if (key > root.data)
-            {
-                // Insert right node data, if the 'key'
-                // to be inserted is greater than 'root' node data.
-
-                // Process right nodes.
-                root.right = Insert(root.right, key);
-            }
-            else
-            {
-                // Insert left node data, if the 'key'
-                // to be inserted is greater than 'root' node data.
-
-                // Process left nodes.
-                root.left = Insert(root.left, key);
-            }
-            // Return 'root' node, after insertion.
+            if (key > root.data) root.right = Insert(root.right, key);
+            else root.left = Insert(root.left, key);
             return root;
         }
 
@@ -79,7 +47,7 @@ namespace Love_Babbar_450_In_CSharp._07_binary_search_trees
             TC: O(log N) not skewed
                 O(N) for skewed
         */
-        private void insert(NodeBinary root, int key)
+        private void Insert1(NodeBinary root, int key)
         {
             NodeBinary node = new NodeBinary(key);
             if (root == null)

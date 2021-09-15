@@ -23,10 +23,10 @@ namespace linked_list
         public void reverse_LinkList()
         {
             /* Start with the empty list */
-            AddFirst(20);
             AddFirst(4);
-            AddFirst(15);
-            AddFirst(85);
+            AddFirst(3);
+            AddFirst(2);
+            AddFirst(1);
             AddLast(0);
             print();
             reverse();
@@ -107,10 +107,6 @@ namespace linked_list
         }
 
         // ----------------------------------------------------------------------------------------------------------------------- //
-        /*
-            simplest to understand
-        */
-
         // A simple and tail-recursive function to reverse
         // a linked list.  prev is passed as NULL initially.
         private void reverseUtil(NodeLL curr, NodeLL prev, NodeLL head)
@@ -135,10 +131,6 @@ namespace linked_list
 
             reverseUtil(next, curr, head);
         }
-
-
-        // This function mainly calls reverseUtil()
-        // with prev as NULL
         private void reverseTailUntil(NodeLL head)
         {
             if (head == null)

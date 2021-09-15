@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
+using Xunit;
 
-namespace Love_Babbar_450_In_CSharp._09_backtracking
+namespace backtracking
 {
     /*
     link: https://practice.geeksforgeeks.org/problems/rat-in-a-maze-problem/1
@@ -15,11 +17,26 @@ namespace Love_Babbar_450_In_CSharp._09_backtracking
     video2: https://youtu.be/bLGZhJlt4y0
 */
 
-
-
     public class _01_rat_in_maze
     {
-
+        [Fact]
+        public void reverse_arrayTest()
+        {
+            int[,] m = { { 1, 0, 0, 0, 0 },
+                        { 1, 1, 1, 1, 1 },
+                        { 1, 1, 1, 0, 1 },
+                        { 0, 0, 0, 0, 1 },
+                        { 0, 0, 0, 0, 1 } };
+            int n = m.GetLength(0);
+            int[][] maze = new int[5][] { new int[] { 1, 0, 0, 0, 0 }
+                                        , new int[] { 1, 1, 1, 1, 1 }
+                                        , new int[] { 1, 1, 1, 0, 1 }
+                                        , new int[] { 0, 0, 0, 0, 1 }
+                                        , new int[] { 0, 0, 0, 0, 1 }
+                                    };
+            var ans = findPath(maze, maze.GetLength(0));
+            var ansJArray = solveMaze(maze, maze.GetLength(0));
+        }
 
         // ----------------------------------------------------------------------------------------------------------------------- //
         /*
@@ -34,52 +51,31 @@ namespace Love_Babbar_450_In_CSharp._09_backtracking
             SC: O(N * N)
         */
 
-        private int N;
-        private List<string> ans = new List<string>();
-
-
-        private void dfs(int x, int y, string s, int[][] m, bool[][] vis)
+        private List<string> ansLst = new List<string>();
+        private void dfs(int x, int y, string ansStr, int[][] m, bool[][] vis, int Size)
         {
-            if (x < 0 || y < 0 || x >= N || y >= N)
+            if (x < 0 || y < 0 || x >= Size || y >= Size) return;
+            if (m[x][y] == 0 || vis[x][y] == true) return;
+            if (x == Size - 1 && y == Size - 1)
             {
-                return;
-            }
-            if (m[x][y] == 0 || vis[x][y] == true)
-            {
-                return;
-            }
-
-            if (x == N - 1 && y == N - 1)
-            {
-                ans.Add(s);
+                ansLst.Add(ansStr);
                 return;
             }
             vis[x][y] = true;
-
-            dfs(x + 1, y, s + "D", m, vis);
-            dfs(x, y + 1, s + "R", m, vis);
-            dfs(x, y - 1, s + "L", m, vis);
-            dfs(x - 1, y, s + "U", m, vis);
-
+            dfs(x + 1, y, ansStr + "D", m, vis, Size);
+            dfs(x, y + 1, ansStr + "R", m, vis, Size);
+            dfs(x, y - 1, ansStr + "L", m, vis, Size);
+            dfs(x - 1, y, ansStr + "U", m, vis, Size);
             vis[x][y] = false;
         }
 
-        private List<string> findPath(int[][] m, int n)
+        private List<string> findPath(int[][] maze, int Size)
         {
-            ans.Clear();
-            N = n;
-
-            if (m[N - 1][N - 1] == 0 || m[0][0] == 0)
-            {
-                return new List<string>(ans);
-            }
-
-            bool[][] vis = new bool[m.GetLength(0)][];
-
-            dfs(0, 0, "", m, vis);
-            ans.Sort();
-
-            return new List<string>(ans);
+            if (maze[Size - 1][Size - 1] == 0 || maze[0][0] == 0) return new List<string>(ansLst);
+            bool[][] vis = new bool[maze.GetLength(0)][];
+            for (int r = 0; r < vis.GetLength(0); r++) vis[r] = new bool[vis.GetLength(0)];
+            dfs(0, 0, "", maze, vis, Size);
+            return new List<string>(ansLst);
         }
 
 
@@ -92,56 +88,38 @@ namespace Love_Babbar_450_In_CSharp._09_backtracking
 
         /* A recursive utility function
         to solve Maze problem */
-        private bool solveMazeUtil(int[][] maze, int x, int y, int[][] sol)
+        private bool solveMazeUtil(int[][] maze, int x, int y, int[][] sol, int Size)
         {
-            // if (x, y is goal) return true
-            if (x == N - 1 && y == N - 1 && maze[x][y] == 1)
+            if (x == Size - 1 && y == Size - 1 && maze[x][y] == 1)
             {
                 sol[x][y] = 1;
                 return true;
             }
-
-            // Check if maze[x][y] is valid
-            if (isSafe(maze, x, y) == true)
+            if (isSafe(maze, x, y, Size) == true)
             {
                 // Check if the current block is already part of solution path.   
-                if (sol[x][y] == 1)
-                {
-                    return false;
-                }
+                if (sol[x][y] == 1) return false;
 
                 // mark x, y as part of solution path
                 sol[x][y] = 1;
 
                 /* Move forward in x direction */
-                if (solveMazeUtil(maze, x + 1, y, sol) == true)
-                {
-                    return true;
-                }
+                if (solveMazeUtil(maze, x + 1, y, sol, Size) == true) return true;
 
                 /* If moving in x direction
                 doesn't give solution then
                 Move down in y direction */
-                if (solveMazeUtil(maze, x, y + 1, sol) == true)
-                {
-                    return true;
-                }
+                if (solveMazeUtil(maze, x, y + 1, sol, Size) == true) return true;
 
                 /* If moving in y direction
                 doesn't give solution then
                 Move back in x direction */
-                if (solveMazeUtil(maze, x - 1, y, sol) == true)
-                {
-                    return true;
-                }
+                if (solveMazeUtil(maze, x - 1, y, sol, Size) == true) return true;
 
                 /* If moving backwards in x direction
                 doesn't give solution then
                 Move upwards in y direction */
-                if (solveMazeUtil(maze, x, y - 1, sol) == true)
-                {
-                    return true;
-                }
+                if (solveMazeUtil(maze, x, y - 1, sol, Size) == true) return true;
 
                 /* If none of the above movements
                 work then BACKTRACK: unmark
@@ -152,18 +130,12 @@ namespace Love_Babbar_450_In_CSharp._09_backtracking
 
             return false;
         }
-        /* A utility function to check if x,
-        y is valid index for N*N maze */
-        private bool isSafe(int[][] maze, int x, int y)
+        private bool isSafe(int[][] maze, int x, int y, int Size)
         {
-            // if (x, y outside maze) return false
-            if (x >= 0 && x < N && y >= 0 && y < N && maze[x][y] == 1)
-            {
-                return true;
-            }
-
+            if (x >= 0 && x < Size && y >= 0 && y < Size && maze[x][y] == 1) return true;
             return false;
         }
+
 
         /* This function solves the Maze problem
         using Backtracking. It mainly uses
@@ -174,27 +146,148 @@ namespace Love_Babbar_450_In_CSharp._09_backtracking
         may be more than one solutions, this
         function prints one of the feasible
         solutions.*/
-        private bool solveMaze(int[][] maze)
+        private int[][] solveMaze(int[][] maze, int Size)
         {
             int[][] sol =
             {
-        new int[] {0, 0, 0, 0},
-        new int[] {0, 0, 0, 0},
-        new int[] {0, 0, 0, 0},
-        new int[] {0, 0, 0, 0}
-    };
+                new int[] {0, 0, 0, 0,0},
+                new int[] {0, 0, 0, 0,0},
+                new int[] {0, 0, 0, 0,0},
+                new int[] {0, 0, 0, 0,0},
+                new int[] {0, 0, 0, 0,0}
+            };
 
-            if (solveMazeUtil(maze, 0, 0, sol) == false)
+            if (solveMazeUtil(maze, 0, 0, sol, Size) == false)
             {
                 Console.Write("Solution doesn't exist");
-                return false;
+                return null;
             }
 
             //printSolution(sol);
+            for (int r = 0; r < 5; r++)
+            {
+                for (int c = 0; c < 5; c++)
+                {
+                    Debug.Write(sol[r][c]);
+                }
+                Debug.WriteLine(" ");
+            }
+            return sol;
+        }
+
+        //-----------------------------------------------------geek 
+        static List<String> possiblePaths = new List<String>();
+        static String path = "";
+        static readonly int MAX = 5;
+
+        // Function returns true if the
+        // move taken is valid else 
+        // it will return false.
+        static bool isSafe(int row, int col, int[,] m,
+                              int n, bool[,] visited)
+        {
+            if (row == -1 || row == n || col == -1 ||
+                 col == n || visited[row, col] ||
+                             m[row, col] == 0)
+                return false;
             return true;
         }
 
+        // Function to print all the possible
+        // paths from (0, 0) to (n-1, n-1).
+        static void printPathUtil(int row, int col, int[,] m,
+                                  int n, bool[,] visited)
+        {
 
+            // This will check the initial point
+            // (i.e. (0, 0)) to start the paths.
+            if (row == -1 || row == n || col == -1 ||
+                 col == n || visited[row, col] ||
+                             m[row, col] == 0)
+                return;
+
+            // If reach the last cell (n-1, n-1)
+            // then store the path and return
+            if (row == n - 1 && col == n - 1)
+            {
+                possiblePaths.Add(path);
+                return;
+            }
+
+            // Mark the cell as visited
+            visited[row, col] = true;
+
+            // Try for all the 4 directions (down, left, 
+            // right, up) in the given order to get the
+            // paths in lexicographical order
+
+            // Check if downward move is valid
+            if (isSafe(row + 1, col, m, n, visited))
+            {
+                path += 'D';
+                printPathUtil(row + 1, col, m, n,
+                              visited);
+                path = path.Substring(0, path.Length - 1);
+            }
+
+            // Check if the left move is valid
+            if (isSafe(row, col - 1, m, n, visited))
+            {
+                path += 'L';
+                printPathUtil(row, col - 1, m, n,
+                              visited);
+                path = path.Substring(0, path.Length - 1);
+            }
+
+            // Check if the right move is valid
+            if (isSafe(row, col + 1, m, n, visited))
+            {
+                path += 'R';
+                printPathUtil(row, col + 1, m, n,
+                              visited);
+                path = path.Substring(0, path.Length - 1);
+            }
+
+            // Check if the upper move is valid
+            if (isSafe(row - 1, col, m, n, visited))
+            {
+                path += 'U';
+                printPathUtil(row - 1, col, m, n,
+                              visited);
+                path = path.Substring(0, path.Length - 1);
+            }
+
+            // Mark the cell as unvisited for 
+            // other possible paths
+            visited[row, col] = false;
+        }
+
+        // Function to store and print
+        // all the valid paths 
+        static void printPath(int[,] m, int n)
+        {
+            bool[,] visited = new bool[n, MAX];
+
+            // Call the utility function to
+            // find the valid paths 
+            printPathUtil(0, 0, m, n, visited);
+
+            // Print all possible paths
+            for (int i = 0; i < possiblePaths.Count; i++)
+                Console.Write(possiblePaths[i] + " ");
+        }
+
+        // Driver code
+        public static void Main(String[] args)
+        {
+            int[,] m = { { 1, 0, 0, 0, 0 },
+                  { 1, 1, 1, 1, 1 },
+                  { 1, 1, 1, 0, 1 },
+                  { 0, 0, 0, 0, 1 },
+                  { 0, 0, 0, 0, 1 } };
+            int n = m.GetLength(0);
+            printPath(m, n);
+        }
 
         // ----------------------------------------------------------------------------------------------------------------------- //
         /*
@@ -288,11 +381,11 @@ namespace Love_Babbar_450_In_CSharp._09_backtracking
         {
             int[][] maze =
             {
-        new int[] {0, 0, 0, 0},
-        new int[] {0, -1, 0, 0},
-        new int[] {-1, 0, 0, 0},
-        new int[] {0, 0, 0, 0}
-    };
+                new int[] {0, 0, 0, 0},
+                new int[] {0, -1, 0, 0},
+                new int[] {-1, 0, 0, 0},
+                new int[] {0, 0, 0, 0}
+            };
             Console.Write(countPaths(maze));
         }
 
@@ -301,7 +394,7 @@ namespace Love_Babbar_450_In_CSharp._09_backtracking
             public const int R = 4;
             public const int C = 4;
         }
-
+        
 
     }
 }
