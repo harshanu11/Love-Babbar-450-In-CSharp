@@ -1,5 +1,4 @@
 ﻿using System;
-using static Love_Babbar_450_In_CSharp._05_linked_list._01_reverse_linklist;
 
 namespace Love_Babbar_450_In_CSharp._05_linked_list
 {
@@ -47,7 +46,7 @@ namespace Love_Babbar_450_In_CSharp._05_linked_list
             }
         }
 
-        public void push(int data)
+        public void pushFirst(int data)
         {
             NodeLL temp = new NodeLL(data);
             temp.next = head;
