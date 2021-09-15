@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace Love_Babbar_450_In_CSharp._01_array
+namespace array
 {
     /*
         link: https://www.geeksforgeeks.org/write-a-program-to-reverse-an-array-or-string/
@@ -31,16 +31,10 @@ namespace Love_Babbar_450_In_CSharp._01_array
         // TC: O(N)
         private void rvereseArrayRecursion(int[] arr, int start, int end)
         {
-            if (start >= end)
-            {
-                return;
-            }
-
-            int temp = arr[start];
+            if (start >= end) return;
+            var temp = arr[start];
             arr[start] = arr[end];
             arr[end] = temp;
-
-            // Recursive Function calling
             rvereseArrayRecursion(arr, start + 1, end - 1);
         }
     }

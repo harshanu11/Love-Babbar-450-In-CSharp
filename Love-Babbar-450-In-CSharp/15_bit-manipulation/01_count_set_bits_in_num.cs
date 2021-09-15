@@ -10,7 +10,7 @@ namespace Love_Babbar_450_In_CSharp._15_bit_manipulation
         public int setBits1(int N)
         {
             // Write Your Code here
-            return __builtin_popcount(N);
+            return 0;// __builtin_popcount(N);
         }
         public int setBits2(int N)
         {

@@ -23,25 +23,25 @@ namespace Love_Babbar_450_In_CSharp._12_graph
         */
 
 
-		private int adjMatrix()
-		{
-			int rows;
-			int cols;
-			rows = int.Parse(ConsoleInput.ReadToWhiteSpace(true));
-			cols = int.Parse(ConsoleInput.ReadToWhiteSpace(true));
+		//private int adjMatrix()
+		//{
+		//	//int rows;
+		//	//int cols;
+		//	//rows = int.Parse(ConsoleInput.ReadToWhiteSpace(true));
+		//	//cols = int.Parse(ConsoleInput.ReadToWhiteSpace(true));
 
-			int[][] adj = RectangularArrays.RectangularIntArray(rows + 1, rows + 1);
+		//	//int[][] adj = RectangularArrays.RectangularIntArray(rows + 1, rows + 1);
 
-			for (int i = 0; i < rows; i++)
-			{
-				int u;
-				int v;
-				u = int.Parse(ConsoleInput.ReadToWhiteSpace(true));
-				v = int.Parse(ConsoleInput.ReadToWhiteSpace(true));
-				adj[u][v] = 1;
-				adj[v][u] = 1;
-			}
-		}
+		//	//for (int i = 0; i < rows; i++)
+		//	//{
+		//	//	int u;
+		//	//	int v;
+		//	//	u = int.Parse(ConsoleInput.ReadToWhiteSpace(true));
+		//	//	v = int.Parse(ConsoleInput.ReadToWhiteSpace(true));
+		//	//	adj[u][v] = 1;
+		//	//	adj[v][u] = 1;
+		//	}
+		//}
 
 
 		// ----------------------------------------------------------------------------------------------------------------------- //
@@ -52,29 +52,29 @@ namespace Love_Babbar_450_In_CSharp._12_graph
 			SC: O(N + (2*E))
 		*/
 
-		private int adjList()
-		{
-			int rows;
-			int cols;
-			rows = int.Parse(ConsoleInput.ReadToWhiteSpace(true));
-			cols = int.Parse(ConsoleInput.ReadToWhiteSpace(true));
+		//private int adjList()
+		//{
+		//	int rows;
+		//	int cols;
+		//	rows = int.Parse(ConsoleInput.ReadToWhiteSpace(true));
+		//	cols = int.Parse(ConsoleInput.ReadToWhiteSpace(true));
 
-			List<int> adj = new List<int>(rows + 1);
+		//	List<int> adj = new List<int>(rows + 1);
 
-			for (int i = 0; i < m; i++)
-			{
-				int u;
-				int v;
-				u = int.Parse(ConsoleInput.ReadToWhiteSpace(true));
-				v = int.Parse(ConsoleInput.ReadToWhiteSpace(true));
+		//	for (int i = 0; i < m; i++)
+		//	{
+		//		int u;
+		//		int v;
+		//		u = int.Parse(ConsoleInput.ReadToWhiteSpace(true));
+		//		v = int.Parse(ConsoleInput.ReadToWhiteSpace(true));
 
-				adj[u].push_back(v);
-				adj[v].push_back(u); // comment this line for directed graph
+		//		adj[u].push_back(v);
+		//		adj[v].push_back(u); // comment this line for directed graph
 
-				// for weighted graph use: adj[u].push_back({v, wt});
-				//                         adj[v].push_back({u, wt});
-			}
-		}
+		//		// for weighted graph use: adj[u].push_back({v, wt});
+		//		//                         adj[v].push_back({u, wt});
+		//	}
+		//}
 
 	}
 }

@@ -46,7 +46,7 @@ namespace Love_Babbar_450_In_CSharp._11_heap
 			// If largest is not root
 			if (largest != i)
 			{
-				swap(arr[i], arr[largest]);
+				//swap(arr[i], arr[largest]);
 
 				// Recursively heapify the affected sub-tree
 				heapify(arr, n, largest);
@@ -74,7 +74,7 @@ namespace Love_Babbar_450_In_CSharp._11_heap
 			// If smallest is not parent
 			if (smallest != i)
 			{
-				swap(arr[i], arr[smallest]);
+				//swap(arr[i], arr[smallest]);
 
 				// Recursively heapify the affected sub-tree
 				heapifyMin(arr,n, smallest);

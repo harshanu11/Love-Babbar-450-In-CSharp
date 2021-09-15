@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace Love_Babbar_450_In_CSharp._02_matrix
+namespace matrix
 {
     /*
     link: https://practice.geeksforgeeks.org/problems/spirally-traversing-a-matrix-1587115621/1#
@@ -13,9 +13,6 @@ namespace Love_Babbar_450_In_CSharp._02_matrix
 
     video(for anti-clockwise): https://www.youtube.com/watch?v=SVFXEqn3Ceo
 */
-
-
-
 
     // ----------------------------------------------------------------------------------------------------------------------- //
     /*
@@ -27,12 +24,16 @@ namespace Love_Babbar_450_In_CSharp._02_matrix
     public class _01_spiral_traversal_on_matrix
     {
         [Fact]
-        public void reverse_arrayTest()
+        public void Spiral_MatrixTest()
         {
             int[][] arr = new int[3][] { new int[]{ 1, 2, 3 }, new int[] { 4, 5, 6 }, new int[] { 7, 8, 9 } };
-            SpiralOrder(arr);
+            List<List<int>> lst = new List<List<int>>() { new List<int>() { 1, 2, 3 }, new List<int>() { 4, 5, 6 }, new List<int>() { 7, 8, 9 } };
+            var ans = SpiralOrder1(arr);
+            ans = spiralOrder3(arr,3,3);
+            ans = SpiralOrder2(lst,3,3);
+            ans = spiralOrder4(arr, 3,3);
         }
-        public IList<int> SpiralOrder(int[][] matrix)
+        public IList<int> SpiralOrder1(int[][] matrix)
         {
             var result = new List<int>();
             if (matrix.Length == 0 || matrix[0].Length == 0)
@@ -41,14 +42,13 @@ namespace Love_Babbar_450_In_CSharp._02_matrix
             }
             if (matrix.Length == 1 || matrix[0].Length == 1)
             {
-                for (int i = 0; i < matrix.Length; i++)
+                for (int row = 0; row < matrix.Length; row++)
                 {
-                    for (int j = 0; j < matrix[0].Length; j++)
+                    for (int col = 0; col < matrix[0].Length; col++)
                     {
-                        result.Add(matrix[i][j]);
+                        result.Add(matrix[row][col]);
                     }
                 }
-
                 return result;
             }
 
@@ -108,6 +108,148 @@ namespace Love_Babbar_450_In_CSharp._02_matrix
             }
 
             return result;
+        }
+        public IList<int> SpiralOrder2(List<List<int>> matrix, int r, int c)
+        {
+            var result = new List<int>();
+            if (r== 0 || c == 0) return result;
+            if (r== 1 || c == 1)
+            {
+                for (int row = 0; row < r; row++)
+                {
+                    for (int col = 0; col < c; col++)
+                    {
+                        result.Add(matrix[row][col]);
+                    }
+                }
+                return result;
+            }
+
+            int[][] direction = new int[][]
+            {
+                new int[] {0,1}, // right direction 
+                new int[] {1,0}, // down direction
+                new int[] {0,-1},// left direction
+                new int[] {-1,0} // up direction
+            };
+            int totalElements = r * c;
+
+            int minRow = 0;
+            int minCol = 0;
+            int curCol = 0;
+            int curRow = 0;
+            int curDir = 0;
+
+            while (totalElements-- != 0)
+            {
+
+                result.Add(matrix[curRow][curCol]);
+
+                curRow = curRow + direction[curDir][0];
+                curCol = curCol + direction[curDir][1];
+                if (curCol == c - 1 && direction[curDir][1] == 1 && direction[curDir][0] == 0)
+                {
+                    minRow++;
+                    //1%4= 1,2 % 4=2,3 % 4=3,4 % 4=0,5 % 4=1,6 % 4=2,7 % 4=3,8 % 4=00
+                    curDir = (curDir + 1) % 4;
+                }
+                if (curRow == r - 1 && direction[curDir][0] == 1 && direction[curDir][1] == 0)
+                {
+                    c--;
+                    curDir = (curDir + 1) % 4;
+                }         
+                if (curCol == minCol && direction[curDir][1] == -1 && direction[curDir][0] == 0)
+                {
+                    r--;
+                    curDir = (curDir + 1) % 4;
+                }
+                if (curRow == minRow && direction[curDir][0] == -1 && direction[curDir][1] == 0)
+                {
+                    minCol++;
+                    curDir = (curDir + 1) % 4;
+                }
+            }
+
+            return result;
+        }
+        public List<int> spiralOrder3(int[][] matrix, int r, int c)
+        {
+
+            List<int> res = new List<int>();
+
+            if (r == 0)
+            {
+                return res;
+            }
+
+            int rowBegin = 0;
+            int rowEnd = r - 1;
+            int colBegin = 0;
+            int colEnd = c- 1;
+
+            while (rowBegin <= rowEnd && colBegin <= colEnd)
+            {
+                // Traverse Right
+                for (int j = colBegin; j <= colEnd; j++)
+                {
+                    res.Add(matrix[rowBegin][j]);
+                }
+                rowBegin++;
+
+                // Traverse Down
+                for (int j = rowBegin; j <= rowEnd; j++)
+                {
+                    res.Add(matrix[j][colEnd]);
+                }
+                colEnd--;
+
+                if (rowBegin <= rowEnd)
+                {
+                    // Traverse Left
+                    for (int j = colEnd; j >= colBegin; j--)
+                    {
+                        res.Add(matrix[rowEnd][j]);
+                    }
+                }
+                rowEnd--;
+
+                if (colBegin <= colEnd)
+                {
+                    // Traver Up
+                    for (int j = rowEnd; j >= rowBegin; j--)
+                    {
+                        res.Add(matrix[j][colBegin]);
+                    }
+                }
+                colBegin++;
+            }
+
+            return res;
+        }
+        public List<int> spiralOrder4(int[][] matrix, int r, int c)
+        {
+            List<int> res = new List<int>();
+            if (matrix == null || r == 0) return res;
+            int n = r, m = c;
+            int up = 0, down = n - 1;
+            int left = 0, right = m - 1;
+            while (res.Count < n * m)
+            {
+                for (int j = left; j <= right && res.Count < n * m; j++)
+                    res.Add(matrix[up][j]);
+
+                for (int i = up + 1; i <= down - 1 && res.Count < n * m; i++)
+                    res.Add(matrix[i][right]);
+
+                for (int j = right; j >= left && res.Count < n * m; j--)
+                    res.Add(matrix[down][j]);
+
+                for (int i = down - 1; i >= up + 1 && res.Count < n * m; i--)
+                    res.Add(matrix[i][left]);
+
+                left++; right--; up++; down--;
+            }
+            return res;
         }
 
     }

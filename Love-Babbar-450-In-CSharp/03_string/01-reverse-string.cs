@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace Love_Babbar_450_In_CSharp._03_string
+namespace stringg
 {/*
     link: https://leetcode.com/problems/reverse-string/
 */
@@ -11,15 +11,11 @@ namespace Love_Babbar_450_In_CSharp._03_string
     public class _01_reverse_string
     {
         [Fact]
-        public void reverse_arrayTest()
+        public void reverse_StringTest()
         {
-            
-           var result =  reverseString("123456".ToCharArray());
-        }
-        public void reverseStringInBuilt(List<char> s)
-        {
-            s.Reverse();
-
+            var strArr = "123456".ToCharArray();
+           var result =  reverseString(strArr);
+            rvereseArrayRecursion(strArr, 0, strArr.Length-1);
         }
         public string reverseString(char[] s)
         {
@@ -31,6 +27,15 @@ namespace Love_Babbar_450_In_CSharp._03_string
                 s[s.Length - 1 - i] = temp;
             }
             return new string(s);
+        }
+        // TC: O(N)
+        private void rvereseArrayRecursion(char[] arr, int start, int end)
+        {
+            if (start >= end) return;
+            var temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            rvereseArrayRecursion(arr, start + 1, end - 1);
         }
 
     }
