@@ -1,8 +1,8 @@
-﻿namespace Love_Babbar_450_In_CSharp._05_linked_list
+﻿namespace Model
 {
     /*
-        Time Complexity: O(n)
-        Space Complexity: O(1)
+    Time Complexity: O(n)
+    Space Complexity: O(1)
     */
     // Iterative C++ program to reverse
     // a linked list

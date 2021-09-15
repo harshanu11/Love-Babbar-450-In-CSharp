@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Love_Babbar_450_In_CSharp._06_binary_trees
+namespace Model
 {
     public class LoaclBinaryTree
     {

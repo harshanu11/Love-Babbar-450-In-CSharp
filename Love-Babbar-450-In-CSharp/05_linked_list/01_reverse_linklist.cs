@@ -1,75 +1,99 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace Love_Babbar_450_In_CSharp._05_linked_list
+namespace linked_list
 {
-    /*
-    link: https://www.geeksforgeeks.org/reverse-a-linked-list/
-*/
+    //link: https://www.geeksforgeeks.org/reverse-a-linked-list/
 
     public partial class _01_reverse_linklist
     {
+        public NodeLL head;
+        public _01_reverse_linklist()
+        {
+            head = null;
+        }
         /*
-    Time Complexity: O(n)
-    Space Complexity: O(1)
-*/
-        // Iterative C++ program to reverse
-        // a linked list
+            Time Complexity: O(n)
+            Space Complexity: O(1)
+        */
         [Fact]
-        public void reverse_arrayTest()
+        public void reverse_LinkList()
         {
             /* Start with the empty list */
-            LocalLinkedList ll = new LocalLinkedList();
-            ll.pushFirst(20);
-            ll.pushFirst(4);
-            ll.pushFirst(15);
-            ll.pushFirst(85);
+            AddFirst(20);
+            AddFirst(4);
+            AddFirst(15);
+            AddFirst(85);
+            AddLast(0);
+            print();
+            reverse();
+            print();
+            reverseRecur(head);
+            reverseTailUntil(head);
+            reverseLLStack(head);
+            ll_reverse4(head);
+        }
+        void AddFirst(int data)
+        {
+            NodeLL startNode = new NodeLL(data);
+            startNode.next = head;
+            head = startNode;
+        }
+        void AddLast(int data)
+        {
+            NodeLL temp = head;
+            NodeLL end = new NodeLL(data);
+            while (temp.next != null)
+            {
+                temp = temp.next;
+            }
+            temp.next = end;
+        }
+        void reverse()
+        {
+            NodeLL current = head;
+            NodeLL prev = null;
+            NodeLL next = null;
 
-            LocalLinkedList ll1 = new LocalLinkedList();
-            ll1.pushFirst(20);
-            ll1.pushFirst(4);
-            ll1.pushFirst(15);
-            ll1.pushFirst(85);
-            LocalLinkedList ll2 = new LocalLinkedList();
-            ll2.pushFirst(20);
-            ll2.pushFirst(4);
-            ll2.pushFirst(15);
-            ll2.pushFirst(85);
+            while (current != null)
+            {
+                // Store next
+                next = current.next;
 
-            Console.Write("Given linked list\n");
-            ll.print();
+                // Reverse current node's pointer
+                current.next = prev;
 
-            ll.reverse();
-
-            Console.Write("\nReversed Linked list \n");
-            ll.print();
-
-            reverseRecur(ll1.head);
-            reverseTailUntil(ll2.head);
-            reverseLLStack(ll2.head);
-            ll_reverse4(ll2.head);
+                // Move pointers one position ahead.
+                prev = current;
+                current = next;
+            }
+            head = prev;
+        }
+        void print()
+        {
+            NodeLL temp = head;
+            while (temp != null)
+            {
+                Console.Write(temp.data);
+                Console.Write(" ");
+                temp = temp.next;
+            }
         }
 
-
         /*
-    recursive
+            after running this function we just do
+            head = reverse(head);
 
-    after running this function we just do
-    ll.head = ll.reverse(ll.head);
-
-    Time Complexity: O(n)
-    Space Complexity: O(1)
-*/
+            Time Complexity: O(n)
+            Space Complexity: O(1)
+        */
 
         private NodeLL reverseRecur(NodeLL head)
         {
-            if (head == null || head.next == null)
-            {
-                return head;
-            }
-
+            if (head == null || head.next == null) return head;
             /* reverse the rest list and put
             the first element at the end */
             NodeLL rest = reverseRecur(head.next);
@@ -169,47 +193,47 @@ namespace Love_Babbar_450_In_CSharp._05_linked_list
         }
 
 
-// ----------------------------------------------------------------------------------------------------------------------- //
-/*
-    if we dont want to use count function, use vector (push_back)
-    TC: O(N)
-    SC: O(N)
-*/
-private int count(NodeLL head) // code to count the no. of nodes
-    {
-        NodeLL p = head;
-        int k = 1;
-        while (p != null)
+        // ----------------------------------------------------------------------------------------------------------------------- //
+        /*
+            if we dont want to use count function, use vector (push_back)
+            TC: O(N)
+            SC: O(N)
+        */
+        private int count(NodeLL head) // code to count the no. of nodes
         {
-            p = p.next;
-            k++;
+            NodeLL p = head;
+            int k = 1;
+            while (p != null)
+            {
+                p = p.next;
+                k++;
+            }
+            return k;
         }
-        return k;
+
+        private NodeLL ll_reverse4(NodeLL head) // to reverse the linked list
+        {
+            NodeLL p = head;
+            int i = count(head);
+            int j = 1;
+            int[] arr = new int[i];
+            while (i != 0 && p != null)
+            {
+                arr[j++] = p.data;
+                p = p.next;
+                i--;
+            }
+            j--;
+            while (j != 0) // loop will break as soon as j=0
+            {
+                Console.Write(arr[j--]);
+                Console.Write(" ");
+            }
+
+            return head;
+        }
+
+
+
     }
-
-    private NodeLL ll_reverse4(NodeLL head) // to reverse the linked list
-    {
-        NodeLL p = head;
-        int i = count(head);
-        int j = 1;
-        int[] arr = new int[i];
-        while (i != 0 && p != null)
-        {
-            arr[j++] = p.data;
-            p = p.next;
-            i--;
-        }
-        j--;
-        while (j != 0) // loop will break as soon as j=0
-        {
-            Console.Write(arr[j--]);
-            Console.Write(" ");
-        }
-
-        return head;
-    }
-
-
-
-}
 }
