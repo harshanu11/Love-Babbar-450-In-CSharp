@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace Love_Babbar_450_In_CSharp._15_bit_manipulation
+namespace bit_manipulation
 {
     public class _01_count_set_bits_in_num
     {

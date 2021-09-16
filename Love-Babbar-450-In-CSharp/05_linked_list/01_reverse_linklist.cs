@@ -4,17 +4,13 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace linked_list
+namespace _05_linked_list
 {
     //link: https://www.geeksforgeeks.org/reverse-a-linked-list/
 
-    public partial class _01_reverse_linklist
+    public  class _01_reverse_linklist
     {
         public NodeLL head;
-        public _01_reverse_linklist()
-        {
-            head = null;
-        }
         /*
             Time Complexity: O(n)
             Space Complexity: O(1)
@@ -27,7 +23,7 @@ namespace linked_list
             AddFirst(3);
             AddFirst(2);
             AddFirst(1);
-            AddLast(0);
+            AddLast(5);
             print();
             reverse();
             print();
@@ -224,8 +220,6 @@ namespace linked_list
 
             return head;
         }
-
-
 
     }
 }

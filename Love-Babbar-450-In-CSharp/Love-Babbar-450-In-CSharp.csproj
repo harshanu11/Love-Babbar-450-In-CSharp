@@ -2,16 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>Love_Babbar_450_In_CSharp</RootNamespace>
+    <RootNamespace></RootNamespace>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="01_array\02_max_min_array.cs" />
-    <Compile Remove="01_array\03_kth_max_min.cs" />
-    <Compile Remove="01_array\04_sort_arr_0_1_2.cs" />
-    <Compile Remove="01_array\05_negative_ele_to_one_side_of_array.cs" />
     <Compile Remove="01_array\06_union_and_intersection.cs" />
     <Compile Remove="01_array\07_cyclically_rotate_by_1.cs" />
     <Compile Remove="01_array\08_largest_sum_conti_arr.cs" />
@@ -46,10 +42,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="01_array\02_max_min_array.cs" />
-    <None Include="01_array\03_kth_max_min.cs" />
-    <None Include="01_array\04_sort_arr_0_1_2.cs" />
-    <None Include="01_array\05_negative_ele_to_one_side_of_array.cs" />
     <None Include="01_array\06_union_and_intersection.cs" />
     <None Include="01_array\07_cyclically_rotate_by_1.cs" />
     <None Include="01_array\08_largest_sum_conti_arr.cs" />

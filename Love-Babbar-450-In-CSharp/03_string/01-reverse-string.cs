@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace stringg
+namespace _03_string
 {/*
     link: https://leetcode.com/problems/reverse-string/
 */

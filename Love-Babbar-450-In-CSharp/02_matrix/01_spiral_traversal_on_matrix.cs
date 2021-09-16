@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace matrix
+namespace _02_matrix
 {
     /*
     link: https://practice.geeksforgeeks.org/problems/spirally-traversing-a-matrix-1587115621/1#

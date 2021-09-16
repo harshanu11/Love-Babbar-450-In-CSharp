@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace array
+namespace _01_array
 {
     /*
         link: https://www.geeksforgeeks.org/write-a-program-to-reverse-an-array-or-string/
