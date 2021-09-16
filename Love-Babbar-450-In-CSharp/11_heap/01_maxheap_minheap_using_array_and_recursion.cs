@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xunit;
 
-namespace Love_Babbar_450_In_CSharp._11_heap
+namespace heap
 {
     public class _01_maxheap_minheap_using_array_and_recursion
     {
@@ -25,75 +26,118 @@ namespace Love_Babbar_450_In_CSharp._11_heap
 
 		// To heapify a subtree rooted with node i which is
 		// an index in arr[]. N is size of heap
-		private void heapify(int[] arr, int n, int i)
+		private void heapifyMax(int[] arr, int len, int curr)
 		{
-			int largest = i; // Initialize largest as root
-			int l = 2 * i + 1; // left = 2*i + 1
-			int r = 2 * i + 2; // right = 2*i + 2
+			int largest = curr; // Initialize largest as root
+			int l = 2 * curr + 1; // left = 2*i + 1
+			int r = 2 * curr + 2; // right = 2*i + 2
 
 			// If left child is larger than root
-			if (l < n && arr[l] > arr[largest])
+			if (l < len && arr[l] > arr[largest])
 			{
 				largest = l;
 			}
 
 			// If right child is larger than largest so far
-			if (r < n && arr[r] > arr[largest])
+			if (r < len && arr[r] > arr[largest])
 			{
 				largest = r;
 			}
 
 			// If largest is not root
-			if (largest != i)
+			if (largest != curr)
 			{
-				//swap(arr[i], arr[largest]);
-
+				arr[curr] = arr[curr] ^ arr[largest];
+				arr[largest] = arr[curr] ^ arr[largest];
+				arr[curr] = arr[curr] ^ arr[largest];
 				// Recursively heapify the affected sub-tree
-				heapify(arr, n, largest);
+				heapifyMax(arr, len, largest);
 			}
 		}
 
-		private void heapifyMin(int[] arr, int n, int i)
+		private void heapifyMin(int[] arr, int len, int curr)
 		{
-			int smallest = i; // The node which will be heapified
-			int l = 2 * i + 1; // left child node
-			int r = 2 * i + 2; // right child node
+			int smallest = curr; // The node which will be heapified
+			int l = 2 * curr + 1; // left child node
+			int r = 2 * curr + 2; // right child node
 
 			// Check if left child is smaller than its parent
-			if (l < n && arr[l] < arr[smallest])
+			if (l < len && arr[l] < arr[smallest])
 			{
 				smallest = l;
 			}
 
 			// Check if right child is smaller than smallest
-			if (r < n && arr[r] < arr[smallest])
+			if (r < len && arr[r] < arr[smallest])
 			{
 				smallest = r;
 			}
 
 			// If smallest is not parent
-			if (smallest != i)
+			if (smallest != curr)
 			{
-				//swap(arr[i], arr[smallest]);
-
+				arr[curr] = arr[curr] ^ arr[smallest];
+				arr[smallest] = arr[curr] ^ arr[smallest];
+				arr[curr] = arr[curr] ^ arr[smallest];
 				// Recursively heapify the affected sub-tree
-				heapifyMin(arr,n, smallest);
+				heapifyMin(arr,len, smallest);
 			}
 		}
 
 		// Function to build a Max-Heap from the given array
-		private void buildHeap(int[] arr, int n)
+		private void buildMaxHeapWithReverseLevelOrder(int[] arr, int len)
 		{
 			// Index of last non-leaf node  [parent of last leaf node]
-			int startIdx = (n / 2) - 1;
+			int startIdx = (len / 2) - 1;
 
 			// Perform reverse level order traversal
 			// from last non-leaf node and heapify
 			// each node
-			for (int i = startIdx; i >= 0; i--)
+			for (int curr = startIdx; curr >= 0; curr--)
 			{
-				heapify(arr, n, i);
+				heapifyMax(arr, len, curr);
 			}
+		}
+		private void buildMinHeapWithReverseLevelOrder(int[] arr, int len)
+		{
+			// Index of last non-leaf node  [parent of last leaf node]
+			int startIdx = (len / 2) - 1;
+
+			// Perform reverse level order traversal
+			// from last non-leaf node and heapify
+			// each node
+			for (int curr = startIdx; curr >= 0; curr--)
+			{
+				heapifyMin(arr, len, curr);
+			}
+		}
+
+		[Fact]
+		public void buildHeapWithReverseLevelOrder_HeapTest()
+		{
+			// Binary Tree Representation
+			// of input array
+			// 1
+			//		 /	
+			//	// 3		 5
+			//	 / \	 /
+			//	// 4	 6 13 10
+			// / \ /
+			//	// 9 8 15 17
+			int[] arr = { 1, 3, 5, 4, 6, 13, 10, 9, 8, 15, 17 };
+
+			buildMaxHeapWithReverseLevelOrder(arr, arr.Length);
+			buildMinHeapWithReverseLevelOrder(arr, arr.Length);
+
+			printHeap(arr, arr.Length);
+			// Final Heap:
+			// 17
+			//		 /	
+			//	// 15		 13
+			//	 / \	 /
+			//	// 9	 6 5 10
+			//	 / \ /
+			//	// 4 8 3 1
 		}
 		// A utility function to print the array
 		// representation of Heap
@@ -109,37 +153,6 @@ namespace Love_Babbar_450_In_CSharp._11_heap
 			Console.Write("\n");
 		}
 
-		// Driver Code
-		private  void Main()
-		{
-			// Binary Tree Representation
-			// of input array
-			// 1
-			//		 /	
-			//	// 3		 5
-			//	 / \	 /
-			//	// 4	 6 13 10
-			// / \ /
-			//	// 9 8 15 17
-			int[] arr = { 1, 3, 5, 4, 6, 13, 10, 9, 8, 15, 17 };
-
-			//C++ TO C# CONVERTER WARNING: This 'sizeof' ratio was replaced with a direct reference to the array length:
-			//ORIGINAL LINE: int n = sizeof(arr) / sizeof(arr[0]);
-			int n = arr.Length;
-
-			buildHeap(arr, n);
-
-			printHeap(arr, n);
-			// Final Heap:
-			// 17
-			//		 /	
-			//	// 15		 13
-			//	 / \	 /
-			//	// 9	 6 5 10
-			//	 / \ /
-			//	// 4 8 3 1
-
-		}
 
 	}
 }

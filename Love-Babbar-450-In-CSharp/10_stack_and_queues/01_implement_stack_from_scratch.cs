@@ -3,8 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
+using Xunit;
 
-namespace Love_Babbar_450_In_CSharp._10_stack_and_queues
+namespace Stack_and_queues
 {
     /*
     link(java): https://www.tutorialspoint.com/javaexamples/data_stack.htm
@@ -13,7 +14,82 @@ namespace Love_Babbar_450_In_CSharp._10_stack_and_queues
 */
     public class _01_implement_stack_from_scratch
     {
+        [Fact]
+        public void reverse_arrayTest()
+        {
+            StackWtihArray stackWtihArray = new StackWtihArray(5);
+            stackWtihArray.push(5);
+            stackWtihArray.push(8);
+            stackWtihArray.push(2);
+            stackWtihArray.push(9);
+            stackWtihArray.pop();
 
+            StackUsingArrayList stkArrayLst = new StackUsingArrayList();
+
+            stkArrayLst.push(5);
+            stkArrayLst.push(8);
+            stkArrayLst.push(2);
+            stkArrayLst.push(9);
+            stkArrayLst.pop();
+
+
+            StackUsingList stkList = new StackUsingList();
+
+            stkList.push(5);
+            stkList.push(8);
+            stkList.push(2);
+            stkList.push(9);
+            stkList.pop();
+
+
+
+        }
+    }
+    class StackWtihArray
+    {
+        private int[] ele;
+        private int top;
+        private int max;
+        public StackWtihArray(int size)
+        {
+            ele = new int[size]; // Maximum size of Stack
+            top = -1;
+            max = size;
+        }
+
+        public void push(int item)
+        {
+            // Debug.WriteLine("Stack Overflow");
+            if (top == max - 1) return;
+            else ele[++top] = item;
+        }
+
+        public int pop()
+        {
+            //Debug.WriteLine("Stack is Empty");
+            if (top == -1) return -1;
+            // Debug.WriteLine("{0} popped from stack ", ele[top]);
+            else return ele[top--];
+        }
+
+        public int peek()
+        {
+            //Debug.WriteLine("Stack is Empty");
+            if (top == -1) return -1;
+            //Debug.WriteLine("{0} popped from stack ", ele[top]);
+            else return ele[top];
+        }
+
+        public void printStack()
+        {
+                Debug.WriteLine("Stack is Empty");
+            if (top == -1) return;
+            else
+                for (int i = 0; i <= top; i++)
+                {
+                    Debug.WriteLine("{0} pushed into stack", ele[i]);
+                }
+        }
     }
     public class FixedMultiStack
     {
@@ -80,13 +156,13 @@ namespace Love_Babbar_450_In_CSharp._10_stack_and_queues
     /// <summary>
     /// Design a stack that supports getMin() in O(1) time and O(1) extra space
     /// </summary>
-    public class MyStack
+    public class MyMinStack
     {
         public Stack s;
         public int minEle;
 
         // Constructor
-        public MyStack()
+        public MyMinStack()
         {
             s = new Stack();
         }
@@ -206,86 +282,12 @@ namespace Love_Babbar_450_In_CSharp._10_stack_and_queues
             return min_Conflict;
         }
     }
-    class StackWtihArray
-    {
-        private int[] ele;
-        private int top;
-        private int max;
-        public StackWtihArray(int size)
-        {
-            ele = new int[size]; // Maximum size of Stack
-            top = -1;
-            max = size;
-        }
 
-        public void push(int item)
-        {
-            if (top == max - 1)
-            {
-                Debug.WriteLine("Stack Overflow");
-                return;
-            }
-            else
-            {
-                ele[++top] = item;
-            }
-        }
-
-        public int pop()
-        {
-            if (top == -1)
-            {
-                Debug.WriteLine("Stack is Empty");
-                return -1;
-            }
-            else
-            {
-                Debug.WriteLine("{0} popped from stack ", ele[top]);
-                return ele[top--];
-            }
-        }
-
-        public int peek()
-        {
-            if (top == -1)
-            {
-                Debug.WriteLine("Stack is Empty");
-                return -1;
-            }
-            else
-            {
-                Debug.WriteLine("{0} popped from stack ", ele[top]);
-                return ele[top];
-            }
-        }
-
-        public void printStack()
-        {
-            if (top == -1)
-            {
-                Debug.WriteLine("Stack is Empty");
-                return;
-            }
-            else
-            {
-                for (int i = 0; i <= top; i++)
-                {
-                    Debug.WriteLine("{0} pushed into stack", ele[i]);
-                }
-            }
-        }
-    }
     public class StackUsingArrayList
     {
         internal ArrayList stackList;
-        internal StackUsingArrayList()
-        {
-            stackList = new ArrayList();
-        }
-        internal virtual void push(int value)
-        {
-            stackList.Add(value);
-        }
+        internal StackUsingArrayList()=> stackList = new ArrayList();
+        internal virtual void push(int value)=> stackList.Add(value);
         internal virtual int pop()
         {
 
@@ -305,14 +307,41 @@ namespace Love_Babbar_450_In_CSharp._10_stack_and_queues
         {
             get
             {
-                if (stackList.Count == 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                if (stackList.Count == 0) return true;
+                else return false;
+            }
+        }
+        internal virtual int peek()
+        {
+            return Convert.ToInt32(stackList[stackList.Count - 1]);
+        }
+    }
+    public class StackUsingList
+    {
+        internal List<int> stackList;
+        internal StackUsingList() => stackList = new List<int>();
+        internal virtual void push(int value) => stackList.Add(value);
+        internal virtual int pop()
+        {
+
+            if (!Empty)
+            { // checks for an empty Stack
+                int popValue = Convert.ToInt32(stackList[stackList.Count - 1]);
+                stackList.RemoveAt(stackList.Count - 1); // removes the poped element
+                return popValue;
+            }
+            else
+            {
+                Debug.Write("The stack is already empty  ");
+                return -1;
+            }
+        }
+        internal virtual bool Empty
+        {
+            get
+            {
+                if (stackList.Count == 0) return true;
+                else return false;
             }
         }
         internal virtual int peek()

@@ -278,7 +278,7 @@ namespace backtracking
         }
 
         // Driver code
-        public static void Main(String[] args)
+         void Main1()
         {
             int[,] m = { { 1, 0, 0, 0, 0 },
                   { 1, 1, 1, 1, 1 },
