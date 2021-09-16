@@ -8,13 +8,14 @@ namespace _05_linked_list
 {
     //link: https://www.geeksforgeeks.org/reverse-a-linked-list/
 
-    public  class _01_reverse_linklist
+    public class _01_reverse_linklist
     {
         public NodeLL head;
         /*
             Time Complexity: O(n)
             Space Complexity: O(1)
         */
+
         [Fact]
         public void reverse_LinkList()
         {
@@ -23,22 +24,24 @@ namespace _05_linked_list
             AddFirst(3);
             AddFirst(2);
             AddFirst(1);
-            AddLast(5);
+            AddLast(6);
             print();
+            AddAt(5, 4);
+            DeleteAt(4);
             reverse();
             print();
-            reverseRecur(head);
+            head = reverseRecur(head);
             reverseTailUntil(head);
             reverseLLStack(head);
             ll_reverse4(head);
         }
-        void AddFirst(int data)
+        public void AddFirst(int data)
         {
             NodeLL startNode = new NodeLL(data);
             startNode.next = head;
             head = startNode;
         }
-        void AddLast(int data)
+        public void AddLast(int data)
         {
             NodeLL temp = head;
             NodeLL end = new NodeLL(data);
@@ -48,6 +51,29 @@ namespace _05_linked_list
             }
             temp.next = end;
         }
+        public void AddAt(int data, int pos)
+        {
+            var newNode = new NodeLL(data);
+            if (pos == 0) newNode.next = head;
+            var prev = head;
+            for (int p = 0; p < pos - 1; p++)
+            {
+                prev = prev.next;
+            }
+            newNode.next = prev.next;
+            prev.next = newNode;
+        }
+        public void DeleteAt(int pos)
+        {
+            if (pos == 0) head = head.next;
+            var prev = head;
+
+            for (int p = 0; p < pos - 1; p++)
+            {
+                prev = prev.next;
+            }
+            prev.next = prev.next.next;
+        }
         void reverse()
         {
             NodeLL current = head;
@@ -56,14 +82,13 @@ namespace _05_linked_list
 
             while (current != null)
             {
-                // Store next
+                // save next node 
                 next = current.next;
-
-                // Reverse current node's pointer
+                // remover next node and make curr next to prev
                 current.next = prev;
-
-                // Move pointers one position ahead.
+                // time to move right n make prev to crrent
                 prev = current;
+                // refresh curr with temp
                 current = next;
             }
             head = prev;
@@ -87,19 +112,14 @@ namespace _05_linked_list
             Space Complexity: O(1)
         */
 
-        private NodeLL reverseRecur(NodeLL head)
+        private NodeLL reverseRecur(NodeLL hedRoot)
         {
-            if (head == null || head.next == null) return head;
-            /* reverse the rest list and put
-            the first element at the end */
-            NodeLL rest = reverseRecur(head.next);
-            head.next.next = head;
-
-            /* tricky step -- see the diagram */
-            head.next = null;
-
-            /* fix the head pointer */
-            return rest;
+            if (hedRoot == null || hedRoot.next == null) return hedRoot;
+            NodeLL newHead = reverseRecur(hedRoot.next);
+            NodeLL nextHead = hedRoot.next;
+            nextHead.next = hedRoot;
+            hedRoot.next = null;
+            return newHead;
         }
 
         // ----------------------------------------------------------------------------------------------------------------------- //
@@ -135,8 +155,6 @@ namespace _05_linked_list
             }
             reverseUtil(head, null, head);
         }
-
-
 
         // ----------------------------------------------------------------------------------------------------------------------- //
         /*
