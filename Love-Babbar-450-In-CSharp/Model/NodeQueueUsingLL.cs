@@ -1,0 +1,49 @@
+﻿using Model;
+
+namespace Model
+{
+    public partial class _02_implement_queue_from_scratch
+    {
+        public class NodeQueueUsingLL
+        {
+            public NodeLL front, rear;
+
+            public NodeQueueUsingLL()
+            {
+                this.front = this.rear = null;
+            }
+
+            // Method to add an key to the queue.
+            public void enqueue(int key)
+            {
+
+                // Create a new LL node
+                NodeLL temp = new NodeLL(key);
+
+                // If queue is empty, then new
+                // node is front and rear both
+                if (this.rear == null)
+                {
+                    this.front = this.rear = temp;
+                    return;
+                }
+
+                // Add the new node at the
+                // end of queue and change rear
+                this.rear.next = temp;
+                this.rear = temp;
+            }
+
+            // Method to remove an key from queue.
+            public void dequeue()
+            {
+                if (this.front == null)
+                    return;
+                NodeLL temp = this.front;
+                this.front = this.front.next;
+                if (this.front == null)
+                    this.rear = null;
+            }
+        }
+    }
+}

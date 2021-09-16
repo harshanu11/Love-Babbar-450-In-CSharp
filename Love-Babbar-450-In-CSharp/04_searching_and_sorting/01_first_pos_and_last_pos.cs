@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace searching_and_sorting
+namespace _04_searching_and_sorting
 {
     /*
     link: https://practice.geeksforgeeks.org/problems/first-and-last-occurrences-of-x3116/1
