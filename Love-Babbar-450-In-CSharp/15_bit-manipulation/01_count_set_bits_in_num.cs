@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xunit;
 
 namespace Love_Babbar_450_In_CSharp._15_bit_manipulation
 {
     public class _01_count_set_bits_in_num
     {
         // https://practice.geeksforgeeks.org/problems/set-bits0143/1
-        public int setBits1(int N)
+        [Fact]
+        public void reverse_arrayTest()
         {
-            // Write Your Code here
-            return 0;// __builtin_popcount(N);
+            var ans = setBits2(6);//6>2
+            ans = setBits3(8);//8>1
         }
         public int setBits2(int N)
         {
