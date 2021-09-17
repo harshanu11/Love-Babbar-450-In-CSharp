@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 using Xunit;
 
-namespace graph
+namespace _12_graph
 {
     public class _01_create_and_print_graph
     {
@@ -25,7 +25,7 @@ namespace graph
         [Fact]
         public void AddEdge_GraphTest()
         {
-            GraphOps g = new GraphOps(4);
+            NodeGraphUsingLL g = new NodeGraphUsingLL(4);
             g.addEdge(0, 1);
             g.addEdge(0, 2);
             g.addEdge(1, 2);
@@ -74,83 +74,28 @@ namespace graph
             SC: O(N + (2*E))
         */
 
-        //private int adjList()
-        //{
-        //	int rows;
-        //	int cols;
-        //	rows = int.Parse(ConsoleInput.ReadToWhiteSpace(true));
-        //	cols = int.Parse(ConsoleInput.ReadToWhiteSpace(true));
-
-        //	List<int> adj = new List<int>(rows + 1);
-
-        //	for (int i = 0; i < m; i++)
-        //	{
-        //		int u;
-        //		int v;
-        //		u = int.Parse(ConsoleInput.ReadToWhiteSpace(true));
-        //		v = int.Parse(ConsoleInput.ReadToWhiteSpace(true));
-
-        //		adj[u].push_back(v);
-        //		adj[v].push_back(u); // comment this line for directed graph
-
-        //		// for weighted graph use: adj[u].push_back({v, wt});
-        //		//                         adj[v].push_back({u, wt});
-        //	}
-        //}
-
-    }
-
-    public class GraphOps
-    {
-        private int V;
-        private LinkedList<int>[] adj;
-        public GraphOps(int v)
+        private void adjList()
         {
-            V = v;
-            adj = new LinkedList<int>[v];
-            for (int i = 0; i < v; ++i)
-                adj[i] = new LinkedList<int>();
-        }
-        public void addEdge(int v, int w)
-        {
-            adj[v].AddLast(w);
-        }
-        public bool isReachable(int s, int d)
-        {
-            bool[] visited = new bool[V];
+            int rows;
+            int cols;
+            rows = 4;
+            cols = 4;
 
-            // Create a queue for BFS
-            LinkedList<int> queue = new LinkedList<int>();
+            List<int> adj = new List<int>(rows + 1);
 
-            visited[s] = true;
-            queue.AddLast(s);
-
-            IEnumerator i;
-            while (queue.Count != 0)
+            for (int i = 0; i < 4; i++)
             {
+                int u = 1;
+                int v = 1;
 
-                s = queue.First.Value;
-                queue.RemoveFirst();
-                int n;
-                i = adj[s].GetEnumerator();
 
-                while (i.MoveNext())
-                {
-                    n = (int)i.Current;
+                adj[u] = (v);
+                adj[v] = (u); // comment this line for directed graph
 
-                    if (n == d)
-                        return true;
-
-                    if (!visited[n])
-                    {
-                        visited[n] = true;
-                        queue.AddLast(n);
-                    }
-                }
+                // for weighted graph use: adj[u].push_back({v, wt});
+                //                         adj[v].push_back({u, wt});
             }
-
-            // If BFS is complete without visited d
-            return false;
         }
+
     }
 }

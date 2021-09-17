@@ -1,82 +1,80 @@
 ﻿namespace Model
 {
-    public partial class _02_implement_queue_from_scratch
+    public class NodeQueueArray
     {
-        public class NodeQueueArray
+        public static int front, rear, capacity;
+        public static int[] queue;
+        public int Length = 0;
+        public NodeQueueArray(int c)
         {
-            public static int front, rear, capacity;
-            public static int[] queue;
-            public int Length = 0;
-            public NodeQueueArray(int c)
-            {
-                front = rear = 0;
-                capacity = c;
-                queue = new int[capacity];
-            }
+            front = rear = 0;
+            capacity = c;
+            queue = new int[capacity];
+        }
 
-            // function to insert an element
-            // at the rear of the queue
-            public void queueEnqueue(int data)
+        // function to insert an element
+        // at the rear of the queue
+        public void queueEnqueue(int data)
+        {
+            if (capacity == rear)
             {
-                if (capacity == rear)
-                {
-                    return;
-                }
-                else
-                {
-                    queue[rear] = data;
-                    rear++;
-                    Length++;
-                }
                 return;
             }
-            public void queueDequeue()
+            else
             {
-                if (front == rear)
-                {
-                    return;
-                }
-                else
-                {
-                    for (int i = 0; i < rear - 1; i++)
-                    {
-                        queue[i] = queue[i + 1];
-                    }
-                    if (rear < capacity)
-                        queue[rear] = 0;
-                    Length--;
-                    rear--;
-                }
+                queue[rear] = data;
+                rear++;
+                Length++;
+            }
+            return;
+        }
+        public void queueDequeue()
+        {
+            if (front == rear)
+            {
                 return;
             }
+            else
+            {
+                for (int i = 0; i < rear - 1; i++)
+                {
+                    queue[i] = queue[i + 1];
+                }
+                if (rear < capacity)
+                    queue[rear] = 0;
+                Length--;
+                rear--;
+            }
+            return;
+        }
 
-            // print queue elements
+        // print queue elements
 
-            // print front of queue
-            public int Peek1()
+        // print front of queue
+        public int Peek1()
+        {
+            if (front == rear)
             {
-                if (front == rear)
-                {
-                    return 0;
-                }
-                return queue[front];
+                return 0;
             }
-            public int Peek2()
+            return queue[front];
+        }
+        public int Peek2()
+        {
+            if (front == rear || Length < 3)
             {
-                if (front == rear || Length < 3)
-                {
-                    return 0;
-                }
-                return queue[front + 1];
+                return 0;
             }
-            public int Peek3()
+            return queue[front + 1];
+        }
+        public int Peek3()
+        {
+            if (front == rear || Length < 3)
             {
-                if (front == rear || Length < 3)
-                {
-                    return 0;
-                }
-                return queue[front + 2];
+                return 0;
             }
+            return queue[front + 2];
         }
     }
+
 }
