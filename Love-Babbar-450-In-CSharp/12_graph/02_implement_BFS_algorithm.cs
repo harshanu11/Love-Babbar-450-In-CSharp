@@ -35,8 +35,8 @@ namespace _12_graph
             g.addEdge(2, 0);
             g.addEdge(2, 3);
             g.addEdge(3, 3);
-            var ans = bfsOfGraph1(4, g.adj);
-            ans = bfsOfGraph2(4, g.adj);
+            //var ans = bfsOfGraph1(4, g.adj);
+            //ans = bfsOfGraph2(4, g.adj);
         }
 
         // ----------------------------------------------------------------------------------------------------------------------- //
