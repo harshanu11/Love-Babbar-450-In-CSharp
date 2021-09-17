@@ -7,16 +7,17 @@ namespace _11_heap
 {
     public class _01_maxheap_minheap_using_array_and_recursion
     {
+        NodeHeap heap = new NodeHeap();
 
         /*
-    link: https://www.geeksforgeeks.org/building-heap-from-array/
+            link: https://www.geeksforgeeks.org/building-heap-from-array/
 
-    Time Complexity: Heapify a single node takes O(log N) [as every jump will be to child]
-     time complexity where N is the total number of Nodes. Therefore, building the entire Heap
-    will take N heapify operations and the total time complexity will be O(N*logN).
+            Time Complexity: Heapify a single node takes O(log N) [as every jump will be to child]
+             time complexity where N is the total number of Nodes. Therefore, building the entire Heap
+            will take N heapify operations and the total time complexity will be O(N*logN).
 
-    In reality, building a heap takes O(n) time depending on the implementation which can be seen here.
-*/
+            In reality, building a heap takes O(n) time depending on the implementation which can be seen here.
+        */
         [Fact]
         public void buildHeapWithReverseLevelOrder_HeapTest()
         {
@@ -48,68 +49,6 @@ namespace _11_heap
         // ----------------------------------------------------------------------------------------------------------------------- //
         // C++ program for building Heap from Array
 
-
-
-        // To heapify a subtree rooted with node i which is
-        // an index in arr[]. N is size of heap
-        internal void heapifyMax(int[] arr, int len, int curr)
-        {
-            int largest = curr; // Initialize largest as root
-            int l = 2 * curr + 1; // left = 2*i + 1
-            int r = 2 * curr + 2; // right = 2*i + 2
-
-            // If left child is larger than root
-            if (l < len && arr[l] > arr[largest])
-            {
-                largest = l;
-            }
-
-            // If right child is larger than largest so far
-            if (r < len && arr[r] > arr[largest])
-            {
-                largest = r;
-            }
-
-            // If largest is not root
-            if (largest != curr)
-            {
-                arr[curr] = arr[curr] ^ arr[largest];
-                arr[largest] = arr[curr] ^ arr[largest];
-                arr[curr] = arr[curr] ^ arr[largest];
-                // Recursively heapify the affected sub-tree
-                heapifyMax(arr, len, largest);
-            }
-        }
-
-        private void heapifyMin(int[] arr, int len, int curr)
-        {
-            int smallest = curr; // The node which will be heapified
-            int l = 2 * curr + 1; // left child node
-            int r = 2 * curr + 2; // right child node
-
-            // Check if left child is smaller than its parent
-            if (l < len && arr[l] < arr[smallest])
-            {
-                smallest = l;
-            }
-
-            // Check if right child is smaller than smallest
-            if (r < len && arr[r] < arr[smallest])
-            {
-                smallest = r;
-            }
-
-            // If smallest is not parent
-            if (smallest != curr)
-            {
-                arr[curr] = arr[curr] ^ arr[smallest];
-                arr[smallest] = arr[curr] ^ arr[smallest];
-                arr[curr] = arr[curr] ^ arr[smallest];
-                // Recursively heapify the affected sub-tree
-                heapifyMin(arr, len, smallest);
-            }
-        }
-
         // Function to build a Max-Heap from the given array
         private void buildMaxHeapWithReverseLevelOrder(int[] arr, int len)
         {
@@ -121,7 +60,7 @@ namespace _11_heap
             // each node
             for (int curr = startIdx; curr >= 0; curr--)
             {
-                heapifyMax(arr, len, curr);
+                heap.heapifyMax(arr, len, curr);
             }
         }
         private void buildMinHeapWithReverseLevelOrder(int[] arr, int len)
@@ -134,7 +73,7 @@ namespace _11_heap
             // each node
             for (int curr = startIdx; curr >= 0; curr--)
             {
-                heapifyMin(arr, len, curr);
+                heap.heapifyMin(arr, len, curr);
             }
         }
 
@@ -152,7 +91,5 @@ namespace _11_heap
             }
             Console.Write("\n");
         }
-
-
     }
 }

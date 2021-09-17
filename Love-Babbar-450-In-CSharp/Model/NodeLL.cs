@@ -12,6 +12,11 @@
     {
         public int data;
         public NodeLL next;
+        public int flag { get; set; }
+        public NodeLL()
+        {
+
+        }
         public NodeLL(int data)
         {
             this.data = data;

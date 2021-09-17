@@ -9,14 +9,15 @@ namespace _06_binary_trees
 {
     public class _01_level_order_traversal
     {
+        NodeBinary o = new NodeBinary();
         [Fact]
         public void reverse_arrayTest()
         {
-            NodeBinary root = newNode(1);
-            root.left = newNode(2);
-            root.right = newNode(3);
-            root.left.left = newNode(4);
-            root.left.right = newNode(5);
+            NodeBinary root = o.newNode(1);
+            root.left = o.newNode(2);
+            root.right = o.newNode(3);
+            root.left.left = o.newNode(4);
+            root.left.right = o.newNode(5);
 
             Console.Write("Level Order traversal of binary tree is \n");
             printLevelOrderRecursive(root);
@@ -98,19 +99,7 @@ namespace _06_binary_trees
             }
         }
 
-        /* Helper function that allocates
-        a new node with the given data and
-        NULL left and right pointers. */
 
-        public NodeBinary newNode(int data)
-        {
-            NodeBinary Node = new NodeBinary(data);
-            Node.data = data;
-            Node.left = null;
-            Node.right = null;
-
-            return (Node);
-        }
 
         /* Function to print level
         order traversal a tree*/

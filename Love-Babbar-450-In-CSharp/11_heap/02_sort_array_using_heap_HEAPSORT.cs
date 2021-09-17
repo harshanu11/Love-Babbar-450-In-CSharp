@@ -7,8 +7,6 @@ namespace _11_heap
 {
     public class _02_sort_array_using_heap_HEAPSORT
     {
-
-
         /*
             link: https://www.geeksforgeeks.org/heap-sort/
 
@@ -17,7 +15,7 @@ namespace _11_heap
             note: to get ascending sorted array use maxHeap,
                   to get descending sorted array use minHeap
         */
-        _01_maxheap_minheap_using_array_and_recursion o = new _01_maxheap_minheap_using_array_and_recursion();
+        NodeHeap o = new NodeHeap();
         [Fact]
         private void HeapSortTest()
         {

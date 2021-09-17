@@ -65,5 +65,18 @@
             else root.left = InsertBST(root.left, key);
             return root;
         }
+        /* Helper function that allocates
+            a new node with the given data and
+            NULL left and right pointers. */
+
+        public NodeBinary newNode(int data)
+        {
+            NodeBinary Node = new NodeBinary(data);
+            Node.data = data;
+            Node.left = null;
+            Node.right = null;
+
+            return (Node);
+        }
     }
 }
