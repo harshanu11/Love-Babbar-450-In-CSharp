@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace DP
+namespace _14_DP
 {
     public class _01_0_1_knapsack
     {

@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Text;
 using Xunit;
 
-namespace greedy
+namespace _08_greedy
 {
     internal class pair
     {

@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.Text;
 using Xunit;
 
-namespace Stack_and_queues
+namespace _10_stack_and_queues
 {
     /*
     link(java): https://www.tutorialspoint.com/javaexamples/data_stack.htm

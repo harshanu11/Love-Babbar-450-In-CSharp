@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Text;
 using Xunit;
 
-namespace backtracking
+namespace _09_backtracking
 {
     /*
     link: https://practice.geeksforgeeks.org/problems/rat-in-a-maze-problem/1

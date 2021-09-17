@@ -1,7 +1,7 @@
 ﻿using Model;
 using Xunit;
 
-namespace binary_search_trees
+namespace _07_binary_search_trees
 {
     public class _01_find_a_value_in_BST
     {
@@ -32,12 +32,12 @@ namespace binary_search_trees
                 O(N)        // it skewed tree
         */
         // Insert function definition.
-        private NodeBinary Insert(NodeBinary root, int key)
+        private NodeBinary InsertBST(NodeBinary root, int key)
         {
             if (root == null) return new NodeBinary(key);
             // Insert data.
-            if (key > root.data) root.right = Insert(root.right, key);
-            else root.left = Insert(root.left, key);
+            if (key > root.data) root.right = InsertBST(root.right, key);
+            else root.left = InsertBST(root.left, key);
             return root;
         }
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace bit_manipulation
+namespace _15_bit_manipulation
 {
     public class _01_count_set_bits_in_num
     {

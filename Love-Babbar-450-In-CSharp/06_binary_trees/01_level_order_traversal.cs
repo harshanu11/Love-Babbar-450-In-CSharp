@@ -5,22 +5,21 @@ using System.Diagnostics;
 using System.Text;
 using Xunit;
 
-namespace binary_trees
+namespace _06_binary_trees
 {
     public class _01_level_order_traversal
     {
         [Fact]
         public void reverse_arrayTest()
         {
-            LoaclBinaryTree lbt = new LoaclBinaryTree();
-            NodeBinary root = lbt.newNode(1);
-            root.left = lbt.newNode(2);
-            root.right = lbt.newNode(3);
-            root.left.left = lbt.newNode(4);
-            root.left.right = lbt.newNode(5);
+            NodeBinary root = newNode(1);
+            root.left = newNode(2);
+            root.right = newNode(3);
+            root.left.left = newNode(4);
+            root.left.right = newNode(5);
 
             Console.Write("Level Order traversal of binary tree is \n");
-            lbt.printLevelOrderRecursive(root);
+            printLevelOrderRecursive(root);
             printLevelOrderQueue(root);
 
         }
@@ -52,5 +51,77 @@ namespace binary_trees
             }
         }
 
+        /* Print nodes at a current level */
+        /* Function protoypes */
+        public void printCurrentLevel(NodeBinary root, int level)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            if (level == 1)
+            {
+                Console.Write(root.data);
+                Console.Write(" ");
+            }
+            else if (level > 1)
+            {
+                printCurrentLevel(root.left, level - 1);
+                printCurrentLevel(root.right, level - 1);
+            }
+        }
+        /* CSompute the "height" of a tree -- the number of
+            nodes along the longest path from the root node
+            down to the farthest leaf node.*/
+
+        public int height(NodeBinary node)
+        {
+            if (node == null)
+            {
+                return 0;
+            }
+            else
+            {
+                /* compute the height of each subtree */
+                int lheight = height(node.left);
+                int rheight = height(node.right);
+
+                /* use the larger one */
+                if (lheight > rheight)
+                {
+                    return (lheight + 1);
+                }
+                else
+                {
+                    return (rheight + 1);
+                }
+            }
+        }
+
+        /* Helper function that allocates
+        a new node with the given data and
+        NULL left and right pointers. */
+
+        public NodeBinary newNode(int data)
+        {
+            NodeBinary Node = new NodeBinary(data);
+            Node.data = data;
+            Node.left = null;
+            Node.right = null;
+
+            return (Node);
+        }
+
+        /* Function to print level
+        order traversal a tree*/
+        public void printLevelOrderRecursive(NodeBinary root)
+        {
+            int h = height(root);
+            int i;
+            for (i = 1; i <= h; i++)
+            {
+                printCurrentLevel(root, i);
+            }
+        }
     }
 }

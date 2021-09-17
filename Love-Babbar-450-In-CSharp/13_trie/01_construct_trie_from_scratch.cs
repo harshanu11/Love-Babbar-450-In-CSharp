@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace trie
+namespace _13_trie
 {
     public class _01_construct_trie_from_scratch
     {
@@ -14,7 +15,7 @@ namespace trie
             // through 'z' and lower case)
             string[] keys = { "the", "a", "there", "answer", "any", "by", "bye", "their" };
             string[] output = { "Not present in trie", "Present in trie" };
-            root = new TrieNode();
+            root = new NodeTrie();
 
             // Construct trie
             int i;
@@ -40,20 +41,9 @@ namespace trie
         }
 
         // trie node
-        class TrieNode
-        {
-            static readonly int ALPHABET_SIZE = 26;
-            public TrieNode[] children = new TrieNode[ALPHABET_SIZE];
-            public bool isEndOfWord;
-            public TrieNode()
-            {
-                isEndOfWord = false;
-                for (int i = 0; i < ALPHABET_SIZE; i++)
-                    children[i] = null;
-            }
-        };
 
-        static TrieNode root;
+
+        static NodeTrie root;
 
         // If not present, inserts key into trie
         // If the key is prefix of trie node,
@@ -64,13 +54,13 @@ namespace trie
             int length = key.Length;
             int index;
 
-            TrieNode pCrawl = root;
+            NodeTrie pCrawl = root;
 
             for (level = 0; level < length; level++)
             {
                 index = key[level] - 'a';
                 if (pCrawl.children[index] == null)
-                    pCrawl.children[index] = new TrieNode();
+                    pCrawl.children[index] = new NodeTrie();
 
                 pCrawl = pCrawl.children[index];
             }
@@ -86,7 +76,7 @@ namespace trie
             int level;
             int length = key.Length;
             int index;
-            TrieNode pCrawl = root;
+            NodeTrie pCrawl = root;
 
             for (level = 0; level < length; level++)
             {

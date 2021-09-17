@@ -40,12 +40,30 @@
         {
             data = Data;
         }
+        public NodeBinary()
+        {
+        }
         public NodeBinary DeepCopy(NodeBinary data)
         {
             data = (NodeBinary)this.MemberwiseClone();
             //cl.cl2 = new CopyClassTest();
             //cl.num = 0;
             return data;
+        }
+        // ----------------------------------------------------------------------------------------------------------------------- //
+        /*
+            insert a node in BST
+            TC: O(log N)    // if its not skewed tree
+                O(N)        // it skewed tree
+        */
+        // Insert function definition.
+        public NodeBinary InsertBST(NodeBinary root, int key)
+        {
+            if (root == null) return new NodeBinary(key);
+            // Insert data.
+            if (key > root.data) root.right = InsertBST(root.right, key);
+            else root.left = InsertBST(root.left, key);
+            return root;
         }
     }
 }
