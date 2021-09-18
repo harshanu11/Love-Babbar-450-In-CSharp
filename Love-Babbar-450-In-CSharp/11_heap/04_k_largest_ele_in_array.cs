@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace _07_binary_search_trees
+namespace _11_heap
 {
-    public class _04_find_inorder_successor_predecessor_in_BST
+    public class _04_k_largest_ele_in_array
     {
         [Fact]
         public void reverse_arrayTest() { }

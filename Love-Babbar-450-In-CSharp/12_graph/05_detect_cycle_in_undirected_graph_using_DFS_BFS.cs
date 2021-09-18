@@ -1,0 +1,126 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using Xunit;
+
+namespace _12_graph
+{
+    public class _05_detect_cycle_in_undirected_graph_using_DFS_BFS
+    {
+		[Fact]
+		public void reverse_arrayTest() { }
+		/*
+			link: https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1
+
+			sol: https://www.geeksforgeeks.org/detect-cycle-undirected-graph/
+			sol (using bfs): https://www.geeksforgeeks.org/detect-cycle-in-an-undirected-graph-using-bfs/
+
+			video (using BFS): https://youtu.be/A8ko93TyOns?list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw
+			video (using DFS): https://youtu.be/Y9NFqI6Pzd4?list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw
+		*/
+
+		// ----------------------------------------------------------------------------------------------------------------------- //
+		/*
+			using BFS
+
+			TC: O(V + E)
+			SC: O(V + E)
+		*/
+		private bool checkCycle(int curr, List<int> vis, List<int>[] adj)
+	{
+		vis[curr] = 1;
+
+		Queue<Tuple<int, int>> q = new Queue<Tuple<int, int>>();
+		q.Enqueue(new Tuple<int, int>(curr, -1));
+
+		while (q.Count > 0)
+		{
+			Tuple<int, int> p = q.Peek();
+			q.Dequeue();
+
+			foreach (var i in adj[p.Item1])
+			{
+				if (vis[i] == 0)
+				{
+					vis[i] = 1;
+					q.Enqueue(new Tuple<int, int>(i, p.Item1));
+				}
+				else if (i != p.Item2)
+				{
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+	private bool isCycle(int V, List<int>[] adj)
+	{
+		List<int> vis = new List<int>(V);
+
+		for (int i = 0; i < V; i++)
+		{
+			if (vis[i] == 0)
+			{
+				if (checkCycle(i, vis, adj))
+				{
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
+
+
+
+	// ----------------------------------------------------------------------------------------------------------------------- //
+	/*
+		using DFS
+
+		TC: O(N + E)    // N or V both are same (vertices)
+		SC: O(N + E)
+	*/
+	private bool checkCycle(int curr, int prev, List<int> vis, List<int>[] adj)
+	{
+		vis[curr] = 1;
+
+		foreach (var i in adj[curr])
+		{
+			if (vis[i] == 0)
+			{
+				/*
+					hence here dont write  "return checkCycle().." as if false we will check for other nodes
+					as well
+				*/
+				if (checkCycle(curr, vis, adj))
+				{
+					return true;
+				}
+			}
+			// i is visited as well as it is not parent means it is cycle
+			else if (i != prev)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	private bool isCycle1(int V, List<int>[] adj)
+	{
+		List<int> vis = new List<int>(V);
+
+		for (int i = 0; i < V; i++)
+		{
+			if (vis[i] == 0)
+			{
+				if (checkCycle(i, -1, vis, adj))
+				{
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
+}
+}
