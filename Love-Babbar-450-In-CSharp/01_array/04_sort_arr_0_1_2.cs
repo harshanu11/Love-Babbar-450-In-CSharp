@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
@@ -9,11 +10,13 @@ namespace _01_array
     public class _04_sort_arr_0_1_2
     {
         [Fact]
-        public void reverse_arrayTest()
+        public void sort_arr_0_1_2_arrayTest()
         {
-			int n = 5;
+			int a = 5;
+			int b = 6;
+			a.Swap(ref b);
 			int[] arr = { 0, 2, 1, 2, 0 };
-			//sort012(arr, n);
+			sort012(arr);
 		}
 		/*
 			link: https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s4231/1
@@ -25,22 +28,18 @@ namespace _01_array
 			variation: 2-pointer
 		*/
 
-
-
 		// ----------------------------------------------------------------------------------------------------------------------- //
-		//C++ TO C# CONVERTER WARNING: The following #include directive was ignored:
-		//#include<bits/stdc++.h>
 
-		internal void sort012(int[] a, int n)
+		void sort012(int[] a)
 		{
-			int low = 0;
-			int high = n - 1;
-			int mid = 0;
+			int low = 0, high =a.Length - 1, mid = 0;
 			while (mid <= high)
 			{
 				if (a[mid] == 0)
 				{
-					//swap(a[mid++], a[low++]);
+					a[low].Swap(ref a[mid]);
+					low++;
+					mid++;
 				}
 				else if (a[mid] == 1)
 				{
@@ -48,17 +47,9 @@ namespace _01_array
 				}
 				else
 				{
-					//swap(a[mid], a[high--]);
+					a[mid].Swap(ref a[high]);
+					high--;
 				}
-				/* why not mid++ ?
-					ans: let's assume the one which with we are swapping is also 2 then after swapping in mid pos it will still be 2
-						hence solution is don't increment the mid until and unless it is equal to 1.
-				*/
-			}
-			for (int i = 0; i < n; i++)
-			{
-				Debug.Write(a[i]);
-				Debug.Write(" ");
 			}
 		}
 	}
