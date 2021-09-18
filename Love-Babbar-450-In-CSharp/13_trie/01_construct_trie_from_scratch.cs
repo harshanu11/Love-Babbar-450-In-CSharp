@@ -1,6 +1,7 @@
 ﻿using Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using Xunit;
 
@@ -24,20 +25,20 @@ namespace _13_trie
 
             // Search for different keys
             if (search("the") == true)
-                Console.WriteLine("the --- " + output[1]);
-            else Console.WriteLine("the --- " + output[0]);
+                Debug.WriteLine("the --- " + output[1]);
+            else Debug.WriteLine("the --- " + output[0]);
 
             if (search("these") == true)
-                Console.WriteLine("these --- " + output[1]);
-            else Console.WriteLine("these --- " + output[0]);
+                Debug.WriteLine("these --- " + output[1]);
+            else Debug.WriteLine("these --- " + output[0]);
 
             if (search("their") == true)
-                Console.WriteLine("their --- " + output[1]);
-            else Console.WriteLine("their --- " + output[0]);
+                Debug.WriteLine("their --- " + output[1]);
+            else Debug.WriteLine("their --- " + output[0]);
 
             if (search("thaw") == true)
-                Console.WriteLine("thaw --- " + output[1]);
-            else Console.WriteLine("thaw --- " + output[0]);
+                Debug.WriteLine("thaw --- " + output[1]);
+            else Debug.WriteLine("thaw --- " + output[0]);
         }
 
         // trie node

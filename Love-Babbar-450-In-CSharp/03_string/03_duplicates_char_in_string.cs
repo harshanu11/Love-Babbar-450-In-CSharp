@@ -65,7 +65,7 @@ namespace _03_string
 
 			for (int i = 0; i < NO_OF_CHARS; i++)
 				if (count[i] > 1)
-					Console.WriteLine((char)i + ", " +
+					Debug.WriteLine((char)i + ", " +
 								  "count = " + count[i]);
 		}
 		///----------------------------------------------
@@ -87,7 +87,7 @@ namespace _03_string
 			foreach (var it in count.OrderBy(key => key.Value))
 			{
 				if (it.Value > 1)
-					Console.WriteLine(it.Key + ", count = " +
+					Debug.WriteLine(it.Key + ", count = " +
 									  it.Value);
 			}
 		}

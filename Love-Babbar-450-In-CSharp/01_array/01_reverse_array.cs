@@ -29,6 +29,16 @@ namespace _01_array
             }
         }
         // TC: O(N)
+        private void rvereseArrayBit(int[] arr, int start, int end)
+        {
+            for (int a = 0; a < arr.Length/2; a++)
+            {
+                arr[a] = arr[a] ^ arr[arr.Length - 1 - a];
+                arr[arr.Length - 1 - a] = arr[a] ^ arr[arr.Length - 1 - a];
+                arr[a] = arr[a] ^ arr[arr.Length - 1 - a];
+            }
+        }
+        // TC: O(N)
         private void rvereseArrayRecursion(int[] arr, int start, int end)
         {
             if (start >= end) return;

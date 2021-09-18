@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using Xunit;
 
@@ -36,11 +37,11 @@ namespace _03_string
             // find will return 0th based index from where the substring will start.
             if (a.IndexOf(b) != -1)
             {
-                Console.Write("YES");
+                Debug.Write("YES");
             }
             else
             {
-                Console.Write("NO");
+                Debug.Write("NO");
             }
         }
 
@@ -58,13 +59,13 @@ namespace _03_string
             //rotate(b.GetEnumerator(), b.GetEnumerator() + idx, b.end());
             if (a == b)
             {
-                Console.Write("YES");
-                Console.Write("\n");
+                Debug.Write("YES");
+                Debug.Write("\n");
             }
             else
             {
-                Console.Write("NO");
-                Console.Write("\n");
+                Debug.Write("NO");
+                Debug.Write("\n");
             }
         }
 

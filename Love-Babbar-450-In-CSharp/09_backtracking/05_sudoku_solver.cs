@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using Xunit;
 
@@ -99,8 +100,8 @@ namespace _09_backtracking
 			{
 				for (int j = 0; j < N; j++)
 				{
-					Console.Write(grid[i][j]);
-					Console.Write(" ");
+					Debug.Write(grid[i][j]);
+					Debug.Write(" ");
 				}
 			}
 		}

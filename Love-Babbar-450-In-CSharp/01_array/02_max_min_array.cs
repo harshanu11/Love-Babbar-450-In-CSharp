@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using Xunit;
 
@@ -32,10 +33,10 @@ namespace _01_array
 					mn = arr[i];
 				}
 			}
-			Console.Write("MIN: ");
-			Console.Write(mn);
-			Console.Write(" MAX: ");
-			Console.Write(mx);
+			Debug.Write("MIN: ");
+			Debug.Write(mn);
+			Debug.Write(" MAX: ");
+			Debug.Write(mx);
 		}
     }
 }

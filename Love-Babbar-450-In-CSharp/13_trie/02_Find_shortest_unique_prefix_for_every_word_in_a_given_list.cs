@@ -1,6 +1,7 @@
 ﻿using Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using Xunit;
 
@@ -80,8 +81,8 @@ namespace _13_trie
                 prefix[ind] = '\0';
                 int i = 0;
                 while (prefix[i] != '\0')
-                    Console.Write(prefix[i++]);
-                Console.Write(" ");
+                    Debug.Write(prefix[i++]);
+                Debug.Write(" ");
                 return;
             }
 

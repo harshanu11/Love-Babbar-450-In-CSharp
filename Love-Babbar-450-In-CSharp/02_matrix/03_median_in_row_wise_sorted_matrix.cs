@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using Xunit;
 
@@ -27,7 +28,7 @@ namespace _02_matrix
               {2,6,9},
               {3,6,9} };
 
-            Console.WriteLine("Median is " +
+            Debug.WriteLine("Median is " +
                                binaryMedian(m, r, c));
         }
 

@@ -1,6 +1,7 @@
 ﻿using Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using Xunit;
 
@@ -32,9 +33,9 @@ namespace _05_linked_list
             head.next.next.next.next.next = head.next.next;
             bool found = detectLoop1(head);
             if (found)
-                Console.Write("Loop Found");
+                Debug.Write("Loop Found");
             else
-                Console.Write("No Loop Found");
+                Debug.Write("No Loop Found");
         }
         // ----------------------------------------------------------------------------------------------------------------------- //
         /*

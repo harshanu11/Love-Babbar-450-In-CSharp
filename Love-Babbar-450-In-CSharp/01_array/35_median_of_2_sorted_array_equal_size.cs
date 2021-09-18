@@ -72,15 +72,15 @@ private static void Main()
 	int n2 = ar2.Length;
 	if (n1 == n2)
 	{
-		Console.Write("Median is ");
-		Console.Write(getMedian(ar1, ar2, n1));
+		Debug.Write("Median is ");
+		Debug.Write(getMedian(ar1, ar2, n1));
 	}
 	else
 	{
-		Console.Write("Doesn't work for arrays");
-		Console.Write(" of unequal size");
+		Debug.Write("Doesn't work for arrays");
+		Debug.Write(" of unequal size");
 	}
-	Console.Read();
+	Debug.Read();
 }
 
 
@@ -169,13 +169,13 @@ private static void Main()
 	int n2 = ar2.Length;
 	if (n1 == n2)
 	{
-		Console.Write("Median is ");
-		Console.Write(getMedian(ar1, ar2, n1));
+		Debug.Write("Median is ");
+		Debug.Write(getMedian(ar1, ar2, n1));
 	}
 	else
 	{
-		Console.Write("Doesn't work for arrays ");
-		Console.Write("of unequal size");
+		Debug.Write("Doesn't work for arrays ");
+		Debug.Write("of unequal size");
 	}
 }
 
@@ -218,13 +218,13 @@ private static void Main()
 	int n2 = ar2.Length;
 	if (n1 == n2)
 	{
-		Console.Write("Median is ");
-		Console.Write(getMedian(ar1, ar2, n1));
+		Debug.Write("Median is ");
+		Debug.Write(getMedian(ar1, ar2, n1));
 	}
 	else
 	{
-		Console.Write("Doesn't work for arrays");
-		Console.Write(" of unequal size");
+		Debug.Write("Doesn't work for arrays");
+		Debug.Write(" of unequal size");
 	}
-	Console.Read();
+	Debug.Read();
 }

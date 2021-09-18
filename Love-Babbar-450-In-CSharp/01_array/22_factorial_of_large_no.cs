@@ -57,8 +57,8 @@ public static class GlobalMembers
 	{
 		if (n > DefineConstants.MAX)
 		{
-			Console.Write(" Integer Overflow");
-			Console.Write("\n");
+			Debug.Write(" Integer Overflow");
+			Debug.Write("\n");
 			return "";
 		}
 

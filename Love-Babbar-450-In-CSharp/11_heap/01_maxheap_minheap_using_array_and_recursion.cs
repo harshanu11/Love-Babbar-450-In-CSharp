@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using Xunit;
 
@@ -82,14 +83,14 @@ namespace _11_heap
         // representation of Heap
         internal void printHeap(int[] arr, int n)
         {
-            Console.Write("Array representation of Heap is:\n");
+            Debug.Write("Array representation of Heap is:\n");
 
             for (int i = 0; i < n; ++i)
             {
-                Console.Write(arr[i]);
-                Console.Write(" ");
+                Debug.Write(arr[i]);
+                Debug.Write(" ");
             }
-            Console.Write("\n");
+            Debug.Write("\n");
         }
     }
 }

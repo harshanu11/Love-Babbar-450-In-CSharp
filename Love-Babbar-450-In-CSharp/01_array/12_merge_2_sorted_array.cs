@@ -112,7 +112,7 @@ private void merge(int[] arr1, int[] arr2, int n, int m)
 
 	for (int i = 0; i < arr.Count; i++)
 	{
-		Console.Write(arr[i]);
-		Console.Write(" ");
+		Debug.Write(arr[i]);
+		Debug.Write(" ");
 	}
 }

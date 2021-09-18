@@ -159,7 +159,7 @@ namespace _09_backtracking
 
             if (solveMazeUtil(maze, 0, 0, sol, Size) == false)
             {
-                Console.Write("Solution doesn't exist");
+                Debug.Write("Solution doesn't exist");
                 return null;
             }
 
@@ -274,7 +274,7 @@ namespace _09_backtracking
 
             // Print all possible paths
             for (int i = 0; i < possiblePaths.Count; i++)
-                Console.Write(possiblePaths[i] + " ");
+                Debug.Write(possiblePaths[i] + " ");
         }
 
         // Driver code
@@ -386,7 +386,7 @@ namespace _09_backtracking
                 new int[] {-1, 0, 0, 0},
                 new int[] {0, 0, 0, 0}
             };
-            Console.Write(countPaths(maze));
+            Debug.Write(countPaths(maze));
         }
 
         internal class DefineConstants

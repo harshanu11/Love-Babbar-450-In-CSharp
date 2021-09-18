@@ -19,7 +19,7 @@ namespace _06_binary_trees
             root.left.left = o.newNode(4);
             root.left.right = o.newNode(5);
 
-            Console.Write("Level Order traversal of binary tree is \n");
+            Debug.Write("Level Order traversal of binary tree is \n");
             printLevelOrderRecursive(root);
             printLevelOrderQueue(root);
 
@@ -62,8 +62,8 @@ namespace _06_binary_trees
             }
             if (level == 1)
             {
-                Console.Write(root.data);
-                Console.Write(" ");
+                Debug.Write(root.data);
+                Debug.Write(" ");
             }
             else if (level > 1)
             {

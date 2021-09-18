@@ -1,6 +1,7 @@
 ﻿using Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using Xunit;
 
@@ -45,7 +46,7 @@ namespace _06_binary_trees
 				return;
 			}
 			inorder(root.left);
-			Console.Write("{0:D} ", root.data);
+			Debug.Write(root.data);
 			inorder(root.right);
 		}
 
@@ -82,13 +83,13 @@ namespace _06_binary_trees
 			tree.right = createNode(6);
 			tree.left.left = createNode(2);
 			tree.left.right = createNode(4);
-			Console.Write("Inorder of original tree: ");
+			Debug.Write("Inorder of original tree: ");
 			//inorder1(tree);
 
 			// Function call
 			mirrorTree(tree);
 
-			Console.Write("\nInorder of Miror tree: ");
+			Debug.Write("\nInorder of Miror tree: ");
 			//inorder1(tree);
 		}
 
@@ -114,7 +115,7 @@ namespace _06_binary_trees
 				return;
 			}
 			inorder(root.left);
-			Console.Write("{0:D} ", root.data);
+			Debug.Write(root.data);
 			inorder(root.right);
 		}
 
@@ -151,14 +152,14 @@ namespace _06_binary_trees
 			tree.left.right = createNode(4);
 
 			// Print inorder traversal of the input tree
-			Console.Write("Inorder of original tree: ");
+			Debug.Write("Inorder of original tree: ");
 			//inorder(tree);
 			//C++ TO C# CONVERTER TODO TASK: The typedef 'NodeBinary' was defined in multiple preprocessor conditionals and cannot be replaced in-line:
 			NodeBinary mirror = null;
 			mirrorify(tree, mirror);
 
 			// Print inorder traversal of the mirror tree
-			Console.Write("\nInorder of mirror tree: ");
+			Debug.Write("\nInorder of mirror tree: ");
 			//inorder(mirror);
 
 		}

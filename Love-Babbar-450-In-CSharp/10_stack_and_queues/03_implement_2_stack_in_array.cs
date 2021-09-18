@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using Xunit;
 
@@ -16,9 +17,9 @@ namespace _10_stack_and_queues
             ts.push2(15);
             ts.push1(11);
             ts.push2(7);
-            Console.Write("Popped element from stack1 is " + " : " + ts.pop1() + "\n");
+            Debug.Write("Popped element from stack1 is " + " : " + ts.pop1() + "\n");
             ts.push2(40);
-            Console.Write("Popped element from stack2 is " + ": " + ts.pop2() + "\n");
+            Debug.Write("Popped element from stack2 is " + ": " + ts.pop2() + "\n");
         }
 
     }
@@ -52,7 +53,7 @@ namespace _10_stack_and_queues
             }
             else
             {
-                Console.Write("Stack Overflow" + " By element :" + x + "\n");
+                Debug.Write("Stack Overflow" + " By element :" + x + "\n");
                 return;
             }
         }
@@ -71,7 +72,7 @@ namespace _10_stack_and_queues
             }
             else
             {
-                Console.Write("Stack Overflow" + " By element :" + x + "\n");
+                Debug.Write("Stack Overflow" + " By element :" + x + "\n");
                 return;
             }
         }
@@ -87,7 +88,7 @@ namespace _10_stack_and_queues
             }
             else
             {
-                Console.Write("Stack UnderFlow");
+                Debug.Write("Stack UnderFlow");
                 Environment.Exit(1);
             }
             return 0;
@@ -105,7 +106,7 @@ namespace _10_stack_and_queues
             }
             else
             {
-                Console.Write("Stack UnderFlow");
+                Debug.Write("Stack UnderFlow");
                 Environment.Exit(1);
             }
             return 1;

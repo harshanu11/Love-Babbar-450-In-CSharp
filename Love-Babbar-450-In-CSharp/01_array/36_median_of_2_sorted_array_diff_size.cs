@@ -83,7 +83,7 @@ private static void Main()
 	//C++ TO C# CONVERTER WARNING: This 'sizeof' ratio was replaced with a direct reference to the array length:
 	//ORIGINAL LINE: int n2 = sizeof(ar2) / sizeof(ar2[0]);
 	int n2 = ar2.Length;
-	Console.Write(getMedian(ar1, ar2, n1, n2));
+	Debug.Write(getMedian(ar1, ar2, n1, n2));
 }
 
 
@@ -243,7 +243,7 @@ private static void Main()
 	//ORIGINAL LINE: int M = sizeof(B) / sizeof(B[0]);
 	int M = B.Length;
 
-	Console.Write("{0:f}", findMedian(A, N, B, M));
+	Debug.Write("{0:f}", findMedian(A, N, B, M));
 }
 
 
@@ -314,6 +314,6 @@ private static void Main()
 	sort(arr3, arr3 + l);
 
 	// calling the method
-	Console.Write("Median = ");
-	Console.Write(Solution(arr3, l));
+	Debug.Write("Median = ");
+	Debug.Write(Solution(arr3, l));
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using Xunit;
 
@@ -56,8 +57,8 @@ namespace _01_array
 			}
 			for (int i = 0; i < n; i++)
 			{
-				Console.Write(a[i]);
-				Console.Write(" ");
+				Debug.Write(a[i]);
+				Debug.Write(" ");
 			}
 		}
 	}

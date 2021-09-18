@@ -29,8 +29,8 @@ private static void Main()
 			profit += sub;
 		}
 	}
-	Console.Write("Maximum Profit=");
-	Console.Write(profit);
+	Debug.Write("Maximum Profit=");
+	Debug.Write(profit);
 }
 
 

@@ -126,7 +126,7 @@ private static void Main()
 	int n = arr.Length;
 	int[] temp = new int[n];
 	int ans = _mergeSort(arr, temp, 0, n - 1);
-	Console.Write(" Number of inversions are ");
-	Console.Write(ans);
+	Debug.Write(" Number of inversions are ");
+	Debug.Write(ans);
 }
 

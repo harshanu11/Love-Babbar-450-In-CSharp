@@ -1,6 +1,7 @@
 ﻿using Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using Xunit;
 
@@ -98,8 +99,8 @@ namespace _05_linked_list
             NodeLL temp = head;
             while (temp != null)
             {
-                Console.Write(temp.data);
-                Console.Write(" ");
+                Debug.Write(temp.data);
+                Debug.Write(" ");
                 temp = temp.next;
             }
         }
@@ -232,8 +233,8 @@ namespace _05_linked_list
             j--;
             while (j != 0) // loop will break as soon as j=0
             {
-                Console.Write(arr[j--]);
-                Console.Write(" ");
+                Debug.Write(arr[j--]);
+                Debug.Write(" ");
             }
 
             return head;

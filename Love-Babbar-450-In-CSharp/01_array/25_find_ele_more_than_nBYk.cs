@@ -58,8 +58,8 @@ private void morethanNbyK(int[] arr, int n, int k)
 
 			// Print the key of whose value
 			// is greater than x
-			Console.Write(i.first);
-			Console.Write("\n");
+			Debug.Write(i.first);
+			Debug.Write("\n");
 		}
 	}
 }

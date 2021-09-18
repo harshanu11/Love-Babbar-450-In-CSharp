@@ -76,7 +76,7 @@ namespace _08_greedy
         {
             int i, j;
             int result = 1;
-            Console.Write("Following activities are selected : ");
+            Debug.Write("Following activities are selected : ");
 
             // The first activity always gets selected
             i = 0;

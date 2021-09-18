@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using Xunit;
 
@@ -26,7 +27,7 @@ namespace _11_heap
 
             heapSort(arr, n);
 
-            Console.Write("Sorted array is \n");
+            Debug.Write("Sorted array is \n");
             o.printHeap(arr, n);
         }
 
