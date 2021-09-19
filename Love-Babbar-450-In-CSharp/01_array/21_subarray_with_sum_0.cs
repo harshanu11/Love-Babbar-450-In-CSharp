@@ -10,12 +10,16 @@ namespace _01_array
         /*
             link: https://practice.geeksforgeeks.org/problems/subarray-with-0-sum-1587115621/1
 
-        Rearrange array in alternating positive & negative items with O(1) extra space | Set 1
-        Input:  arr[] = {1, 2, 3, -4, -1, 4}
-        Output: arr[] = {-4, 1, -1, 2, 3, 4}
-        
-        Input:  arr[] = {-5, -2, 5, 2, 4, 7, 1, 8, 0, -8}
-        output: arr[] = {-5, 5, -2, 2, -8, 4, 7, 1, 8, 0}
+       if there is a subarray (of size at-least one) with 0 sum.
+
+Example 1:
+
+Input:
+5
+4 2 -3 1 6
+
+Output: 
+Yes
         */
 
         [Fact] public void Test() { }

@@ -11,6 +11,8 @@ namespace _01_array
     link: https://practice.geeksforgeeks.org/problems/minimize-the-heights3351/1#
 
     sol: https://www.geeksforgeeks.org/minimize-the-maximum-difference-between-the-heights/
+
+        increase or decrease k only once in arr > sort > find diff max min
         Input:
         K = 2, N = 4
         Arr[] = {1, 5, 8, 10}

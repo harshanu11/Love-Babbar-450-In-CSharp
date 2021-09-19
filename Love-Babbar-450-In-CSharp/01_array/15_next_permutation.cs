@@ -12,15 +12,12 @@ namespace _01_array
 
             video: https://www.youtube.com/watch?v=LuLCLgMElus
 
-        Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.
-
-            If such an arrangement is not possible, it must rearrange it as the lowest possible order (i.e., sorted in ascending order).
-            
-            The replacement must be in place and use only constant extra memory.
+        Implement next permutation, 
+           
             
                     Example 1:
             
-            Input: nums = [1,2,3]
+            Input: nums = [1,2,3] = 123(current),132(next and ans) 213,231,312,321
             Output: [1,3,2]
             Example 2:
             

@@ -5,12 +5,12 @@ using Xunit;
 
 namespace _01_array
 {
-    public class _25_find_ele_more_than_nBYk
+    public class _25_find_ele_more_than_kTimes
     {
         /*
     link: https://practice.geeksforgeeks.org/problems/count-element-occurences/1
         Count More than n/k Occurences 
-        Given an array arr[] of size N and an element k. The task is to find all elements in array that appear more than n/k times.
+        find all elements in array that appear more than n/k times.
 
         Example 1:
         
