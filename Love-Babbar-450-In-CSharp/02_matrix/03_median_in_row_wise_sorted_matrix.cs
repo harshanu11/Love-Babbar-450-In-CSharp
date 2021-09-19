@@ -9,6 +9,8 @@ namespace _02_matrix
     public class _03_median_in_row_wise_sorted_matrix
     {
         /*
+         * Median: Median, on the other hand, can simply be defined as the number that is found in the middle of the set.
+         * Mean : avg
 			link: https://practice.geeksforgeeks.org/problems/median-in-a-row-wise-sorted-matrix1527/1
 			sol: https://www.geeksforgeeks.org/find-median-row-wise-sorted-matrix/
 			here logic was
@@ -21,36 +23,30 @@ namespace _02_matrix
 		*/
 
         [Fact]
-        public void Test()
+        public void Mean_arrayTest()
         {
             int r = 3, c = 3;
-            int[,] m = {{1,3,5},
+            int[,] matrix = {{1,3,5},
               {2,6,9},
               {3,6,9} };
 
-            Debug.WriteLine("Median is " +
-                               binaryMedian(m, r, c));
+            var ans = binaryMedian(matrix, r, c);
         }
 
-        static int binaryMedian(int[,] m,  int r, int c)
+        static int binaryMedian(int[,] matrix, int row, int col)
         {
             int max = int.MinValue;
             int min = int.MaxValue;
 
-            for (int i = 0; i < r; i++)
+            for (int i = 0; i < row; i++)
             {
-                // Finding the minimum
-                // element
-                if (m[i, 0] < min)
-                    min = m[i, 0];
-
-                // Finding the maximum
-                // element
-                if (m[i, c - 1] > max)
-                    max = m[i, c - 1];
+                if (matrix[i, 0] < min)
+                    min = matrix[i, 0];
+                if (matrix[i, col - 1] > max)
+                    max = matrix[i, col - 1];
             }
 
-            int desired = (r * c + 1) / 2;
+            int desired = (row * col + 1) / 2;// always odd so 
             while (min < max)
             {
                 int mid = min + (max - min) / 2;
@@ -59,10 +55,10 @@ namespace _02_matrix
 
                 // Find count of elements
                 // smaller than mid
-                for (int i = 0; i < r; ++i)
+                for (int i = 0; i < row; ++i)
                 {
                     get = Array.BinarySearch(
-                          GetRow(m, i), mid);
+                          GetRow(matrix, i), mid);
 
                     // If element is not found
                     // in the array the binarySearch()
@@ -84,8 +80,8 @@ namespace _02_matrix
                     // including the searched element.
                     else
                     {
-                        while (get < GetRow(m, i).GetLength(0) &&
-                              m[i, get] == mid)
+                        while (get < GetRow(matrix, i).GetLength(0) &&
+                              matrix[i, get] == mid)
                             get += 1;
                     }
 
@@ -100,8 +96,7 @@ namespace _02_matrix
             return min;
         }
 
-        public static int[] GetRow(int[,] matrix,
-                                   int row)
+        public static int[] GetRow(int[,] matrix, int row)
         {
             var rowLength = matrix.GetLength(1);
             var rowVector = new int[rowLength];
@@ -116,44 +111,44 @@ namespace _02_matrix
 
         // ----------------------------------------------------------------------------------------------------------------------- //
         // function to find median in the matrix
-        private int binaryMedian(List<List<int>> matrix, int r, int c)
-		{
-			int mn = int.MaxValue;
-			int mx = int.MinValue;
-			for (int i = 0; i < r; i++)
-			{
-				// Finding the minimum element
-				mn = Math.Min(mn, matrix[i][0]);
+        private int binaryMedian(List<List<int>> matrix, int row, int col)
+        {
+            int mn = int.MaxValue;
+            int mx = int.MinValue;
+            for (int i = 0; i < row; i++)
+            {
+                // Finding the minimum element
+                mn = Math.Min(mn, matrix[i][0]);
 
-				// Finding the maximum element
-				mx = Math.Max(mn, matrix[i][c - 1]);
-			}
+                // Finding the maximum element
+                mx = Math.Max(mn, matrix[i][col - 1]);
+            }
 
-			int desired = (r * c + 1) / 2;
-			while (mn < mx)
-			{
-				int mid = mn + (mx - mn) / 2;
-				int place = 0;
+            int desired = (row * col + 1) / 2;
+            while (mn < mx)
+            {
+                int mid = mn + (mx - mn) / 2;
+                int place = 0;
 
-				// Find count of elements smaller than mid
-				for (int i = 0; i < r; ++i)
-				{
-					//place += upper_bound(matrix[i].GetEnumerator(), matrix[i].GetEnumerator() + c, mid) - matrix[i].GetEnumerator();
-					// cout << i << ": " << curr << endl;
-				}
+                // Find count of elements smaller than mid
+                for (int i = 0; i < row; ++i)
+                {
+                    //place += upper_bound(matrix[i].GetEnumerator(), matrix[i].GetEnumerator() + c, mid) - matrix[i].GetEnumerator();
+                    // cout << i << ": " << curr << endl;
+                }
 
-				if (place < desired)
-				{
-					mn = mid + 1;
-				}
-				else
-				{
-					mx = mid;
-				}
-				// cout << mx << " " << mn << endl;
-			}
-			return mn;
-		}
+                if (place < desired)
+                {
+                    mn = mid + 1;
+                }
+                else
+                {
+                    mx = mid;
+                }
+                // cout << mx << " " << mn << endl;
+            }
+            return mn;
+        }
 
-	}
+    }
 }

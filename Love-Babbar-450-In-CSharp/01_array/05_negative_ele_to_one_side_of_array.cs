@@ -9,13 +9,15 @@ namespace _01_array
 {
     public class _05_negative_ele_to_one_side_of_array
     {
-		/*
+        /*
 			link: https://www.geeksforgeeks.org/move-negative-numbers-beginning-positive-end-constant-extra-space/
 
 			variation: 2-pointer
+        Input: -12, 11, -13, -5, 6, -7, 5, -3, -6
+        Output: -12 -13 -5 -7 -3 -6 11 6 5
 		*/
 
-		[Fact]
+        [Fact]
 		public void arrangeNegative_arrayTest() 
 		{
 			int[] arr = { -1, 2, -3, 4, 5, 6, -7, 8, 9 };

@@ -15,6 +15,10 @@ namespace _01_array
             sol: https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array/
             or
             refer heap/5th_kth....cpp
+            
+        arr[] = 7 10 4 3 20 15
+        K = 3
+            
         */
 
         [Fact]

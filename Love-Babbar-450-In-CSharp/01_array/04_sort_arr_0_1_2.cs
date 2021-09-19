@@ -9,7 +9,20 @@ namespace _01_array
 {
     public class _04_sort_arr_0_1_2
     {
-        [Fact]
+		/*
+			link: https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s4231/1
+
+			logic: iterate mid and if mid==0 then swap with low and then low++, mid++
+				   if mid==2 then swap with high and then high--, mid
+				   else mid++ as it would be 1.
+
+			variation: 2-pointer
+
+		arr[]= {0 2 1 2 0}
+		Output:
+		0 0 1 2 2
+		*/
+		[Fact]
         public void sort_arr_0_1_2_arrayTest()
         {
 			int a = 5;
@@ -18,15 +31,7 @@ namespace _01_array
 			int[] arr = { 0, 2, 1, 2, 0 };
 			sort012(arr);
 		}
-		/*
-			link: https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s4231/1
 
-			logic: iterate mid and if mid==0 then swap with low and then low++, mid++
-			       if mid==2 then swap with high and then high--, mid
-			       else mid++ as it would be 1.
-
-			variation: 2-pointer
-		*/
 
 		// ----------------------------------------------------------------------------------------------------------------------- //
 

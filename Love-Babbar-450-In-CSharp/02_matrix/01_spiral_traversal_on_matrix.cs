@@ -26,14 +26,39 @@ namespace _02_matrix
         [Fact]
         public void Spiral_MatrixTest()
         {
-            int[][] arr = new int[3][] { new int[]{ 1, 2, 3 }, new int[] { 4, 5, 6 }, new int[] { 7, 8, 9 } };
+            int[][] arr = new int[3][] { new int[] { 1, 2, 3 }, new int[] { 4, 5, 6 }, new int[] { 7, 8, 9 } };
             List<List<int>> lst = new List<List<int>>() { new List<int>() { 1, 2, 3 }, new List<int>() { 4, 5, 6 }, new List<int>() { 7, 8, 9 } };
-            var ans = SpiralOrder1(arr);
-            ans = spiralOrder3(arr,3,3);
-            ans = SpiralOrder2(lst,3,3);
-            ans = spiralOrder4(arr, 3,3);
+
+            var ans = spiralOrder(arr, 3, 3);
+            ans = SpiralOrder1(arr);
+            ans = spiralOrder3(arr, 3, 3);
+            ans = SpiralOrder2(lst, 3, 3);
         }
-        public IList<int> SpiralOrder1(int[][] matrix)
+        public List<int> spiralOrder(int[][] matrix, int row, int col)
+        {
+            List<int> res = new List<int>();
+            if (matrix == null || row == 0) return res;
+            int up = 0, down = row - 1;
+            int left = 0, right = col - 1;
+            while (res.Count < row * col)
+            {
+                for (int j = left; j <= right && res.Count < row * col; j++)
+                    res.Add(matrix[up][j]);
+
+                for (int i = up + 1; i <= down - 1 && res.Count < row * col; i++)
+                    res.Add(matrix[i][right]);
+
+                for (int j = right; j >= left && res.Count < row * col; j--)
+                    res.Add(matrix[down][j]);
+
+                for (int i = down - 1; i >= up + 1 && res.Count < row * col; i--)
+                    res.Add(matrix[i][left]);
+
+                left++; right--; up++; down--;
+            }
+            return res;
+        }
+        public List<int> SpiralOrder1(int[][] matrix)
         {
             var result = new List<int>();
             if (matrix.Length == 0 || matrix[0].Length == 0)
@@ -109,11 +134,11 @@ namespace _02_matrix
 
             return result;
         }
-        public IList<int> SpiralOrder2(List<List<int>> matrix, int r, int c)
+        public List<int> SpiralOrder2(List<List<int>> matrix, int r, int c)
         {
             var result = new List<int>();
-            if (r== 0 || c == 0) return result;
-            if (r== 1 || c == 1)
+            if (r == 0 || c == 0) return result;
+            if (r == 1 || c == 1)
             {
                 for (int row = 0; row < r; row++)
                 {
@@ -157,7 +182,7 @@ namespace _02_matrix
                 {
                     c--;
                     curDir = (curDir + 1) % 4;
-                }         
+                }
                 if (curCol == minCol && direction[curDir][1] == -1 && direction[curDir][0] == 0)
                 {
                     r--;
@@ -185,7 +210,7 @@ namespace _02_matrix
             int rowBegin = 0;
             int rowEnd = r - 1;
             int colBegin = 0;
-            int colEnd = c- 1;
+            int colEnd = c - 1;
 
             while (rowBegin <= rowEnd && colBegin <= colEnd)
             {
@@ -226,31 +251,7 @@ namespace _02_matrix
 
             return res;
         }
-        public List<int> spiralOrder4(int[][] matrix, int r, int c)
-        {
-            List<int> res = new List<int>();
-            if (matrix == null || r == 0) return res;
-            int n = r, m = c;
-            int up = 0, down = n - 1;
-            int left = 0, right = m - 1;
-            while (res.Count < n * m)
-            {
-                for (int j = left; j <= right && res.Count < n * m; j++)
-                    res.Add(matrix[up][j]);
-
-                for (int i = up + 1; i <= down - 1 && res.Count < n * m; i++)
-                    res.Add(matrix[i][right]);
-
-                for (int j = right; j >= left && res.Count < n * m; j--)
-                    res.Add(matrix[down][j]);
-
-                for (int i = down - 1; i >= up + 1 && res.Count < n * m; i--)
-                    res.Add(matrix[i][left]);
-
-                left++; right--; up++; down--;
-            }
-            return res;
-        }
+       
 
     }
 }
