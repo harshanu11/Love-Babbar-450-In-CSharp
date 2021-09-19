@@ -15,6 +15,16 @@
 
     here simple hashing function would be
     current_hash_value - ascii_of_char_we_want_to_discard + ascii_of_char_we_want_to_add
+
+Input:  txt[] = "THIS IS A TEST TEXT"
+        pat[] = "TEST"
+Output: Pattern found at index 10
+
+Input:  txt[] =  "AABAACAADAABAABA"
+        pat[] =  "AABA"
+Output: Pattern found at index 0
+        Pattern found at index 9
+        Pattern found at index 12
 */
 
 

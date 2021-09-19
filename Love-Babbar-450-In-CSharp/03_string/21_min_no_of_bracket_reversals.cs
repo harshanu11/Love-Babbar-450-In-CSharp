@@ -2,6 +2,12 @@
     link: https://practice.geeksforgeeks.org/problems/count-the-reversals0401/1#
 
     sol: https://www.geeksforgeeks.org/minimum-number-of-bracket-reversals-needed-to-make-an-expression-balanced/
+Input:
+S = "}{{}}{{{"
+Output: 3
+Explanation: One way to balance is:
+"{{{}}{}}". There is no balanced sequence
+that can be formed in lesser reversals.
 */
 
 

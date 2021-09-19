@@ -6,4 +6,10 @@
     sol refer to: 14_DP/46_all_count_palindromic_subsequence.cpp
 
     note: currently sol. is not working in practice.gfg but its correct.
+Input: 
+Str = "abcd"
+Output: 
+4
+Explanation:
+palindromic subsequence are : "a" ,"b", "c" ,"d"
 */

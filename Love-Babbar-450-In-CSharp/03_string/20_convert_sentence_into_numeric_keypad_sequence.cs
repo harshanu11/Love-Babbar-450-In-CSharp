@@ -1,7 +1,8 @@
 /*
     link: https://www.geeksforgeeks.org/convert-sentence-equivalent-mobile-numeric-keypad-sequence/
 
-
+Input : GEEKSFORGEEKS
+Output : 4333355777733366677743333557777
     this code was more dependent on pre-processing.
 */
 

@@ -15,7 +15,7 @@ namespace _01_array
         Implement next permutation, 
            
             
-                    Example 1:
+            Example 1:
             
             Input: nums = [1,2,3] = 123(current),132(next and ans) 213,231,312,321
             Output: [1,3,2]

@@ -1,5 +1,14 @@
 /*
     link: https://www.geeksforgeeks.org/split-the-binary-string-into-substrings-with-equal-number-of-0s-and-1s/
+        Input: str = “0100110101” 
+        Output: 4 
+        The required substrings are “01”, “0011”, “01” and “01”.
+        Input: str = “0111100010” 
+        Output: 3 
+        
+        Input: str = “0000000000” 
+        
+        Output: -1
 */
 
 

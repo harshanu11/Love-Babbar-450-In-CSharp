@@ -1,5 +1,27 @@
 /*
     link: https://www.geeksforgeeks.org/find-count-number-given-string-present-2d-character-array/
+nput : a ={
+            {D,D,D,G,D,D},
+            {B,B,D,E,B,S},
+            {B,S,K,E,B,K},
+            {D,D,D,D,D,E},
+            {D,D,D,D,D,E},
+            {D,D,D,D,D,G}
+           }
+        str= "GEEKS"
+Output :2
+
+Input : a = {
+            {B,B,M,B,B,B},
+            {C,B,A,B,B,B},
+            {I,B,G,B,B,B},
+            {G,B,I,B,B,B},
+            {A,B,C,B,B,B},
+            {M,C,I,G,A,M}
+            }
+        str= "MAGIC"
+
+Output :4
 */
 
 

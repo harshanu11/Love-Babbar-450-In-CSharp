@@ -1,9 +1,21 @@
-///*
+/*
 //    link: https://practice.geeksforgeeks.org/problems/word-wrap/0
 
 //    sol: https://www.geeksforgeeks.org/word-wrap-problem-dp-19/
 //    sol2: https://www.geeksforgeeks.org/word-wrap-problem-space-optimized-solution/
-//*/
+        She is my bestie
+        [3,2,6] 
+        if k = 6 after 6 it ll wrap new line 
+        
+        Input: nums = {3,2,2,5}, k = 6
+        Output: 10
+        Explanation: Given a line can have 6
+        characters,
+        Line number 1: From word no. 1 to 1
+        Line number 2: From word no. 2 to 3
+        Line number 3: From word no. 4 to 4
+        So total cost = (6-3)2 + (6-2-2-1)2 = 32+12 = 10.
+*/
 
 //// ----------------------------------------------------------------------------------------------------------------------- //
 

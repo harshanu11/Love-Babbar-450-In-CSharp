@@ -1,5 +1,12 @@
 /*
     link: https://practice.geeksforgeeks.org/problems/parenthesis-checker2744/1
+{([])}
+Output: 
+true
+Explanation: 
+{ ( [ ] ) }. Same colored brackets can form 
+balaced pairs, with 0 number of 
+unbalanced bracket.
 */
 
 
