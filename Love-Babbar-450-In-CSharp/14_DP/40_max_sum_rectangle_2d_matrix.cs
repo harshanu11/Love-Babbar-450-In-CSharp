@@ -1,8 +1,8 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/maximum-sum-rectangle/0#
+/*
+    link: https://practice.geeksforgeeks.org/problems/maximum-sum-rectangle/0#
 
-//    video: https://www.youtube.com/watch?v=kKEX4P53MyY
-//*/
+    video: https://www.youtube.com/watch?v=kKEX4P53MyY
+*/
 
 //// ----------------------------------------------------------------------------------------------------------------------- //
 

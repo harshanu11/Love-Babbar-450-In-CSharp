@@ -1,6 +1,6 @@
-///*
-//    link: https://www.geeksforgeeks.org/gold-mine-problem/
-//*/
+/*
+    link: https://www.geeksforgeeks.org/gold-mine-problem/
+*/
 
 
 

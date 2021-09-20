@@ -1,17 +1,18 @@
-///*
-//    link: https://www.geeksforgeeks.org/program-nth-catalan-number/
+/*
+    link: https://www.geeksforgeeks.org/program-nth-catalan-number/
 
-//    other variations:
-//    1. Count the number of expressions containing n pairs of parentheses which are correctly matched. For n = 3, possible expressions are ((())), ()(()), ()()(), (())(), (()()).
-//    2. Count the number of possible Binary Search Trees with n keys (See this)
-//    3. Count the number of full binary trees (A rooted binary tree is full if every vertex has either two children or no children) with n+1 leaves.
-//    4. Given a number n, return the number of ways you can draw n chords in a circle with 2 x n points such that no 2 chords intersect.
+    other variations:
+    1. Count the number of expressions containing n pairs of parentheses which are correctly matched. For n = 3, possible expressions are ((())), ()(()), ()()(), (())(), (()()).
+    2. Count the number of possible Binary Search Trees with n keys (See this)
+    3. Count the number of full binary trees (A rooted binary tree is full if every vertex has either two children or no children) with n+1 leaves.
+    4. Given a number n, return the number of ways you can draw n chords in a circle with 2 x n points such that no 2 chords intersect.
 
 
-//    recursive C(0)=1 C(n+1)=iteration{0 to n}C(i)C(n-i);
+    recursive C(0)=1 C(n+1)=iteration{0 to n}C(i)C(n-i);
 
-//    most optimized use at last: C(n) = (1/n+1) (2n C n)
-//*/
+    most optimized use at last: C(n) = (1/n+1) (2n C n)
+no are 1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 
+*/
 
 //// ----------------------------------------------------------------------------------------------------------------------- //
 

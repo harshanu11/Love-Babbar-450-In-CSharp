@@ -1,16 +1,16 @@
-///*
-//    link: https://www.geeksforgeeks.org/assembly-line-scheduling-dp-34/
+/*
+    link: https://www.geeksforgeeks.org/assembly-line-scheduling-dp-34/
 
-//    given data:
-//    a[] : time taken per station in same assembly line
-//    s[] : indicates the assembly line the station is on,
-//    t[] : transferring from line i at station j – 1 to station j on the other line takes time
-//    e[] : entry time of each line
-//    x[] : exit time of each line
+    given data:
+    a[] : time taken per station in same assembly line
+    s[] : indicates the assembly line the station is on,
+    t[] : transferring from line i at station j – 1 to station j on the other line takes time
+    e[] : entry time of each line
+    x[] : exit time of each line
 
-//    variation of 0/1 knapsack problem.
+    variation of 0/1 knapsack problem.
 
-//*/
+*/
 
 //// ----------------------------------------------------------------------------------------------------------------------- //
 

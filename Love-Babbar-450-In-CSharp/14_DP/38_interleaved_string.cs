@@ -1,8 +1,13 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/interleaved-strings/1
+/*
+    link: https://practice.geeksforgeeks.org/problems/interleaved-strings/1
 
-//    although its LCS variation but tweaked code of it will not work here.
-//*/
+    although its LCS variation but tweaked code of it will not work here.
+Input:
+A = XY, B = X, C = XXY
+Output: 1
+Explanation: XXY is interleaving of
+XY and X.
+*/
 
 //// ----------------------------------------------------------------------------------------------------------------------- //
 

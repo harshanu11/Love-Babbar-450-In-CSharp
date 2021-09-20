@@ -1,6 +1,11 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/maximum-difference-of-zeros-and-ones-in-binary-string4111/1
-//*/
+/*
+    link: https://practice.geeksforgeeks.org/problems/maximum-difference-of-zeros-and-ones-in-binary-string4111/1
+Input : S = "11000010001" 
+Output : 6 
+Explanatio: From index 2 to index 9, 
+there are 7 0s and 1 1s, so number 
+of 0s - number of 1s is 6. 
+*/
 
 //// ----------------------------------------------------------------------------------------------------------------------- //
 

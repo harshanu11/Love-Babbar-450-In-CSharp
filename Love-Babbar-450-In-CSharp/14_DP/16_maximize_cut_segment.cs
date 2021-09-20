@@ -1,8 +1,8 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/cutted-segments1642/1
+/*
+    link: https://practice.geeksforgeeks.org/problems/cutted-segments1642/1
 
-//    variation: unbounded DP
-//*/
+    variation: unbounded DP
+*/
 
 //// ----------------------------------------------------------------------------------------------------------------------- //
 
