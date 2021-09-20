@@ -1,8 +1,16 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/intersection-of-two-sorted-linked-lists/1
+/*
+    link: https://practice.geeksforgeeks.org/problems/intersection-of-two-sorted-linked-lists/1
 
-//    sol: https://www.geeksforgeeks.org/intersection-of-two-sorted-linked-lists/
-//*/
+    sol: https://www.geeksforgeeks.org/intersection-of-two-sorted-linked-lists/
+
+Input:
+L1 = 1->2->3->4->6
+L2 = 2->4->6->8
+Output: 2 4 6
+Explanation: For the given first two
+linked list, 2, 4 and 6 are the elements
+in the intersection.
+*/
 
 
 //// ----------------------------------------------------------------------------------------------------------------------- //

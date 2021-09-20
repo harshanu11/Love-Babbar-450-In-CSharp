@@ -1,10 +1,24 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/allocate-minimum-number-of-pages0937/1
+/*
+    link: https://practice.geeksforgeeks.org/problems/allocate-minimum-number-of-pages0937/1
 
-//    video [approach]: https://youtu.be/2JSQIhPcHQg
+    video [approach]: https://youtu.be/2JSQIhPcHQg
 
-//    ref: 30_painters_partition...
-//*/
+    ref: 30_painters_partition...
+
+Input:
+N = 4
+A[] = {12,34,67,90}
+M = 2
+Output:
+113
+Explanation: 
+Allocation can be done in following ways:
+{12} and {34, 67, 90} Maximum Pages = 191
+{12, 34} and {67, 90} Maximum Pages = 157
+{12, 34, 67} and {90}  Maximum Pages =113
+Therefore, the minimum of these cases is 
+113, which is selected as the output.
+*/
 
 
 

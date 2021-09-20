@@ -1,5 +1,14 @@
 /*
     link: https://www.geeksforgeeks.org/optimum-location-point-minimize-total-distance/#:~:text=We%20need%20to%20find%20a,set%20of%20points%20is%20minimum.&text=In%20above%20figure%20optimum%20location,is%20minimum%20obtainable%20total%20distance.
+Given a set of points as and a line as ax+by+c = 0. We need to find a point on given line for which sum of distances from given set of points is minimum. 
+
+ line l = new line(1, -1, -3);
+        int[, ] points = { { -3, -2 },
+                           { -1, 0 },
+                           { -1, 2 },
+                           { 1, 2 },
+                           { 3, 4 } };
+        Console.WriteLine(findOptimumCost(points, l));
 */
 
 

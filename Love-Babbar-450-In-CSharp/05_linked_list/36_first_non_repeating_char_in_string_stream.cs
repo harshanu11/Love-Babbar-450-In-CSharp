@@ -1,10 +1,10 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/first-non-repeating-character-in-a-stream1216/1#
+/*
+    link: https://practice.geeksforgeeks.org/problems/first-non-repeating-character-in-a-stream1216/1#
 
-//    sol(queue): https://www.geeksforgeeks.org/queue-based-approach-for-first-non-repeating-character-in-a-stream/
+    sol(queue): https://www.geeksforgeeks.org/queue-based-approach-for-first-non-repeating-character-in-a-stream/
 
-//    sol(DLL): https://www.geeksforgeeks.org/find-first-non-repeating-character-stream-characters/
-//*/
+    sol(DLL): https://www.geeksforgeeks.org/find-first-non-repeating-character-stream-characters/
+*/
 
 
 

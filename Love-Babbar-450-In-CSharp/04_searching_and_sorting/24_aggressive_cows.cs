@@ -1,8 +1,8 @@
-///*
-//    link: https://www.spoj.com/problems/AGGRCOW/
+/*
+    link: https://www.spoj.com/problems/AGGRCOW/
 
-//    video: https://youtu.be/Zwp6M5sl36Q
-//*/
+    video: https://youtu.be/Zwp6M5sl36Q
+*/
 
 
 //// ----------------------------------------------------------------------------------------------------------------------- //

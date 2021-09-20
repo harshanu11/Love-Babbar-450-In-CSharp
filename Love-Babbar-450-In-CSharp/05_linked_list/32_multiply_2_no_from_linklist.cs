@@ -1,8 +1,8 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/multiply-two-linked-lists/1
+/*
+    link: https://practice.geeksforgeeks.org/problems/multiply-two-linked-lists/1
 
-//    sol: https://www.geeksforgeeks.org/multiply-two-numbers-represented-linked-lists/
-//*/
+    sol: https://www.geeksforgeeks.org/multiply-two-numbers-represented-linked-lists/
+*/
 
 
 //// ----------------------------------------------------------------------------------------------------------------------- //

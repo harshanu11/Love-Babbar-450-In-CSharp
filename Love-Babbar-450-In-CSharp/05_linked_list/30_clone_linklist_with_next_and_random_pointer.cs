@@ -1,12 +1,12 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/clone-a-linked-list-with-next-and-random-pointer/1
+/*
+    link: https://practice.geeksforgeeks.org/problems/clone-a-linked-list-with-next-and-random-pointer/1
 
-//    sol1 (overview of some methods): https://www.geeksforgeeks.org/a-linked-list-with-next-and-arbit-pointer/
-//    sol2 (for constant space sol.): https://www.geeksforgeeks.org/clone-linked-list-next-random-pointer-o1-space/
-//    sol3 (for hashing sol.): https://www.geeksforgeeks.org/clone-linked-list-next-arbit-pointer-set-2/
+    sol1 (overview of some methods): https://www.geeksforgeeks.org/a-linked-list-with-next-and-arbit-pointer/
+    sol2 (for constant space sol.): https://www.geeksforgeeks.org/clone-linked-list-next-random-pointer-o1-space/
+    sol3 (for hashing sol.): https://www.geeksforgeeks.org/clone-linked-list-next-arbit-pointer-set-2/
 
-//    video: https://youtu.be/VNf6VynfpdM
-//*/
+    video: https://youtu.be/VNf6VynfpdM
+*/
 
 
 

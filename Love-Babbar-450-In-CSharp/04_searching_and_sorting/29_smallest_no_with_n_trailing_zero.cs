@@ -1,11 +1,19 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/smallest-factorial-number5929/1#
+/*
+    link: https://practice.geeksforgeeks.org/problems/smallest-factorial-number5929/1#
 
-//    sol: https://www.geeksforgeeks.org/smallest-number-least-n-trailing-zeroes-factorial/
+    sol: https://www.geeksforgeeks.org/smallest-number-least-n-trailing-zeroes-factorial/
 
-//    logic: Trailing 0s in x! = Count of 5s in prime factors of x! =
-//             floor(x/5) + floor(x/25) + floor(x/125) + ....
-//*/
+    logic: Trailing 0s in x! = Count of 5s in prime factors of x! =
+             floor(x/5) + floor(x/25) + floor(x/125) + ....
+Example 1:
+
+Input: A = 1, B = 3, C = 2
+Output: 1
+Explaination: 3 is the second term of the 
+sequence starting with 1 and having a common 
+difference 2.
+
+*/
 
 
 

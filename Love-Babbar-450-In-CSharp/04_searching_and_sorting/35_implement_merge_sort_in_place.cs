@@ -1,22 +1,25 @@
-///*
-//    link: https://www.geeksforgeeks.org/in-place-merge-sort/
+/*
+    link: https://www.geeksforgeeks.org/in-place-merge-sort/
 
 
-//    merge-sort-in-place
-//    In-place means it does not occupy extra memory for merge operation as in the standard case.
+    merge-sort-in-place
+    In-place means it does not occupy extra memory for merge operation as in the standard case.
 
 
-//    space-complexity: https://youtu.be/aThGJFgk59E
-//    time-complexity: https://youtu.be/MBxqi6GrfN8
+    space-complexity: https://youtu.be/aThGJFgk59E
+    time-complexity: https://youtu.be/MBxqi6GrfN8
 
-//    same as below but with space complexity of O(N): https://youtu.be/aDX3MFL0tYs
+    same as below but with space complexity of O(N): https://youtu.be/aDX3MFL0tYs
 
-//    how modulo part works in code given below:
+    how modulo part works in code given below:
 
-//    for eg. mx = 5 and ele = 3;
-//    then [ele + (ele * mx)] => 3 + 3*5 = 18
-//    now when we want to retrieve => ele % mx = 18%5 => 3.
-//*/
+    for eg. mx = 5 and ele = 3;
+    then [ele + (ele * mx)] => 3 + 3*5 = 18
+    now when we want to retrieve => ele % mx = 18%5 => 3.
+
+Input: arr[] = {2, 3, 4, 1} 
+Output: 1 2 3 4
+*/
 
 
 //// ----------------------------------------------------------------------------------------------------------------------- //

@@ -1,8 +1,9 @@
-///*
-//    link: https://www.spoj.com/problems/PRATA/
+/*
+    link: https://www.spoj.com/problems/PRATA/
 
-//    video: https://youtu.be/-Nx1h54KzUQ
-//*/
+    video: https://youtu.be/-Nx1h54KzUQ
+min time to get order done
+*/
 
 
 //// ----------------------------------------------------------------------------------------------------------------------- //

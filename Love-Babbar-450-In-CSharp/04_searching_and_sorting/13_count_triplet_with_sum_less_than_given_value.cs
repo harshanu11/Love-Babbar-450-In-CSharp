@@ -1,8 +1,13 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/count-triplets-with-sum-smaller-than-x5549/1
+/*
+    link: https://practice.geeksforgeeks.org/problems/count-triplets-with-sum-smaller-than-x5549/1
 
-//    same code can be used for printing the triplets.
-//*/
+    same code can be used for printing the triplets.
+Input: N = 4, X = 2
+arr[] = {-2, 0, 1, 3}
+Output:  2
+Explanation: Below are triplets with 
+sum less than 2 (-2, 0, 1) and (-2, 0, 3). 
+*/
 
 
 //// ----------------------------------------------------------------------------------------------------------------------- //

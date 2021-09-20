@@ -1,8 +1,8 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/sort-a-linked-list/1
+/*
+    link: https://practice.geeksforgeeks.org/problems/sort-a-linked-list/1
 
-//    sol: https://www.geeksforgeeks.org/merge-sort-for-linked-list/
-//*/
+    sol: https://www.geeksforgeeks.org/merge-sort-for-linked-list/
+*/
 
 
 

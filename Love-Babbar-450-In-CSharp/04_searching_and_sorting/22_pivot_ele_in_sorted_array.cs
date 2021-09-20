@@ -1,9 +1,10 @@
-///*
-//    link: http://theoryofprogramming.com/2017/12/16/find-pivot-element-sorted-rotated-array/
+/*
+    link: http://theoryofprogramming.com/2017/12/16/find-pivot-element-sorted-rotated-array/
 
-//    note: The pivot element is basically, the largest element in an array
-//    still it depends upon the question
-//*/
+    note: The pivot element is basically, the largest element in an array
+    still it depends upon the question
+pivot element ll be largest ele bcz its sorted array
+*/
 
 
 //// ----------------------------------------------------------------------------------------------------------------------- //

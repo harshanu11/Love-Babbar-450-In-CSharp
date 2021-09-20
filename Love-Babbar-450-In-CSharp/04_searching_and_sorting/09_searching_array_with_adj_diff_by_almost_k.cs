@@ -1,6 +1,17 @@
-///*
-//    link: https://www.geeksforgeeks.org/searching-array-adjacent-differ-k/
-//*/
+/*
+    link: https://www.geeksforgeeks.org/searching-array-adjacent-differ-k/
+Input : arr[] = {4, 5, 6, 7, 6}
+           k = 1
+           x = 6
+Output : 2
+The first index of 6 is 2.
+
+Input : arr[] = {20, 40, 50, 70, 70, 60}  
+          k = 20
+          x = 60
+Output : 5
+The index of 60 is 5
+*/
 
 
 //// ----------------------------------------------------------------------------------------------------------------------- //

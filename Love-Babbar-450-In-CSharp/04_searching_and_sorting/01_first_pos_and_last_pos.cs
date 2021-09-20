@@ -7,6 +7,9 @@ namespace _04_searching_and_sorting
 {
     /*
     link: https://practice.geeksforgeeks.org/problems/first-and-last-occurrences-of-x3116/1
+    x=5
+arr[] = { 1, 3, 5, 5, 5, 5, 67, 123, 125 }
+Output:  2 5
 */
 
     public class _01_first_pos_and_last_pos

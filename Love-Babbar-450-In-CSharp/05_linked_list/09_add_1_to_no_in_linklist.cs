@@ -1,8 +1,12 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/add-1-to-a-number-represented-as-linked-list/1
+/*
+    link: https://practice.geeksforgeeks.org/problems/add-1-to-a-number-represented-as-linked-list/1
 
-//    sol: https://www.geeksforgeeks.org/add-1-number-represented-linked-list/
-//*/
+    sol: https://www.geeksforgeeks.org/add-1-number-represented-linked-list/
+
+Input:
+LinkedList: 1->2->3
+Output: 124 
+*/
 
 
 //// ----------------------------------------------------------------------------------------------------------------------- //

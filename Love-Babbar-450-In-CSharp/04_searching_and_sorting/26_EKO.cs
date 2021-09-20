@@ -1,8 +1,8 @@
-///*
-//    link: https://www.spoj.com/problems/EKO/
+/*
+    link: https://www.spoj.com/problems/EKO/
 
-//    video: https://youtu.be/tkoucfh10SI
-//*/
+    video: https://youtu.be/tkoucfh10SI
+*/
 
 
 

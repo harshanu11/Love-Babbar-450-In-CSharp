@@ -1,12 +1,20 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/arithmetic-number2815/1
+/*
+    link: https://practice.geeksforgeeks.org/problems/arithmetic-number2815/1
 
-//    nth no. in AP = a0 + (n-1) d.
+    nth no. in AP = a0 + (n-1) d.
 
-//    so here (b = a + (n-1)*d) where n should be integer.
+    so here (b = a + (n-1)*d) where n should be integer.
 
-//    n = (b-a)/c + 1;
-//*/
+    n = (b-a)/c + 1;
+
+Example 1:
+
+Input: A = 1, B = 3, C = 2
+Output: 1
+Explaination: 3 is the second term of the 
+sequence starting with 1 and having a common 
+difference 2.
+*/
 
 
 

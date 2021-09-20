@@ -1,9 +1,20 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/add-two-numbers-represented-by-linked-lists/1
+/*
+    link: https://practice.geeksforgeeks.org/problems/add-two-numbers-represented-by-linked-lists/1
 
-//    sol: https://www.geeksforgeeks.org/add-two-numbers-represented-by-linked-lists/
-//    sol2: https://www.geeksforgeeks.org/sum-of-two-linked-lists/
-//*/
+    sol: https://www.geeksforgeeks.org/add-two-numbers-represented-by-linked-lists/
+    sol2: https://www.geeksforgeeks.org/sum-of-two-linked-lists/
+
+Input:
+N = 2
+valueN[] = {4,5}
+M = 3
+valueM[] = {3,4,5}
+Output: 3 9 0  
+Explanation: For the given two linked
+list (4 5) and (3 4 5), after adding
+the two linked list resultant linked
+list will be (3 9 0).
+*/
 
 
 

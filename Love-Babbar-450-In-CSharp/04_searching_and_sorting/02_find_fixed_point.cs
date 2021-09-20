@@ -21,6 +21,12 @@ namespace _04_searching_and_sorting
             sol(this is for single point): https://www.geeksforgeeks.org/find-a-fixed-point-in-a-given-array/
 
             here we have to find all the point fulfilling the condition
+
+        value is equal to that of its index value.
+
+        Arr[] = {15, 2, 45, 12, 7}
+Output: 2
+Explanation: Only Arr[2] = 2 exists here.S
         */
 
 

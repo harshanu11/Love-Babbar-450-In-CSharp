@@ -1,8 +1,17 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/majority-element-1587115620/1#
+/*
+    link: https://practice.geeksforgeeks.org/problems/majority-element-1587115620/1#
 
-//    sol: https://www.geeksforgeeks.org/majority-element/
-//*/
+    sol: https://www.geeksforgeeks.org/majority-element/
+ A majority element in an array A of size N is an element that appears more than N/2 times in the array
+N = 5 
+A[] = {3,1,3,3,2} 
+Output:
+3
+Explanation:
+Since, 3 is present more
+than N/2 times, so it is 
+the majority element.
+*/
 
 
 //// ----------------------------------------------------------------------------------------------------------------------- //

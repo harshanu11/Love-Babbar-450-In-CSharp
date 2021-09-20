@@ -9,6 +9,8 @@ namespace _04_searching_and_sorting
     {
 		/*
 			link: https://leetcode.com/problems/search-in-rotated-sorted-array/
+		Input: nums = [4,5,6,7,0,1,2], target = 0
+		Output: 4
 		*/
 
 		[Fact]

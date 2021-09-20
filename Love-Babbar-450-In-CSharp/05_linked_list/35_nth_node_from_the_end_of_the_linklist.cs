@@ -1,8 +1,8 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/nth-node-from-end-of-linked-list/1
+/*
+    link: https://practice.geeksforgeeks.org/problems/nth-node-from-end-of-linked-list/1
 
-//    sol: https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/
-//*/
+    sol: https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/
+*/
 
 
 

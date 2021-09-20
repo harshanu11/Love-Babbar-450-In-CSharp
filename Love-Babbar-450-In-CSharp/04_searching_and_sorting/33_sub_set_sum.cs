@@ -1,8 +1,8 @@
-///*
-//    link: https://www.spoj.com/problems/SUBSUMS/
+/*
+    link: https://www.spoj.com/problems/SUBSUMS/
 
-//    video: https://youtu.be/VCZ4lqfZRPk
-//*/
+    video: https://youtu.be/VCZ4lqfZRPk
+*/
 
 
 //// ----------------------------------------------------------------------------------------------------------------------- //

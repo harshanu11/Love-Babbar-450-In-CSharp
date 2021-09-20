@@ -1,10 +1,15 @@
-///*
+/*
 //    link: https://practice.geeksforgeeks.org/problems/find-missing-and-repeating2512/1#
 
 //    sol: https://www.geeksforgeeks.org/find-a-repeating-and-a-missing-number/
 
 //    plz refer to sol. link it has other awesome solutions
-//*/
+N = 3
+Arr[] = {1, 3, 3}
+Output: 3 2
+Explanation: Repeating number is 3 and 
+smallest positive missing number is 2.
+*/
 
 
 //// ----------------------------------------------------------------------------------------------------------------------- //

@@ -1,8 +1,8 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/flattening-a-linked-list/1
+/*
+    link: https://practice.geeksforgeeks.org/problems/flattening-a-linked-list/1
 
-//    sol: https://www.geeksforgeeks.org/flattening-a-linked-list/
-//*/
+    sol: https://www.geeksforgeeks.org/flattening-a-linked-list/
+*/
 
 
 //// ----------------------------------------------------------------------------------------------------------------------- //

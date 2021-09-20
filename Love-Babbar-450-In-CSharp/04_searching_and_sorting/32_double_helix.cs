@@ -1,8 +1,12 @@
-///*
-//    link: https://www.spoj.com/problems/ANARC05B/
+﻿/*
+    link: https://www.spoj.com/problems/ANARC05B/
 
-//    video: https://youtu.be/w-6YHcGmSxM
-//*/
+    video: https://youtu.be/w-6YHcGmSxM
+First= 3 5 7* 9 20 25* 30 40 55* 56 57* 60 62
+Second= 1 4 7* 11 14 25* 44 47 55* 57* 100   where * is intersection point
+
+ﬁnding a path that produces the maximum sum of data you walked over.
+*/
 
 
 //// ----------------------------------------------------------------------------------------------------------------------- //

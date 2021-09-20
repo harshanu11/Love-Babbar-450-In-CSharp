@@ -1,15 +1,15 @@
-///*
-//    link: https://leetcode.com/problems/middle-of-the-linked-list/submissions/
+/*
+    link: https://leetcode.com/problems/middle-of-the-linked-list/submissions/
 
 
-//    case 1: fast->next will be NULL
-//            1->2->3->4->5       when fast->next will be NULL slow will be at 3.
+    case 1: fast->next will be NULL
+            1->2->3->4->5       when fast->next will be NULL slow will be at 3.
 
-//    case 2: fast->next->next will be NULL
-//            1->2->3->4->5->6    when fast->next->next will be NULL slow will be at 4.
+    case 2: fast->next->next will be NULL
+            1->2->3->4->5->6    when fast->next->next will be NULL slow will be at 4.
 
 
-//*/
+*/
 
 
 //// ----------------------------------------------------------------------------------------------------------------------- //

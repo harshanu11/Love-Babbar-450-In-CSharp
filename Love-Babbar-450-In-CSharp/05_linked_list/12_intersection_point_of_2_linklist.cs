@@ -1,8 +1,8 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/intersection-point-in-y-shapped-linked-lists/1#
+/*
+    link: https://practice.geeksforgeeks.org/problems/intersection-point-in-y-shapped-linked-lists/1#
 
-//    sol: https://www.geeksforgeeks.org/write-a-function-to-get-the-intersection-point-of-two-linked-lists/
-//*/
+    sol: https://www.geeksforgeeks.org/write-a-function-to-get-the-intersection-point-of-two-linked-lists/
+*/
 
 
 //// ----------------------------------------------------------------------------------------------------------------------- //
