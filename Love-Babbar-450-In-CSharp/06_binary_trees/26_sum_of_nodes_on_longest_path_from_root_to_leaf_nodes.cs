@@ -1,8 +1,8 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/sum-of-the-longest-bloodline-of-a-tree/1
+/*
+    link: https://practice.geeksforgeeks.org/problems/sum-of-the-longest-bloodline-of-a-tree/1
 
-//    sol: https://www.geeksforgeeks.org/sum-nodes-longest-path-root-leaf-node/
-//*/
+    sol: https://www.geeksforgeeks.org/sum-nodes-longest-path-root-leaf-node/
+*/
 
 
 

@@ -1,6 +1,16 @@
-///*
-//    link: https://www.geeksforgeeks.org/maximum-sum-nodes-binary-tree-no-two-adjacent/
-//*/
+/*
+    link: https://www.geeksforgeeks.org/maximum-sum-nodes-binary-tree-no-two-adjacent/
+
+      Node root = new Node(1);
+        root.left = new Node(2);
+        root.right = new Node(3);
+        root.right.left = new Node(4);
+        root.right.right = new Node(5);
+        root.left.left = new Node(1);    
+        Console.Write(getMaxSum(root));
+
+output 11
+*/
 
 
 

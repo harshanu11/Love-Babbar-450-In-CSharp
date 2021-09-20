@@ -1,6 +1,25 @@
-///*
-//    link: https://www.geeksforgeeks.org/print-k-sum-paths-binary-tree/
-//*/
+/*
+    link: https://www.geeksforgeeks.org/print-k-sum-paths-binary-tree/
+Input : k = 5  
+        Root of below binary tree:
+           1
+        /     \
+      3        -1
+    /   \     /   \
+   2     1   4     5                        
+        /   / \     \                    
+       1   1   2     6    
+                       
+Output :
+3 2 
+3 1 1 
+1 3 1 
+4 1 
+1 -1 4 1 
+-1 4 2 
+5 
+1 -1 5 S
+*/
 
 
 

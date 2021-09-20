@@ -1,7 +1,7 @@
-///*
-//    link: https://www.geeksforgeeks.org/kth-ancestor-node-binary-tree/
-//    link: https://www.geeksforgeeks.org/kth-ancestor-node-binary-tree-set-2/
-//*/
+/*
+    link: https://www.geeksforgeeks.org/kth-ancestor-node-binary-tree/
+    link: https://www.geeksforgeeks.org/kth-ancestor-node-binary-tree-set-2/
+*/
 
 
 

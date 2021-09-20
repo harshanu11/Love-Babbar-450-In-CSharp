@@ -1,8 +1,15 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/check-if-tree-is-isomorphic/1
+/*
+    link: https://practice.geeksforgeeks.org/problems/check-if-tree-is-isomorphic/1
 
-//    sol: https://www.geeksforgeeks.org/tree-isomorphism-problem/
-//*/
+    sol: https://www.geeksforgeeks.org/tree-isomorphism-problem/
+Input:
+T1    1     T2:    1
+    /  \         /   \
+   2    3       3     2
+  /                    \
+  4                     4
+Output: Yes
+*/
 
 
 
