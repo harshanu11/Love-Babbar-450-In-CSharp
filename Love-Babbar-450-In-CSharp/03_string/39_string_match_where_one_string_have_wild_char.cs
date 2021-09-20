@@ -2,6 +2,12 @@
     link: https://practice.geeksforgeeks.org/problems/wildcard-string-matching1126/1#
 
     sol: https://www.geeksforgeeks.org/wildcard-pattern-matching/
+
+Input: wild = ge*ks
+       pattern = geeks
+Output: Yes
+Explanation: Replace the '*' with 'e' to obtain 
+the string.
 */
 
 

@@ -1,5 +1,6 @@
 /*
     link: https://www.geeksforgeeks.org/find-count-number-given-string-present-2d-character-array/
+find word from matrix in nay direction recursively 
 nput : a ={
             {D,D,D,G,D,D},
             {B,B,D,E,B,S},
@@ -22,6 +23,13 @@ Input : a = {
         str= "MAGIC"
 
 Output :4
+Algorithm : 
+1- Traverse matrix character by character and take one character as string start 
+2- For each character find the string in all the four directions recursively 
+3- If a string found, we increase the count 
+4- When we are done with one character as start, we repeat the same process for the next character 
+5- Calculate the sum of count for each character 
+6- Final count will be the answer
 */
 
 

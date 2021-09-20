@@ -1,5 +1,12 @@
 /*
     link: https://practice.geeksforgeeks.org/problems/consecutive-elements2306/1
+Input:
+S = aabb
+Output:  ab 
+Explanation: 'a' at 2nd position is
+appearing 2nd time consecutively.
+Similiar explanation for b at
+4th position.
 */
 
 

@@ -1,5 +1,6 @@
 /*
     link:   https://www.geeksforgeeks.org/boyer-moore-algorithm-for-pattern-searching/
+boyer_moore_ algo  for text fing in notepad
 */
 
 

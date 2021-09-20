@@ -1,5 +1,23 @@
 /*
     link: https://practice.geeksforgeeks.org/problems/find-the-string-in-grid0111/1
+
+find word from matrix in nay direction recursively 
+
+Input: grid = {{a,b,c},{d,r,f},{g,h,i}},
+word = "abc"
+Output: {{0,0}}
+Expalnation: From (0,0) one can find "abc"
+in horizontally right direction.
+Example 2:
+
+Input: grid = {{a,b,a,b},{a,b,e,b},{e,b,e,b}}
+,word = "abe"
+Output: {{0,0},{0,2},{1,0}}
+Explanation: From (0,0) one can find "abe" in 
+right-down diagonal. From (0,2) one can
+find "abe" in left-down diagonal. From
+(1,0) one can find "abe" in Horizontally right 
+direction.
 */
 
 

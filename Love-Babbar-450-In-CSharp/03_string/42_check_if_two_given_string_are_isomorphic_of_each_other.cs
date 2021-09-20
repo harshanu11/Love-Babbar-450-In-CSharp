@@ -1,5 +1,24 @@
 /*
     link: https://practice.geeksforgeeks.org/problems/isomorphic-strings-1587115620/1
+Input:
+str1 = aab
+str2 = xxy
+Output: 1
+Explanation: There are two different
+charactersin aab and xxy, i.e a and b
+with frequency 2and 1 respectively.
+Example 2:
+
+Input:
+str1 = aab
+str2 = xyz
+Output: 0
+Explanation: There are two different
+charactersin aab but there are three
+different charactersin xyz. So there
+won't be one to one mapping between
+str1 and str2.
+
 */
 
 

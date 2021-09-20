@@ -2,6 +2,16 @@
     link: https://practice.geeksforgeeks.org/problems/smallest-distant-window3132/1
 
     sol: https://www.geeksforgeeks.org/smallest-window-contains-characters-string/
+Given a string 's'. The task is to find the smallest window length that contains all the characters of the given string at least one time.
+For eg. A = “aabcbcdbca”, then the result would be 4 as of the smallest window will be “dbca”.
+
+ 
+
+Example 1:
+
+Input : "AABBBCBBAC"
+Output : 3
+Explanation : Sub-string -> "BAC"
 */
 
 
