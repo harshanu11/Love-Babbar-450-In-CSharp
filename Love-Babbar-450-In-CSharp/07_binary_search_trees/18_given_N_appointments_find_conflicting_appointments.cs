@@ -1,13 +1,13 @@
-///*
-//    link: https://www.geeksforgeeks.org/given-n-appointments-find-conflicting-appointments/
-//*/
+/*
+    link: https://www.geeksforgeeks.org/given-n-appointments-find-conflicting-appointments/
+*/
 
-//// ----------------------------------------------------------------------------------------------------------------------- //
-///*
-//    A Simple Solution is to one by one process all appointments from the second appointment to last.
-//    For every appointment i, check if it conflicts with i-1, i-2, … 0.
-//    The time complexity of this method is O(n2).
-//*/
+// ----------------------------------------------------------------------------------------------------------------------- //
+/*
+    A Simple Solution is to one by one process all appointments from the second appointment to last.
+    For every appointment i, check if it conflicts with i-1, i-2, … 0.
+    The time complexity of this method is O(n2).
+*/
 
 
 //// ----------------------------------------------------------------------------------------------------------------------- //

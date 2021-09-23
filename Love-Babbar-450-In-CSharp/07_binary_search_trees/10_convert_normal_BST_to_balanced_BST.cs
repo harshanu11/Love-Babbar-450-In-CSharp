@@ -1,6 +1,6 @@
-///*
-//    link: https://www.geeksforgeeks.org/convert-normal-bst-balanced-bst/
-//*/
+/*
+    link: https://www.geeksforgeeks.org/convert-normal-bst-balanced-bst/
+*/
 
 
 
