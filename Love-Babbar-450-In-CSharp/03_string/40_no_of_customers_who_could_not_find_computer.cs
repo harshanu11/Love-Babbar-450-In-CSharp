@@ -1,6 +1,6 @@
 /*
     link: https://www.geeksforgeeks.org/function-to-find-number-of-customers-who-could-not-get-a-computer/
-unCustomerSimulation (2, “ABBAJJKZKZ”) should return 0
+runCustomerSimulation (2, “ABBAJJKZKZ”) should return 0
 runCustomerSimulation (3, “GACCBDDBAGEE”) should return 1 as ‘D’ was not able to get any computer
 runCustomerSimulation (3, “GACCBGDDBAEE”) should return 0
 runCustomerSimulation (1, “ABCBCA”) should return 2 as ‘B’ and ‘C’ were not able to get any computer.

@@ -1,16 +1,20 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/edit-distance3702/1
-//    sol: https://www.geeksforgeeks.org/edit-distance-dp-5/
+/*
+    link: https://practice.geeksforgeeks.org/problems/edit-distance3702/1
+    sol: https://www.geeksforgeeks.org/edit-distance-dp-5/
 
-//    variation of: LCS
+    variation of: LCS
 
-//    refer: DP_tut/3_LCS/5_minimum....
+    refer: DP_tut/3_LCS/5_minimum....
 
-//    Applications:
-//    There are many practical applications of edit distance algorithm, refer Lucene API for sample.
-//    Another example, display all the words in a dictionary that are near proximity to a given wordincorrectly spelled word.
+    Applications:
+    There are many practical applications of edit distance algorithm, refer Lucene API for sample.
+    Another example, display all the words in a dictionary that are near proximity to a given wordincorrectly spelled word.
 
-//*/
+s = "geek", t = "gesek"
+Output: 1
+Explanation: One operation is required 
+inserting 's' between two 'e's of str1.
+*/
 
 //// ----------------------------------------------------------------------------------------------------------------------- //
 

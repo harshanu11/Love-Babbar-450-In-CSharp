@@ -2,6 +2,11 @@
     link: https://practice.geeksforgeeks.org/problems/permutations-of-a-given-string2041/1
 
     sol: https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/
+
+
+ABC
+Output:
+ABC ACB BAC BCA CAB CBA
 */
 
 
