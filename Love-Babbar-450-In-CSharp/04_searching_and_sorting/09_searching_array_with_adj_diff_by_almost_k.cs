@@ -1,8 +1,8 @@
 /*
     link: https://www.geeksforgeeks.org/searching-array-adjacent-differ-k/
 Input : arr[] = {4, 5, 6, 7, 6}
-           k = 1
-           x = 6
+           k = 1 diff wiith side ele
+           x = 6 find index of it
 Output : 2
 The first index of 6 is 2.
 

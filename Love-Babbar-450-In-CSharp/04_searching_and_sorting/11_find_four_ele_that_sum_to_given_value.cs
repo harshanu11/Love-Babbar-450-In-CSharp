@@ -5,7 +5,7 @@
     sol>set2: https://www.geeksforgeeks.org/find-four-elements-that-sum-to-a-given-value-set-2/
 
 Input:
-N = 5, K = 3
+K = 3
 A[] = {0,0,2,1,1}
 Output: 0 0 1 2 $
 Explanation: Sum of 0, 0, 1, 2 is equal

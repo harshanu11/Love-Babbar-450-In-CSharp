@@ -1,7 +1,6 @@
 /*
     link: https://practice.geeksforgeeks.org/problems/find-pair-given-difference1559/1
-
-L = 6, N = 78
+N = 78
 arr[] = {5, 20, 3, 2, 5, 80}
 Output: 1
 Explanation: (2, 80) have difference of 78.
