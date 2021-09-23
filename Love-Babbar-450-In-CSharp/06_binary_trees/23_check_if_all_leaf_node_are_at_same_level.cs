@@ -1,8 +1,8 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/leaf-at-same-level/1
+/*
+    link: https://practice.geeksforgeeks.org/problems/leaf-at-same-level/1
 
-//    sol: https://www.geeksforgeeks.org/check-leaves-level/
-//*/
+    sol: https://www.geeksforgeeks.org/check-leaves-level/
+*/
 
 
 //// ----------------------------------------------------------------------------------------------------------------------- //

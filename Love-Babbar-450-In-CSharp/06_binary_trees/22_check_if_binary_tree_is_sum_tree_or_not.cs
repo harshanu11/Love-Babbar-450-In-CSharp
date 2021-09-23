@@ -1,8 +1,8 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/sum-tree/1#
+/*
+    link: https://practice.geeksforgeeks.org/problems/sum-tree/1#
 
-//    sol: https://www.geeksforgeeks.org/check-if-a-given-binary-tree-is-sumtree/
-//*/
+    sol: https://www.geeksforgeeks.org/check-if-a-given-binary-tree-is-sumtree/
+*/
 
 
 

@@ -1,9 +1,9 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/duplicate-subtree-in-binary-tree/1
+/*
+    link: https://practice.geeksforgeeks.org/problems/duplicate-subtree-in-binary-tree/1
 
-//    sol: https://www.geeksforgeeks.org/check-binary-tree-contains-duplicate-subtrees-size-2/
-//    video: https://youtu.be/_j7yb_nWFO8
-//*/
+    sol: https://www.geeksforgeeks.org/check-binary-tree-contains-duplicate-subtrees-size-2/
+    video: https://youtu.be/_j7yb_nWFO8
+*/
 
 
 
