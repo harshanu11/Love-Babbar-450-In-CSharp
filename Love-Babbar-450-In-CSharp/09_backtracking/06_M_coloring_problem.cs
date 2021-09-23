@@ -1,8 +1,8 @@
-///*
-//	link: https://practice.geeksforgeeks.org/problems/m-coloring-problem-1587115620/1
+/*
+	link: https://practice.geeksforgeeks.org/problems/m-coloring-problem-1587115620/1
 
-//	video: https://youtu.be/wuVwUK25Rfc
-//*/
+	video: https://youtu.be/wuVwUK25Rfc
+*/
 
 
 

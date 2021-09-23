@@ -1,11 +1,11 @@
-///*
-//	link: https://practice.geeksforgeeks.org/problems/largest-number-in-k-swaps-1587115620/1
+/*
+	link: https://practice.geeksforgeeks.org/problems/largest-number-in-k-swaps-1587115620/1
 
-//	video: https://youtu.be/5crucASFoA4
-//	(just to understand as it will give TLE in GFG)
+	video: https://youtu.be/5crucASFoA4
+	(just to understand as it will give TLE in GFG)
 
-//	sol: https://www.geeksforgeeks.org/find-maximum-number-possible-by-doing-at-most-k-swaps/
-//*/
+	sol: https://www.geeksforgeeks.org/find-maximum-number-possible-by-doing-at-most-k-swaps/
+*/
 
 
 

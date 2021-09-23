@@ -1,8 +1,8 @@
-///*
-//	link: https://practice.geeksforgeeks.org/problems/combination-sum-1587115620/1
+/*
+	link: https://practice.geeksforgeeks.org/problems/combination-sum-1587115620/1
 
-//	sol: https://www.geeksforgeeks.org/combinational-sum/
-//*/
+	sol: https://www.geeksforgeeks.org/combinational-sum/
+*/
 
 
 
