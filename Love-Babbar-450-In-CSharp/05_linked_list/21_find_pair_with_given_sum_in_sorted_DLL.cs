@@ -1,8 +1,8 @@
-///*
-//    link: https://www.geeksforgeeks.org/find-pairs-given-sum-doubly-linked-list/
+/*
+    link: https://www.geeksforgeeks.org/find-pairs-given-sum-doubly-linked-list/
 
-//    **sorted**
-//*/
+    **sorted**
+*/
 
 
 
