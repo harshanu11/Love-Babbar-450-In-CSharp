@@ -1,9 +1,9 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/distance-of-nearest-cell-having-1-1587115620/1
+/*
+    link: https://practice.geeksforgeeks.org/problems/distance-of-nearest-cell-having-1-1587115620/1
 
-//    sol: https://www.geeksforgeeks.org/distance-nearest-cell-1-binary-matrix/
+    sol: https://www.geeksforgeeks.org/distance-nearest-cell-1-binary-matrix/
 
-//*/
+*/
 
 
 

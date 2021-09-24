@@ -1,8 +1,8 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/rotten-oranges2536/1
+/*
+    link: https://practice.geeksforgeeks.org/problems/rotten-oranges2536/1
 
-//    sol: https://www.geeksforgeeks.org/minimum-time-required-so-that-all-oranges-become-rotten/
-//*/
+    sol: https://www.geeksforgeeks.org/minimum-time-required-so-that-all-oranges-become-rotten/
+*/
 
 
 

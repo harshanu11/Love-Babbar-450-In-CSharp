@@ -1,8 +1,8 @@
-///*
-//    link:   https://practice.geeksforgeeks.org/problems/parenthesis-checker2744/1
+/*
+    link:   https://practice.geeksforgeeks.org/problems/parenthesis-checker2744/1
 
-//    ref: 3_string/16_balanced_paranthesis.cpp
-//*/
+    ref: 3_string/16_balanced_paranthesis.cpp
+*/
 
 
 //// ----------------------------------------------------------------------------------------------------------------------- //

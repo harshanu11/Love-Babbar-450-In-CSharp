@@ -1,10 +1,10 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/lru-cache/1
+/*
+    link: https://practice.geeksforgeeks.org/problems/lru-cache/1
 
-//    sol: https://www.geeksforgeeks.org/lru-cache-implementation/
+    sol: https://www.geeksforgeeks.org/lru-cache-implementation/
 
-//    list(reference): https://www.geeksforgeeks.org/list-cpp-stl/
-//*/
+    list(reference): https://www.geeksforgeeks.org/list-cpp-stl/
+*/
 
 
 

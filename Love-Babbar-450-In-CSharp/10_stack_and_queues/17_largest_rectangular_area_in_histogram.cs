@@ -1,12 +1,12 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/maximum-rectangular-area-in-a-histogram-1587115620/1
+/*
+    link: https://practice.geeksforgeeks.org/problems/maximum-rectangular-area-in-a-histogram-1587115620/1
 
-//    sol1: https://www.geeksforgeeks.org/largest-rectangular-area-in-a-histogram-set-1/
-//    sol2: https://www.geeksforgeeks.org/largest-rectangle-under-histogram/
+    sol1: https://www.geeksforgeeks.org/largest-rectangular-area-in-a-histogram-set-1/
+    sol2: https://www.geeksforgeeks.org/largest-rectangle-under-histogram/
 
-//    ref: stack_tut/6_max_area_histogram.cpp
+    ref: stack_tut/6_max_area_histogram.cpp
 
-//*/
+*/
 
 
 

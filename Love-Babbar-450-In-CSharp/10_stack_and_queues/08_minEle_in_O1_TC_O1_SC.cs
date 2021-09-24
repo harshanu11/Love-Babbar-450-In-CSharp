@@ -1,8 +1,8 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/special-stack/1
+/*
+    link: https://practice.geeksforgeeks.org/problems/special-stack/1
 
-//    ref: stack_tut/10_min_ele....
-//*/
+    ref: stack_tut/10_min_ele....
+*/
 
 
 

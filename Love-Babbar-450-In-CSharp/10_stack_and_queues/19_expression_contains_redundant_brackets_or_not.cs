@@ -1,6 +1,6 @@
-///*
-//    link: https://www.geeksforgeeks.org/expression-contains-redundant-bracket-not/
-//*/
+/*
+    link: https://www.geeksforgeeks.org/expression-contains-redundant-bracket-not/
+*/
 
 
 //// ----------------------------------------------------------------------------------------------------------------------- //

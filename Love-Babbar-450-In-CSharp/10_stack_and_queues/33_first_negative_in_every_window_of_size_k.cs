@@ -1,8 +1,8 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/first-negative-integer-in-every-window-of-size-k3345/1
+/*
+    link: https://practice.geeksforgeeks.org/problems/first-negative-integer-in-every-window-of-size-k3345/1
 
-//    sol: https://www.geeksforgeeks.org/first-negative-integer-every-window-size-k/
-//*/
+    sol: https://www.geeksforgeeks.org/first-negative-integer-every-window-size-k/
+*/
 
 
 

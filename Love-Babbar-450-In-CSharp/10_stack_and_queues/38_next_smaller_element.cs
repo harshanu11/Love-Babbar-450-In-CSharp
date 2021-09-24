@@ -1,6 +1,6 @@
-///*
-//    link: https://www.geeksforgeeks.org/next-smaller-element/
-//*/
+/*
+    link: https://www.geeksforgeeks.org/next-smaller-element/
+*/
 
 
 //// ----------------------------------------------------------------------------------------------------------------------- //

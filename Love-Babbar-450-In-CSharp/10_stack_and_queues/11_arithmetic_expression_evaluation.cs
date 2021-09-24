@@ -1,15 +1,15 @@
-///*
-//    link: https://www.geeksforgeeks.org/arithmetic-expression-evalution/#:~:text=The%20stack%20organization%20is%20very,i.e.%2C%20A%20%2B%20B).
+/*
+    link: https://www.geeksforgeeks.org/arithmetic-expression-evalution/#:~:text=The%20stack%20organization%20is%20very,i.e.%2C%20A%20%2B%20B).
 
-//    infix notation:  A + B
-//    Polish notation (prefix notation): +AB
-//    Reverse Polish notation (postfix notation): AB+
+    infix notation:  A + B
+    Polish notation (prefix notation): +AB
+    Reverse Polish notation (postfix notation): AB+
 
-//    There are 3 levels of precedence for 5 binary operators as given below:
-//        Highest: Exponentiation (^)
-//        Next highest: Multiplication (*) and division (/)
-//        Lowest: Addition (+) and Subtraction (-)
-//*/
+    There are 3 levels of precedence for 5 binary operators as given below:
+        Highest: Exponentiation (^)
+        Next highest: Multiplication (*) and division (/)
+        Lowest: Addition (+) and Subtraction (-)
+*/
 
 
 //// ----------------------------------------------------------------------------------------------------------------------- //

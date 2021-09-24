@@ -1,8 +1,8 @@
-///*
-//    link: https://www.geeksforgeeks.org/stack-permutations-check-if-an-array-is-stack-permutation-of-other/
+/*
+    link: https://www.geeksforgeeks.org/stack-permutations-check-if-an-array-is-stack-permutation-of-other/
 
-//    here we just have to check if given permutation in output is possible using stack
-//*/
+    here we just have to check if given permutation in output is possible using stack
+*/
 
 
 

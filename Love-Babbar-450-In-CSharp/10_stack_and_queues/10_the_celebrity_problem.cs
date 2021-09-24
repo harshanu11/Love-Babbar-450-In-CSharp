@@ -1,10 +1,10 @@
-///*
-//    link: https://practice.geeksforgeeks.org/problems/the-celebrity-problem/1#
+/*
+    link: https://practice.geeksforgeeks.org/problems/the-celebrity-problem/1#
 
-//    sol: https://www.geeksforgeeks.org/the-celebrity-problem/
+    sol: https://www.geeksforgeeks.org/the-celebrity-problem/
 
-//    video (using stack explanation): https://youtu.be/CiiXBvrX-5A
-//*/
+    video (using stack explanation): https://youtu.be/CiiXBvrX-5A
+*/
 
 
 
