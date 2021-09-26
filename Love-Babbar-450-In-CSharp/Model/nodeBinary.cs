@@ -65,6 +65,49 @@
             else root.left = InsertBST(root.left, key);
             return root;
         }
+        // ----------------------------------------------------------------------------------------------------------------------- //
+        /*
+            using iteration
+            TC: O(log N) not skewed
+                O(N) for skewed
+        */
+        private void Insert1(NodeBinary root, int key)
+        {
+            NodeBinary node = new NodeBinary(key);
+            if (root == null)
+            {
+                root = node;
+                return;
+            }
+            NodeBinary prev = null;
+            NodeBinary temp = root;
+            while (temp != null)
+            {
+                if (temp.data > key)
+                {
+                    //C++ TO C# CONVERTER TODO TASK: The following line was determined to be a copy assignment (rather than a reference assignment) - this should be verified and a 'CopyFrom' method should be created:
+                    //ORIGINAL LINE: prev = temp;
+                    prev.DeepCopy(temp);
+                    temp = temp.left;
+                }
+                else if (temp.data < key)
+                {
+                    //C++ TO C# CONVERTER TODO TASK: The following line was determined to be a copy assignment (rather than a reference assignment) - this should be verified and a 'CopyFrom' method should be created:
+                    //ORIGINAL LINE: prev = temp;
+                    prev.DeepCopy(temp);
+                    temp = temp.right;
+                }
+            }
+
+            if (prev.data > key)
+            {
+                prev.left = node;
+            }
+            else
+            {
+                prev.right = node;
+            }
+        }
         /* Helper function that allocates
             a new node with the given data and
             NULL left and right pointers. */

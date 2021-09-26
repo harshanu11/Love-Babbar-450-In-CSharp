@@ -15,6 +15,7 @@ namespace _01_array
             int[] arr = { 1000, 11, 445, 1, 330, 3000 };
             rvereseArray(arr, 0, arr.Length - 1);
             rvereseArrayRecursion(arr, 0, arr.Length - 1);
+            rvereseArrayBit(arr, 0, arr.Length - 1);
         }
         // TC: O(N)
         private void rvereseArray(int[] arr, int start, int end)

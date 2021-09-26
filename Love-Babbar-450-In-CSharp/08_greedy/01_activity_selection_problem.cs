@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 using Xunit;
 
@@ -22,6 +23,7 @@ namespace _08_greedy
             return s1.second - s2.second;
         }
     }
+
     public class _01_activity_selection_problem
     {
         /*
@@ -35,44 +37,31 @@ namespace _08_greedy
         [Fact]
         public void greedy_arrayTest()
         {
-           var ans = maxMeetings1(new int[] { 1, 3, 0, 5, 8, 5 }, new int[] { 2, 4, 6, 7, 9, 9 }, 6);
+            int ans = maxMeetings1(new int[] { 1, 3, 0, 5, 8, 5 }, new int[] { 2, 4, 6, 7, 9, 9 }, 6);
             ans = printMaxActivities(new int[] { 1, 3, 0, 5, 8, 5 }, new int[] { 2, 4, 6, 7, 9, 9 }, 6);
         }
 
 
-        public static int maxMeetings1(int[] start, int[] end, int n)
+        public static int maxMeetings1(int[] start, int[] end, int len)
         {
-            pair[] x = new pair[n];
-
-            //pushing the pair of starting and finish time in a list.
-            for (int i = 0; i < n; i++)
+            pair[] meetings = new pair[len];
+            for (int i = 0; i < len; i++)
+                meetings[i] = new pair(start[i], end[i]);
+            Array.Sort(meetings, new ComparatorAnonymousInnerClass());
+            int second = 0;
+            int noOfMeeting = 0;
+            for (int i = 0; i < len; i++)
             {
-                x[i] = new pair(start[i], end[i]);
-            }
-
-
-            //comparator function used in sorting the list of pairs 
-            //according to increasing order of the finish time.
-            Array.Sort(x, new ComparatorAnonymousInnerClass());
-
-            int last = 0;
-            int res = 0;
-            for (int i = 0; i < n; i++)
-            {
-                //if the start time of this meeting is greater than or equal
-                //to the finish time of previously selected meeting then 
-                //we increment the counter and update last.
-                if (x[i].first > last)
+                if (meetings[i].first > second)
                 {
-                    res++;
-                    last = x[i].second;
+                    noOfMeeting++;
+                    second = meetings[i].second;
                 }
             }
-            //returning the counter.
-            return res;
+            return noOfMeeting;
         }
 
-        public int printMaxActivities(int[] start,int[] end, int len)
+        public int printMaxActivities(int[] start, int[] end, int len)
         {
             int i, j;
             int result = 1;
@@ -99,5 +88,5 @@ namespace _08_greedy
         }
 
     }
-    
+
 }

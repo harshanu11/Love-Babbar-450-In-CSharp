@@ -36,27 +36,23 @@ namespace _02_matrix
         }
         public List<int> spiralOrder(int[][] matrix, int row, int col)
         {
-            List<int> res = new List<int>();
-            if (matrix == null || row == 0) return res;
+            List<int> ans = new List<int>();
+            if (matrix == null || row == 0) return ans;
             int up = 0, down = row - 1;
             int left = 0, right = col - 1;
-            while (res.Count < row * col)
+            while (ans.Count < row * col)
             {
-                for (int j = left; j <= right && res.Count < row * col; j++)
-                    res.Add(matrix[up][j]);
-
-                for (int i = up + 1; i <= down - 1 && res.Count < row * col; i++)
-                    res.Add(matrix[i][right]);
-
-                for (int j = right; j >= left && res.Count < row * col; j--)
-                    res.Add(matrix[down][j]);
-
-                for (int i = down - 1; i >= up + 1 && res.Count < row * col; i--)
-                    res.Add(matrix[i][left]);
-
+                for (int lr = left; lr <= right && ans.Count < row * col; lr++)
+                    ans.Add(matrix[up][lr]);
+                for (int ud = up + 1; ud <= down - 1 && ans.Count < row * col; ud++)
+                    ans.Add(matrix[ud][right]);
+                for (int lr = right; lr >= left && ans.Count < row * col; lr--)
+                    ans.Add(matrix[down][lr]);
+                for (int ud = down - 1; ud >= up + 1 && ans.Count < row * col; ud--)
+                    ans.Add(matrix[ud][left]);
                 left++; right--; up++; down--;
             }
-            return res;
+            return ans;
         }
         public List<int> SpiralOrder1(int[][] matrix)
         {
