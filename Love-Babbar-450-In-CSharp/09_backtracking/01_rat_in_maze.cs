@@ -22,6 +22,21 @@ namespace _09_backtracking
         [Fact]
         public void reverse_arrayTest()
         {
+            var maze1 = new int[4][] {
+                new int[] {1, 0, 0, 0},
+                new int[]{1, 1, 0, 1},
+                new int[]{1, 1, 0, 0},
+                new int[]{0, 1, 1, 1}
+            };
+            int[][] sol =
+            {
+                new int[] {0, 0, 0, 0},
+                new int[] {0, 0, 0, 0},
+                new int[] {0, 0, 0, 0},
+                new int[] {0, 0, 0, 0},
+            };
+
+            var ansJArray = solveMazeOneSolOnly(maze1, maze1.GetLength(0), sol);
             int[,] m = { { 1, 0, 0, 0, 0 },
                         { 1, 1, 1, 1, 1 },
                         { 1, 1, 1, 0, 1 },
@@ -34,8 +49,9 @@ namespace _09_backtracking
                                         , new int[] { 0, 0, 0, 0, 1 }
                                         , new int[] { 0, 0, 0, 0, 1 }
                                     };
+
             var ans = findPath(maze, maze.GetLength(0));
-            var ansJArray = solveMaze(maze, maze.GetLength(0));
+
         }
 
         // ----------------------------------------------------------------------------------------------------------------------- //
@@ -86,8 +102,6 @@ namespace _09_backtracking
             TC: O(2^(n^2))
         */
 
-        /* A recursive utility function
-        to solve Maze problem */
         private bool solveMazeUtil(int[][] maze, int x, int y, int[][] sol, int Size)
         {
             if (x == Size - 1 && y == Size - 1 && maze[x][y] == 1)
@@ -95,39 +109,17 @@ namespace _09_backtracking
                 sol[x][y] = 1;
                 return true;
             }
-            if (isSafe(maze, x, y, Size) == true)
+            if (isSafe(maze, x, y, Size))
             {
-                // Check if the current block is already part of solution path.   
-                if (sol[x][y] == 1) return false;
-
-                // mark x, y as part of solution path
+                if (sol[x][y] == 1) return false;// already visited
                 sol[x][y] = 1;
-
-                /* Move forward in x direction */
-                if (solveMazeUtil(maze, x + 1, y, sol, Size) == true) return true;
-
-                /* If moving in x direction
-                doesn't give solution then
-                Move down in y direction */
-                if (solveMazeUtil(maze, x, y + 1, sol, Size) == true) return true;
-
-                /* If moving in y direction
-                doesn't give solution then
-                Move back in x direction */
-                if (solveMazeUtil(maze, x - 1, y, sol, Size) == true) return true;
-
-                /* If moving backwards in x direction
-                doesn't give solution then
-                Move upwards in y direction */
-                if (solveMazeUtil(maze, x, y - 1, sol, Size) == true) return true;
-
-                /* If none of the above movements
-                work then BACKTRACK: unmark
-                x, y as part of solution path */
-                sol[x][y] = 0;
+                if (solveMazeUtil(maze, x + 1, y, sol, Size)) return true;
+                if (solveMazeUtil(maze, x, y + 1, sol, Size)) return true;
+                if (solveMazeUtil(maze, x - 1, y, sol, Size)) return true;
+                if (solveMazeUtil(maze, x, y - 1, sol, Size)) return true;
+                sol[x][y] = 0;// unmark xy
                 return false;
             }
-
             return false;
         }
         private bool isSafe(int[][] maze, int x, int y, int Size)
@@ -146,17 +138,8 @@ namespace _09_backtracking
         may be more than one solutions, this
         function prints one of the feasible
         solutions.*/
-        private int[][] solveMaze(int[][] maze, int Size)
+        private int[][] solveMazeOneSolOnly(int[][] maze, int Size, int[][] sol)
         {
-            int[][] sol =
-            {
-                new int[] {0, 0, 0, 0,0},
-                new int[] {0, 0, 0, 0,0},
-                new int[] {0, 0, 0, 0,0},
-                new int[] {0, 0, 0, 0,0},
-                new int[] {0, 0, 0, 0,0}
-            };
-
             if (solveMazeUtil(maze, 0, 0, sol, Size) == false)
             {
                 Debug.Write("Solution doesn't exist");
@@ -278,7 +261,7 @@ namespace _09_backtracking
         }
 
         // Driver code
-         void Main1()
+        void Main1()
         {
             int[,] m = { { 1, 0, 0, 0, 0 },
                   { 1, 1, 1, 1, 1 },
@@ -394,7 +377,7 @@ namespace _09_backtracking
             public const int R = 4;
             public const int C = 4;
         }
-        
+
 
     }
 }

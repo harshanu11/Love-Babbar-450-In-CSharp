@@ -11,7 +11,7 @@ namespace _10_stack_and_queues
     link(java): https://www.tutorialspoint.com/javaexamples/data_stack.htm
 
     link(cpp): https://www.geeksforgeeks.org/stack-data-structure-introduction-program/
-*/
+    */
     public class _01_implement_stack_from_scratch
     {
         [Fact]
@@ -82,7 +82,7 @@ namespace _10_stack_and_queues
 
         public void printStack()
         {
-                Debug.WriteLine("Stack is Empty");
+            Debug.WriteLine("Stack is Empty");
             if (top == -1) return;
             else
                 for (int i = 0; i <= top; i++)
@@ -286,8 +286,8 @@ namespace _10_stack_and_queues
     public class StackUsingArrayList
     {
         internal ArrayList stackList;
-        internal StackUsingArrayList()=> stackList = new ArrayList();
-        internal virtual void push(int value)=> stackList.Add(value);
+        internal StackUsingArrayList() => stackList = new ArrayList();
+        internal virtual void push(int value) => stackList.Add(value);
         internal virtual int pop()
         {
 

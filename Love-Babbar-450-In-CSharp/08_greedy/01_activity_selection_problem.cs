@@ -10,18 +10,11 @@ namespace _08_greedy
     internal class pair
     {
         internal int first, second;
-        public pair(int start, int finish)
-        {
-            this.first = start;
-            this.second = finish;
-        }
+        public pair(int start, int finish){first = start;second = finish;}
     }
     class ComparatorAnonymousInnerClass : IComparer<pair>
     {
-        public int Compare(pair s1, pair s2)
-        {
-            return s1.second - s2.second;
-        }
+        public int Compare(pair s1, pair s2){return s1.second - s2.second;}
     }
 
     public class _01_activity_selection_problem
@@ -52,11 +45,7 @@ namespace _08_greedy
             int noOfMeeting = 0;
             for (int i = 0; i < len; i++)
             {
-                if (meetings[i].first > second)
-                {
-                    noOfMeeting++;
-                    second = meetings[i].second;
-                }
+                if (meetings[i].first > second){noOfMeeting++;second = meetings[i].second; }
             }
             return noOfMeeting;
         }
