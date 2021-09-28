@@ -7,6 +7,11 @@ namespace _14_DP
 {
     public class _02_equal_subset_sum
     {
+		/*
+			link: https://practice.geeksforgeeks.org/problems/subset-sum-problem2014/1
+			for memoization go to DP_tut/1_0-1_knapsack/2_subset... its just variation
+		*/
+
 		[Fact]
 		public void Subset_Dp() 
 		{

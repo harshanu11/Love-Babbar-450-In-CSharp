@@ -19,20 +19,21 @@ namespace _08_greedy
 			warning: we cannot the replace the filled job as if the job exist for that deadline then we have to fill it.
 		*/
         [Fact]
-        public void Test() 
+        public void Test()
         {
-            Job[] j = new Job[] { 
-                new Job() { id =1, dead=4,profit= 20} ,
-                new Job() { id =2, dead=1,profit= 10} ,
-                new Job() { id =3, dead=1,profit= 40} ,
-                new Job() { id =4, dead=1,profit= 30} ,
+            Job[] j = new Job[] {
+                new Job() { id =1, deadLine=4,profit= 20} ,
+                new Job() { id =2, deadLine=1,profit= 10} ,
+                new Job() { id =3, deadLine=1,profit= 40} ,
+                new Job() { id =4, deadLine=1,profit= 30} ,
             };
-            var ans = JobScheduling(j,4);
+            var ans = JobScheduling(j, 4);
         }
 
-        public class Job { 
+        public class Job
+        {
             public int id { get; set; }
-            public int dead { get; set; }
+            public int deadLine { get; set; }
             public int profit { get; set; }
         }
         class compare : IComparer<Job>
@@ -52,7 +53,7 @@ namespace _08_greedy
 
             for (int i = 0; i < n; i++)
             {
-                for (int j = Math.Min(arr[i].dead, n); j > 0; j--)
+                for (int j = Math.Min(arr[i].deadLine, n); j > 0; j--)
                 {
                     if (a[j] == 0)
                     {

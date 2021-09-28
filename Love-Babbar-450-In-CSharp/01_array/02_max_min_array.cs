@@ -11,7 +11,7 @@ namespace _01_array
         /*
             link: https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/
             can also be done using several methods, visit link for more methods
-        int []arr = {1000, 11, 445, 1, 330, 3000};
+            int []arr = {1000, 11, 445, 1, 330, 3000};
             Minimum element is 1
             Maximum element is 3000
 
