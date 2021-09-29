@@ -51,9 +51,16 @@ int main()
 
 #pragma region UserInput
 	string str;
-	cin >> age;
-	getline(cin, str);
+	//cin >> age;
+	//getline(cin, str);
 #pragma endregion
+
+#pragma region Array
+	int arr[] = { 5,6,9,8 };
+	arr[0];
+	arr[10] = 55;// can not be index out on range
+#pragma endregion
+
 
 	return 0;
 }
