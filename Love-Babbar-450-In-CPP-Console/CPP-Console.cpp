@@ -169,17 +169,18 @@ class CppBasic
 		cout << GiveCube(3);
 	}
 };
-int main()
+bool DecOrder(int a,int b) 
 {
-#pragma region STL
-
-#pragma endregion
-	vector<int> A = {11,2,3,14};
-	cout << A[1]<< endl;
-	sort(A.begin(),A.end()); // o(NlogN)
+	return a > b;
+}
+void VectorDemo() 
+{
+	vector<int> A = { 11,2,3,14 };
+	cout << A[1] << endl;
+	sort(A.begin(), A.end()); // o(NlogN)
 	//2,3,11,14
 	//o(lonN) binary search 
-	bool present = binary_search(A.begin(),A.end(),3);// true
+	bool present = binary_search(A.begin(), A.end(), 3);// true
 	present = binary_search(A.begin(), A.end(), 4);// false
 	A.push_back(100);
 	present = binary_search(A.begin(), A.end(), 100);// true
@@ -194,8 +195,39 @@ int main()
 	vector<int> ::iterator it2 = upper_bound(A.begin(), A.end(), 100);//<=
 
 	cout << *it << " " << *it2 << endl;
-	cout << it2 -it<< endl;
+	cout << it2 - it << endl;
 
+	// comparator fn 
+	sort(A.begin(), A.end(), DecOrder);
+	vector<int> ::iterator it3;//
+	// itration
+	for (it3 = A.begin(); it3 != A.end(); it3++)
+	{
+		cout << *it3 << " ";
+	}
+	cout << " \n";
+	//simple itration
+	for (int x : A)
+	{
+		cout << x << " ";
+	}
+	cout << " \n";
+	// ittrate by ref 
+	for (int& x : A)
+	{
+		x++;//can update element 
+	}
+	for (int x : A)
+	{
+		cout << x << " ";
+	}
+	//-------------------
+
+}
+int main()
+{
+
+	
 	return 0;
 }
 
