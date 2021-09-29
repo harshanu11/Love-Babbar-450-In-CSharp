@@ -56,6 +56,7 @@ void LoopCondition()
 }
 class Book
 {
+private:string rating;
 public:string title;
 	  string auther;
 	  int pages;
@@ -71,6 +72,7 @@ public:string title;
 				  
 		  }
 	  }
+	  void SetRaiting() {}
 };
 int main()
 {
