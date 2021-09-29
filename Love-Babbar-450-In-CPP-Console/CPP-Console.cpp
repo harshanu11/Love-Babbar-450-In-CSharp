@@ -4,13 +4,13 @@
 using namespace std;
 void SayHi(string name)
 {
-	cout << "\nhello user"<< name;
+	cout << "\nhello user" << name;
 }
 int GiveCube(int num)
 {
 	return  num * num * num;
 }
-void ConditionFunction() 
+void ConditionFunction()
 {
 	int age = 0;
 	if (true)
@@ -33,6 +33,23 @@ void ConditionFunction()
 	default:
 		break;
 	}
+}
+void LoopCondition()
+{
+	int index = 0;
+	while (index < 10)
+	{
+		index++;
+	}
+	do
+	{
+
+	} while (index < 10);
+	for (size_t i = 0; i < index; i++)
+	{
+
+	}
+
 }
 int main()
 {
