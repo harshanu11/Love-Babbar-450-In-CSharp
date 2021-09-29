@@ -1,4 +1,5 @@
 #include <iostream>
+#include<array> // for array
 #include <cmath>// for math opration
 #include <string>// get user input as string 
 #include <vector>
@@ -174,6 +175,58 @@ class CppBasic
 bool DecOrder(int a, int b)
 {
 	return a > b;
+}
+
+void ArrayDemoLB()
+{
+	int basic[3] = { 1,2,3 };
+	array<int, 4> a = { 1,2,3,4 };// stl 
+
+	int size = a.size();
+
+	for (int i = 0; i < size; i++) {
+		cout << a[i] << endl;
+	}
+	cout << "Element at 2nd Index-> " << a.at(2) << endl; //3
+	cout << "Empty or not-> " << a.empty() << endl;// false
+	cout << "First Element-> " << a.front() << endl;//1
+	cout << "last Element-> " << a.back() << endl;//4
+};
+void VectorDemoLB() 
+{
+	// dynamic arry
+	vector<int> v;
+	vector<int> a(5, 1);// creat size 5 and set all as 1
+	vector<int> last(a);// move all  a in last 
+
+	cout << "print last" << endl;
+	for (int i : last) {
+		cout << i << " ";
+	}cout << endl;
+
+	cout << "Capacity-> " << v.capacity() << endl;//0
+	v.push_back(1);
+	cout << "Capacity-> " << v.capacity() << endl;
+	v.push_back(2);
+	cout << "Capacity-> " << v.capacity() << endl;
+	v.push_back(3);
+	cout << "Capacity-> " << v.capacity() << endl;
+	cout << "Size-> " << v.size() << endl;
+	cout << "Elemetn at 2nd Index" << v.at(2) << endl;
+	cout << "front " << v.front() << endl;
+	cout << "back " << v.back() << endl;
+	cout << "before pop" << endl;
+	for (int i : v) {
+		cout << i << " ";
+	}cout << endl;
+	v.pop_back();// remove last
+	cout << "after pop" << endl;
+	for (int i : v) {
+		cout << i << " ";
+	}
+	cout << "before clear size " << v.size() << endl;
+	v.clear();
+	cout << "after clear size " << v.size() << endl;
 }
 void VectorDemo()
 {
