@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cmath>// for math opration
 #include <string>// get user input as string 
+#include <vector>
+#include<algorithm>; // for sort
 using namespace std;
 void SayHi(string name)
 {
@@ -60,21 +62,21 @@ private:string rating;
 public:string title;
 	  string auther;
 	  int pages;
-	  Book() 
+	  Book()
 	  {
-	  
+
 	  }
 	  //object function
 	  bool HasHonors() {
 		  if (true)
 		  {
 			  return true;
-				  
+
 		  }
 	  }
 	  void SetRaiting() {}
 };
-class Book1:public Book
+class Book1 :public Book
 {
 private:string rating;
 public:string title;
@@ -94,82 +96,106 @@ public:string title;
 	  }
 	  void SetRaiting() {}
 };
-int main()
+class CppBasic
 {
-	// data type 
-	bool isMail = true;
-	char alphabat = 'A';
-
-	int age = 23;
-	float profit = 22.3;
-	double  gpa = 4.5;
+	void comm() 
+	{
+		// data type 
+		bool isMail = true;
+		char alphabat = 'A';
 #pragma region Number
-	cout << 10 % 3;
-	age++;
-	++age;
-	cout << 15.5 - 5;
-	cout << pow(2, 5);//32 2^5
-	cout << sqrt(2.5);//
-	cout << round(4.5);//
-	cout << ceil(4.5);//
-	cout << fmax(4.5, 8);//
-	cout << fmin(4.5, 8);//
+		int age = 23;
+		float profit = 22.3;
+		double  gpa = 4.5;
+		cout << 10 % 3;
+		age++;
+		++age;
+		cout << 15.5 - 5;
+		cout << pow(2, 5);//32 2^5
+		cout << sqrt(2.5);//
+		cout << round(4.5);//
+		cout << ceil(4.5);//
+		cout << fmax(4.5, 8);//
+		cout << fmin(4.5, 8);//
 
 #pragma endregion
-
-
-	std::string strUsingNameSpace = "the way to add namespace";
-	// string fn 
 #pragma region String Fn 
-	strUsingNameSpace.length();
-	char dsf = strUsingNameSpace[2];
-	strUsingNameSpace.find('d');
-	strUsingNameSpace.find("sfsf");
-	strUsingNameSpace.find("sfsf", 5);// look from index 5
-	strUsingNameSpace.substr(8, 5);// start , till length
+		std::string strUsingNameSpace = "the way to add namespace";
+		strUsingNameSpace.length();
+		char dsf = strUsingNameSpace[2];
+		strUsingNameSpace.find('d');
+		strUsingNameSpace.find("sfsf");
+		strUsingNameSpace.find("sfsf", 5);// look from index 5
+		strUsingNameSpace.substr(8, 5);// start , till length
 #pragma endregion
-
-	// console section
-	cout << "Hello World !" << strUsingNameSpace << "my age is " << age << endl;
-	cout << "dfgdg" << strUsingNameSpace << endl;
-	cout << "hello" << endl;
-	cout << "Want new line\n";
-	cout << "Part one ";
-	cout << "+ part two";
-
 #pragma region UserInput
-	string str;
-	//cin >> age;
-	//getline(cin, str);
+		// console section
+		cout << "Hello World !" << strUsingNameSpace << "my age is " << age << endl;
+		cout << "dfgdg" << strUsingNameSpace << endl;
+		cout << "hello" << endl;
+		cout << "Want new line\n";
+		cout << "Part one ";
+		cout << "+ part two";
+		string str;
+		//cin >> age;
+		//getline(cin, str);
 #pragma endregion
 #pragma region Array
-	int arr[] = { 5,6,9,8 };
-	arr[0];
-	arr[10] = 55;// can not be index out on range
-	int tdArr[3][2] = {
-		{1,2},
-		{3,4},
-		{5,6}
-	};
-	tdArr[0][1] = 6;
+		int arr[] = { 5,6,9,8 };
+		arr[0];
+		arr[10] = 55;// can not be index out on range
+		int tdArr[3][2] = {
+			{1,2},
+			{3,4},
+			{5,6}
+		};
+		tdArr[0][1] = 6;
 #pragma endregion
 #pragma region Pointer
 
-	cout << "\n ref memory address pointer of age:" << &age;
-	int* page = &age; // creting pointer variable to share it
-	// dereference of pointer
-	cout << *page;
+		cout << "\n ref memory address pointer of age:" << &age;
+		int* page = &age; // creting pointer variable to share it
+		// dereference of pointer
+		cout << *page;
 #pragma endregion
 #pragma region ClsObject
-	Book b;
-	b.auther =  "abc";
-	b.pages = 555;
-	b.auther = "me bitch";
+		Book b;
+		b.auther = "abc";
+		b.pages = 555;
+		b.auther = "me bitch";
 #pragma endregion
 
+		SayHi("mu new funciton ");
+		cout << GiveCube(3);
+	}
+};
+int main()
+{
+#pragma region STL
 
-	SayHi("mu new funciton ");
-	cout << GiveCube(3);
+#pragma endregion
+	vector<int> A = {11,2,3,14};
+	cout << A[1]<< endl;
+	sort(A.begin(),A.end()); // o(NlogN)
+	//2,3,11,14
+	//o(lonN) binary search 
+	bool present = binary_search(A.begin(),A.end(),3);// true
+	present = binary_search(A.begin(), A.end(), 4);// false
+	A.push_back(100);
+	present = binary_search(A.begin(), A.end(), 100);// true
+	//2,3,11,14,100
+	A.push_back(100);
+	A.push_back(100);
+	A.push_back(100);
+	A.push_back(100);
+	//2,3,11,14,100,100,100,100,100,123
+	A.push_back(123);
+	vector<int> ::iterator it = lower_bound(A.begin(), A.end(), 100);//>=
+	vector<int> ::iterator it2 = upper_bound(A.begin(), A.end(), 100);//<=
+
+	cout << *it << " " << *it2 << endl;
+	cout << it2 -it<< endl;
+
 	return 0;
 }
 
