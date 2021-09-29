@@ -4,6 +4,7 @@
 #include <vector>
 #include<algorithm>; // for sort
 #include <set>
+#include <map>
 using namespace std;
 void SayHi(string name)
 {
@@ -258,9 +259,55 @@ void SetDemo()
 	}
 	S.erase(14);// llog n
 }
+void MapDemo()
+{
+	// find delete  in log(n)
+	map<int, int>  A;
+	A[1] = 100;
+	A[2] = -1;
+	A[3] = 200;
+	A[100000232] = 1;
+	map<char, int> cnt;
+	string x = "rachit jain";
+
+	for (char c : x)
+	{
+		cnt[c]++;
+	}
+	cout << cnt['a'] << " " << cnt['z'] << endl;
+}
+void PairDemo()
+{
+	set<pair<int, int>> S;
+	//{a, b}and {c,d}
+	//a<c if a== c then compare b<d
+	S.insert({ 401,450 });
+	S.insert({ 2,3 });
+	S.insert({ 10,20 });
+	S.insert({ 30,400 });
+	// 2,3;10,20;30,400;401,450
+	int point = 50;
+
+	auto it = S.upper_bound({ point ,INT_MAX });
+	if (it == S.begin())
+	{
+		// not lying in any interval
+	}
+	it--;
+	pair<int, int > current = *it;
+	if (current.first <= point && point <= current.second)
+	{
+		cout << "Yes its present " << current.first;
+	}
+	else
+	{
+		// not present 
+	}
+
+}
 int main()
 {
-	SetDemo();
+	PairDemo();
 
 	return 0;
 }
