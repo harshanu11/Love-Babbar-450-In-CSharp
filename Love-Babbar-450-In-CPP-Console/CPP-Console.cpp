@@ -74,6 +74,26 @@ public:string title;
 	  }
 	  void SetRaiting() {}
 };
+class Book1:public Book
+{
+private:string rating;
+public:string title;
+	  string auther;
+	  int pages;
+	  Book1()
+	  {
+
+	  }
+	  //object function
+	  bool HasHonors() {
+		  if (true)
+		  {
+			  return true;
+
+		  }
+	  }
+	  void SetRaiting() {}
+};
 int main()
 {
 	// data type 
