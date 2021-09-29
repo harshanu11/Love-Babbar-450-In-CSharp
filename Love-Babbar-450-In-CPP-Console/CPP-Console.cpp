@@ -6,8 +6,16 @@ using namespace std;
 
 int main()
 {
+    // data type 
+    bool isMail = true;
+    char alphabat = 'A';
+    int age = 23;
+    float profit = 22.3;
+    double  gpa = 4.5;
     std::string strUsingNameSpace = "the way to add namespace";
-    cout << "Hello World wwwwwwwwwwwww!\n";
+
+    // console section
+    cout << "Hello World !"<< strUsingNameSpace<< "my age is " << age <<endl;
     cout << "dfgdg" << strUsingNameSpace << endl;
     cout << "hello" << endl;
     return 0;
