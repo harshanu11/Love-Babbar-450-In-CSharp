@@ -114,6 +114,14 @@ int main()
 	};
 	tdArr[0][1] = 6;
 #pragma endregion
+#pragma region Pointer
+
+	cout << "\n ref memory address pointer of age:" << &age;
+	int* page = &age; // creting pointer variable to share it
+	// dereference of pointer
+	cout << *page;
+#pragma endregion
+
 
 	SayHi("mu new funciton ");
 	cout << GiveCube(3);
