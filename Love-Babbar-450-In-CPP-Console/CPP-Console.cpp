@@ -3,6 +3,7 @@
 #include <string>// get user input as string 
 #include <vector>
 #include<algorithm>; // for sort
+#include <set>
 using namespace std;
 void SayHi(string name)
 {
@@ -98,7 +99,7 @@ public:string title;
 };
 class CppBasic
 {
-	void comm() 
+	void comm()
 	{
 		// data type 
 		bool isMail = true;
@@ -169,11 +170,11 @@ class CppBasic
 		cout << GiveCube(3);
 	}
 };
-bool DecOrder(int a,int b) 
+bool DecOrder(int a, int b)
 {
 	return a > b;
 }
-void VectorDemo() 
+void VectorDemo()
 {
 	vector<int> A = { 11,2,3,14 };
 	cout << A[1] << endl;
@@ -192,7 +193,7 @@ void VectorDemo()
 	//2,3,11,14,100,100,100,100,100,123
 	A.push_back(123);
 	vector<int> ::iterator it = lower_bound(A.begin(), A.end(), 100);//>=
-	vector<int> ::iterator it2 = upper_bound(A.begin(), A.end(), 100);//<=
+	vector<int> ::iterator it2 = upper_bound(A.begin(), A.end(), 100);//> 
 
 	cout << *it << " " << *it2 << endl;
 	cout << it2 - it << endl;
@@ -224,10 +225,43 @@ void VectorDemo()
 	//-------------------
 
 }
+void SetDemo()
+{
+	set<int> S;// 
+	S.insert(1);// log n time
+	S.insert(2);
+	S.insert(-1);
+	S.insert(-10);
+	for (int x : S)
+	{
+		cout << x << " ";
+	}
+	//-10 -1 1 2
+	auto it = S.find(-1);
+	if (it == S.end())
+	{
+		// not present
+	}
+	else
+	{
+		cout << *it;
+	}
+	cout << " \n";
+	auto it2 = S.upper_bound(-1);//  first >-1 return first -1 means available
+	auto it3 = S.upper_bound(0);//  stricktly greter then
+	cout << *it2 << " " << *it3 << endl;
+
+	auto it4 = S.upper_bound(2);
+	if (it4 == S.end())
+	{
+		// cant find
+	}
+	S.erase(14);// llog n
+}
 int main()
 {
+	SetDemo();
 
-	
 	return 0;
 }
 
