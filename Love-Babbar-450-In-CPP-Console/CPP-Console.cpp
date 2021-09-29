@@ -10,6 +10,30 @@ int GiveCube(int num)
 {
 	return  num * num * num;
 }
+void ConditionFunction() 
+{
+	int age = 0;
+	if (true)
+	{
+
+	}
+	else if (true)
+	{
+
+	}
+	else
+	{
+
+	}
+	switch (age)
+	{
+	case 10:
+		cout << "44";
+		break;
+	default:
+		break;
+	}
+}
 int main()
 {
 	// data type 
