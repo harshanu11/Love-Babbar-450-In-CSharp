@@ -47,7 +47,10 @@ void LoopCondition()
 	} while (index < 10);
 	for (size_t i = 0; i < index; i++)
 	{
+		for (size_t j = 0; j < 50; j++)
+		{
 
+		}
 	}
 
 }
@@ -104,6 +107,12 @@ int main()
 	int arr[] = { 5,6,9,8 };
 	arr[0];
 	arr[10] = 55;// can not be index out on range
+	int tdArr[3][2] = {
+		{1,2},
+		{3,4},
+		{5,6}
+	};
+	tdArr[0][1] = 6;
 #pragma endregion
 
 	SayHi("mu new funciton ");
