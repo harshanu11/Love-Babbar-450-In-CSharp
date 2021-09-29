@@ -54,6 +54,24 @@ void LoopCondition()
 	}
 
 }
+class Book
+{
+public:string title;
+	  string auther;
+	  int pages;
+	  Book() 
+	  {
+	  
+	  }
+	  //object function
+	  bool HasHonors() {
+		  if (true)
+		  {
+			  return true;
+				  
+		  }
+	  }
+};
 int main()
 {
 	// data type 
@@ -102,7 +120,6 @@ int main()
 	//cin >> age;
 	//getline(cin, str);
 #pragma endregion
-
 #pragma region Array
 	int arr[] = { 5,6,9,8 };
 	arr[0];
@@ -120,6 +137,12 @@ int main()
 	int* page = &age; // creting pointer variable to share it
 	// dereference of pointer
 	cout << *page;
+#pragma endregion
+#pragma region ClsObject
+	Book b;
+	b.auther =  "abc";
+	b.pages = 555;
+	b.auther = "me bitch";
 #pragma endregion
 
 
