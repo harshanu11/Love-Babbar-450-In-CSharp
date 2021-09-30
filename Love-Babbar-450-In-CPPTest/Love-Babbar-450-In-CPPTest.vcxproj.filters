@@ -25,6 +25,9 @@
     <Filter Include="Source Files\04_searching_and_sorting">
       <UniqueIdentifier>{44e76155-353a-4a33-b8b6-c6266d275254}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\05_linked_list">
+      <UniqueIdentifier>{fc331f23-2efe-4476-aacd-1ae983d5cc83}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Love-Babbar-450-In-CPPTest.cpp">
@@ -407,6 +410,114 @@
     </ClCompile>
     <ClCompile Include="04_searching_and_sorting\09_searching_array_with_adj_diff_by_almost_k.cpp">
       <Filter>Source Files\04_searching_and_sorting</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\07_remove_duplicates_from_unsorted_linklist.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\08_move_last_ele_to_front.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\09_add_1_to_no_in_linklist.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\10_add_2_no_represented_by_linklist.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\11_intersection_of_2_linklist.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\12_intersection_point_of_2_linklist.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\13_merge_sort_for_linklist.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\14_quick_sort_for_linklist.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\15_middle_ele_of_linklist.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\16_check_if_circular_linklist.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\17_split_circular_linklist_into_2_halves.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\18_singly_linklist_is_palindrom_or_not.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\19_deletion_from_circular_linklist.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\20_reverse_doubly_linklist.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\21_find_pair_with_given_sum_in_sorted_DLL.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\22_count_triplets_in_sorted_DLL_whose_sum_is_x.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\23_sort_k_sorted_DLL.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\24_rotate_doubly_linklist_by_n_node.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\25_reverse_or_rotate_doubly_linklist_in_given_size.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\26_reverse_link_list_in_big_logn.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\27_quicksort_for_array_merge_sort_for_linklist.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\28_flattern_a_linklist.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\29_sort_LL_of_0_1_and_2.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\30_clone_linklist_with_next_and_random_pointer.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\31_merge_k_sorted_LL.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\32_multiply_2_no_from_linklist.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\33_delete_nodes_which_have_greater_value_on_right_side.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\34_segregate_even_and_odd_nodes_in_linklist.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\35_nth_node_from_the_end_of_the_linklist.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\36_first_non_repeating_char_string_stream.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\01_reverse_linklist.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\02_reverse_linklist_given_n.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\03_detect_loop.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\04_delete_loop.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\05_first_node_in_loop.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
+    </ClCompile>
+    <ClCompile Include="05_linked_list\06_remove_duplicates_in_sorted_linklist.cpp">
+      <Filter>Source Files\05_linked_list</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
