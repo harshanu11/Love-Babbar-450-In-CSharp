@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\01_array">
+      <UniqueIdentifier>{44fe6f4f-119f-4272-89f7-7c5077ce6f4e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Love-Babbar-450-In-CPPTest.cpp">
@@ -20,6 +23,114 @@
     </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\22_factorial_of_large_no.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\23_maximum_subarray_product.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\24_longest_consequecutive_subsequence.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\25_find_ele_more_than_nBYk.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\26_sell_buy_stock_atmost_twice.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\27_array_subset_of_another_array.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\28_triplet_of_ele_sum.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\29_trap_rain_water_problem.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\30_choclate_distribution_problem.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\31_smallest_subarray_with_sum_greater_than_k.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\32_three_way_partitioning_array.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\33_min_swaps_require_to_grp_together.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\34_check_if_palindrom_or_not.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\35_median_of_2_sorted_array_equal_size.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\36_median_of_2_sorted_array_diff_size.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\02_max_min_array.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\03_kth_max_min.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\04_sort_arr_0_1_2.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\05_negative_ele_to_one_side_of_array.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\06_union_and_intersection.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\07_cyclically_rotate_by_1.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\08_largest_sum_conti_arr.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\09_minimize_the_height.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\10_min_jumps_to_reach_end.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\11_find_duplicates.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\12_merge_2_sorted_array.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\13_kadane%27s_algo.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\14_merge_intervals.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\15_next_permutation.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\16_count_inversion.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\17_best_time_to_buy_stock.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\18_all_pair_whose_sum_is_k.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\19_common_ele_in_3_sorted_arr.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\20_rearrange_pos_neg_in_alter.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\21_subarray_with_sum_0.cpp">
+      <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="01_array\01_reverse_array.cpp">
+      <Filter>Source Files\01_array</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
