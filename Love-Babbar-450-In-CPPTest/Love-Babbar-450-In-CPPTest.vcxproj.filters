@@ -16,6 +16,9 @@
     <Filter Include="Source Files\01_array">
       <UniqueIdentifier>{44fe6f4f-119f-4272-89f7-7c5077ce6f4e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\02_matrix">
+      <UniqueIdentifier>{77191263-7e27-47c4-8946-0dba087e1582}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Love-Babbar-450-In-CPPTest.cpp">
@@ -131,6 +134,36 @@
     </ClCompile>
     <ClCompile Include="01_array\01_reverse_array.cpp">
       <Filter>Source Files\01_array</Filter>
+    </ClCompile>
+    <ClCompile Include="02_matrix\04_row_with_maximum_1.cpp">
+      <Filter>Source Files\02_matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="02_matrix\05_print_in_sorted_row_col_sorted_matrix.cpp">
+      <Filter>Source Files\02_matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="02_matrix\06_max_size_rectangle.cpp">
+      <Filter>Source Files\02_matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="02_matrix\07_specific_pair_in_matrix.cpp">
+      <Filter>Source Files\02_matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="02_matrix\08_rotate_matrix_by_90.cpp">
+      <Filter>Source Files\02_matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="02_matrix\09_kth_smallest_in_row_col_sorted_matrix.cpp">
+      <Filter>Source Files\02_matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="02_matrix\10_common_ele_in_all_rows.cpp">
+      <Filter>Source Files\02_matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="02_matrix\01_spiral_traversal_on_matrix.cpp">
+      <Filter>Source Files\02_matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="02_matrix\02_search_an_ele_in_matrix.cpp">
+      <Filter>Source Files\02_matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="02_matrix\03_median_in_row_wise_sorted_matrix.cpp">
+      <Filter>Source Files\02_matrix</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

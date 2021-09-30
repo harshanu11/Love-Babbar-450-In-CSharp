@@ -193,6 +193,16 @@
     <ClCompile Include="01_array\34_check_if_palindrom_or_not.cpp" />
     <ClCompile Include="01_array\35_median_of_2_sorted_array_equal_size.cpp" />
     <ClCompile Include="01_array\36_median_of_2_sorted_array_diff_size.cpp" />
+    <ClCompile Include="02_matrix\01_spiral_traversal_on_matrix.cpp" />
+    <ClCompile Include="02_matrix\02_search_an_ele_in_matrix.cpp" />
+    <ClCompile Include="02_matrix\03_median_in_row_wise_sorted_matrix.cpp" />
+    <ClCompile Include="02_matrix\04_row_with_maximum_1.cpp" />
+    <ClCompile Include="02_matrix\05_print_in_sorted_row_col_sorted_matrix.cpp" />
+    <ClCompile Include="02_matrix\06_max_size_rectangle.cpp" />
+    <ClCompile Include="02_matrix\07_specific_pair_in_matrix.cpp" />
+    <ClCompile Include="02_matrix\08_rotate_matrix_by_90.cpp" />
+    <ClCompile Include="02_matrix\09_kth_smallest_in_row_col_sorted_matrix.cpp" />
+    <ClCompile Include="02_matrix\10_common_ele_in_all_rows.cpp" />
     <ClCompile Include="Love-Babbar-450-In-CPPTest.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
