@@ -19,6 +19,9 @@
     <Filter Include="Source Files\02_matrix">
       <UniqueIdentifier>{77191263-7e27-47c4-8946-0dba087e1582}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\03_string">
+      <UniqueIdentifier>{562003a6-a800-48ad-88dc-9636d7f50990}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Love-Babbar-450-In-CPPTest.cpp">
@@ -164,6 +167,135 @@
     </ClCompile>
     <ClCompile Include="02_matrix\03_median_in_row_wise_sorted_matrix.cpp">
       <Filter>Source Files\02_matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\09_longest_recurring_subsequence.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\10_print_all_subsequence_of_string.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\11_print_all_permutation_of_string.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\12_split_binary_string_with_equal_1_and_0.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\13_word_wrap.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\14_edit_distance.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\15_find_next_greater_no_with_same_set_of_digit.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\16_balanced_paranthesis.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\17_word_break.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\18_rabin_karp.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\19_KMP.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\20_convert_sentence_into_numeric_keypad_sequence.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\21_min_no_of_bracket_reversals.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\22_count_all_palindromic_subsequence.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\23_count_of_no_of_given_string.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\24_search_word_in_2d_grid.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\25_boyer_moore_for_pattern_searching.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\26_converting_roman_numerals_to_integer.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\27_longest_common_prefix.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\28_min_no_of_flip_to_alternate.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\29_first_repeated_word_in_string.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\30_min_no_of_swaps_for_bracket_balancing.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\31_longest_common_subsequence.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\32_program_to_generate_all_valid_IP.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\33_smallest_window_contains_all_char_of_string_itself.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\34_rearrange_chars_such_that_two_adjacent_are_not_same.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\35_minimum_char_added_at_front_to_make_palindrom.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\36_given_sequence_of_all_words_print_all_anagrams.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\37_smallest_window_in_string_cont_all_char_of_another_string.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\38_recursively_remove_all_adjacent_same_char.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\39_string_match_where_one_string_have_wild_char.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\40_no_of_customers_who_could_not_find_computer.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\41_transform_one_string_to_another.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\42_check_if_two_given_string_are_isomorphic_of_each_other.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\43_recur_print_all_the_sentence_from_list_of_words.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\01-reverse-string.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\02-is-palindrom.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\03_duplicates_char_in_string.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\04_why_string_are_immutable.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\05_check_rotation_of_other.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\06_string_shuffle_of_other.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\07_count_and_say.cpp">
+      <Filter>Source Files\03_string</Filter>
+    </ClCompile>
+    <ClCompile Include="03_string\08_longest_palindromic_substring.cpp">
+      <Filter>Source Files\03_string</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
