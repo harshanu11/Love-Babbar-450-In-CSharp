@@ -574,7 +574,13 @@ void AlgoDemoLB()
 
 }
 //oop 
-class Employee {
+class AbstractEmployee
+{
+	void AskForPromotion();
+	// pure abstract
+	virtual void AskForPromotion1() = 0;;
+};
+class Employee :AbstractEmployee {
 	// default private modifire
 private:
 	string Key;
@@ -601,10 +607,25 @@ public:
 	{
 		cout << "sdfsf" << endl;
 	}
+	void AskForPromotion1() {}
+	void work() {}
+};
+// inheheritance
+class Programmer:public Employee
+{
+public:
+	string Language;
+	Programmer(string name,
+		string company,
+		int age) :Employee( name,company,age){
+	
+	}
+	void work() {}
+
 };
 void OopEx()
 {
-	Employee employee1=Employee("dfsdf", "dfsdf",5);
+	Employee employee1= Employee("dfsdf", "dfsdf",5);
 	employee1.Name = "dfsdf";
 	employee1.Company = "dfsdf";
 	employee1.Age = 5;
@@ -615,6 +636,10 @@ void OopEx()
 	//employee2.Age = 5;
 	employee1.setKey("23242");
 	employee1.getKey();
+	Programmer prog = Programmer(" "," ",55);
+	Employee* ee = &prog;
+
+	ee->work();
 }
 int main()
 {
