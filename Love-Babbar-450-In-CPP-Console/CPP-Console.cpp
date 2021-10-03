@@ -427,7 +427,7 @@ void SetDemo()
 	}
 	S.erase(14);// llog n
 }
-void SetDemoLB() 
+void SetDemoLB()
 {
 	// unique no duplicate
 	// use bst
@@ -542,7 +542,7 @@ void PairDemo()
 	}
 
 }
-void AlgoDemoLB() 
+void AlgoDemoLB()
 {
 	vector<int> v;
 	v.push_back(1);
@@ -573,9 +573,52 @@ void AlgoDemoLB()
 	}
 
 }
+//oop 
+class Employee {
+	// default private modifire
+private:
+	string Key;
+public:
+	string Name;
+	string Company;
+	int Age;
+	// getter settet
+	void setKey(string key) {
+		Key = key;
+	}
+	string getKey() {
+		return Key;
+	}
+	Employee(string name,
+		string company,
+		int age)
+	{
+		Name = name;
+		Company = company;
+		Age = age;
+	}
+	void IntrouduceYoureself()
+	{
+		cout << "sdfsf" << endl;
+	}
+};
+void OopEx()
+{
+	Employee employee1=Employee("dfsdf", "dfsdf",5);
+	employee1.Name = "dfsdf";
+	employee1.Company = "dfsdf";
+	employee1.Age = 5;
+
+	//Employee employee2;
+	//employee2.Name = "dsfdsfsdf";
+	//employee2.Company = "dfsdsdfsf";
+	//employee2.Age = 5;
+	employee1.setKey("23242");
+	employee1.getKey();
+}
 int main()
 {
-	PairDemo();
+	//SPairDemo();
 
 	return 0;
 }
