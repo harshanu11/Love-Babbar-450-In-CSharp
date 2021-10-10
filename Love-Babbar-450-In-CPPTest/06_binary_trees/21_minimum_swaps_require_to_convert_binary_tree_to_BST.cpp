@@ -92,7 +92,7 @@ class minimum_swaps_require_to_convert_binary_tree_to_BST
     }
 
     // Driver code
-    int main()
+    int main18()
     {
         int a[] = { 5, 6, 7, 8, 9, 10, 11 };
         int n = sizeof(a) / sizeof(a[0]);

@@ -118,7 +118,7 @@ class kth_ancestor_of_node_in_BT
     }
 
     // Driver program to test above functions
-    int main()
+    int main27()
     {
         // Let us create binary tree shown in above diagram
         nodeBT* root = newNode(1);
@@ -252,7 +252,7 @@ class kth_ancestor_of_node_in_BT
     //}
 
     // Driver program to test above functions
-    int main1()
+    int main28()
     {
         // Let us create binary tree shown in above diagram
         nodeBT* root = newNode(1);

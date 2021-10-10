@@ -90,21 +90,21 @@ class left_view_of_tree
     }
 
     // Driver Code
-    int main()
-    {
-        nodeBT* root = level_order_traversal::newNode(10);
-        root->left = newNode(2);
-        root->right = newNode(3);
-        root->left->left = newNode(7);
-        root->left->right = newNode(8);
-        root->right->right = newNode(15);
-        root->right->left = newNode(12);
-        root->right->right->left = newNode(14);
+    //int main8()
+    //{
+    //    nodeBT* root = level_order_traversal::newNode(10);
+    //    root->left = newNode(2);
+    //    root->right = newNode(3);
+    //    root->left->left = newNode(7);
+    //    root->left->right = newNode(8);
+    //    root->right->right = newNode(15);
+    //    root->right->left = newNode(12);
+    //    root->right->right->left = newNode(14);
 
-        leftView(root);
+    //    leftView(root);
 
-        return 0;
-    }
+    //    return 0;
+    //}
 
 
 
@@ -173,7 +173,7 @@ class left_view_of_tree
     }
 
     // Driver code
-    int main1()
+    int main9()
     {
         // Let's construct the tree as
         // shown in example

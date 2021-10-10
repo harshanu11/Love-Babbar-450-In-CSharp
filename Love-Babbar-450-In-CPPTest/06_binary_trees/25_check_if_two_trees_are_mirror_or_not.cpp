@@ -66,7 +66,7 @@ class check_if_two_trees_are_mirror_or_not
     }
 
     // Driver code
-    int main()
+    int main19()
     {
         int M = 7, N = 6;
 

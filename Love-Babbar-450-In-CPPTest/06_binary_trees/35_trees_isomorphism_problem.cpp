@@ -84,7 +84,7 @@ class trees_isomorphism_problem
     }
 
     /* Driver program to test above functions*/
-    int main()
+    int main30()
     {
         // Let us create trees shown in above diagram
         struct nodeBT* n1 = newNode(1);

@@ -96,7 +96,7 @@ class find_all_duplicate_subtree_in_BT
     }
 
     // Driver code
-    int main()
+    int main29()
     {
         Node* root = NULL;
         root = newNode(1);

@@ -73,7 +73,7 @@ class preorder_traversal_recursion_itertion
     //}
 
 
-    int main()
+    int main4()
     {
         /* Construct the following tree
                    1
@@ -97,7 +97,7 @@ class preorder_traversal_recursion_itertion
         root->right->left->left = new nodeBT(7);
         root->right->left->right = new nodeBT(8);
 
-        level_order_traversal::preorder(root);
+       // level_order_traversal::preorder(root);
 
         return 0;
     }
@@ -162,7 +162,7 @@ class preorder_traversal_recursion_itertion
     }
 
 
-    int main1()
+    int main5()
     {
         /* Construct the following tree
                    1

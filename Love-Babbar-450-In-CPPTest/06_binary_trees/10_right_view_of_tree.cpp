@@ -91,7 +91,7 @@ class right_view_of_tree
     }
 
     // Driver Code
-    int main()
+    int main10()
     {
         struct nodeBT* root = level_order_traversal::newNode(1);
         root->left = level_order_traversal::newNode(2);

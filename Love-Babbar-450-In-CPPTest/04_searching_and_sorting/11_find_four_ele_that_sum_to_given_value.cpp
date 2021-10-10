@@ -107,7 +107,7 @@ using namespace std;
 
 /* Following function is needed
 for library function qsort(). */
-int compare(const void* a, const void* b)
+int compare2(const void* a, const void* b)
 {
     return (*(int*)a - *(int*)b);
 }
@@ -122,7 +122,7 @@ void find4Numbers(int A[], int n, int X)
     // Sort the array in increasing
     // order, using library function
     // for quick sort
-    qsort(A, n, sizeof(A[0]), compare);
+    qsort(A, n, sizeof(A[0]), compare2);
 
     /* Now fix the first 2 elements
     one by one and find
@@ -188,7 +188,7 @@ class pairSum {
 
 // Following function is needed
 // for library function qsort()
-int compare2(const void* a, const void* b)
+int compare3(const void* a, const void* b)
 {
     return ((*(pairSum*)a).sum - (*(pairSum*)b).sum);
 }
@@ -229,7 +229,7 @@ void findFourElements2(int arr[], int n, int X)
 
     // Sort the aux[] array using
     // library function for sorting
-    qsort(aux, size, sizeof(aux[0]), compare);
+    qsort(aux, size, sizeof(aux[0]), compare2);
 
     // Now start two index variables
     // from two corners of array

@@ -165,7 +165,7 @@ class distance_between_2_nodes_in_binary_trees
     }
 
     // Driver program to test above functions
-    int main()
+    int main25()
     {
         // Let us create binary tree given in the
         // above example
@@ -240,7 +240,7 @@ class distance_between_2_nodes_in_binary_trees
     }
 
     // Driver program to test above functions
-    int main1()
+    int main26()
     {
         // Let us create binary tree given in
         // the above example

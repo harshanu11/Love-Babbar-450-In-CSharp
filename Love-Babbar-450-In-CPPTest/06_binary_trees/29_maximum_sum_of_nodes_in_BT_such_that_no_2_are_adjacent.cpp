@@ -118,7 +118,7 @@ class maximum_sum_of_nodes_in_BT_such_that_no_2_are_adjacent
     }
 
     // Driver code to test above methods
-    int main1()
+    int main21()
     {
         node* root = newNode(1);
         root->left = newNode(2);
@@ -146,18 +146,18 @@ class maximum_sum_of_nodes_in_BT_such_that_no_2_are_adjacent
     // C++ program to find maximum sum in Binary Tree
     // such that no two nodes are adjacent.
 
-    class nodeBT
-    {
-    public:
-        int data;
-        nodeBT* left, * right;
-        nodeBT(int data)
-        {
-            this->data = data;
-            left = NULL;
-            right = NULL;
-        }
-    };
+    //class nodeBT
+    //{
+    //public:
+    //    int data;
+    //    nodeBT* left, * right;
+    //    nodeBT(int data)
+    //    {
+    //        this->data = data;
+    //        left = NULL;
+    //        right = NULL;
+    //    }
+    //};
 
     pair<int, int> maxSumHelper(nodeBT* root)
     {
@@ -189,7 +189,7 @@ class maximum_sum_of_nodes_in_BT_such_that_no_2_are_adjacent
     }
 
     // Driver code
-    int main2()
+    int main22()
     {
         nodeBT* root = new nodeBT(10);
         root->left = new nodeBT(1);

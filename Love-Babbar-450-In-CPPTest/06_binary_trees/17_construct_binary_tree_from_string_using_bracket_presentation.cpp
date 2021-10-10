@@ -125,7 +125,7 @@ class construct_binary_tree_from_string_using_bracket_presentation
 	}
 
 	// Driver Code
-	int main()
+	int main14()
 	{
 		string str = "4(2(3)(1))(6(5))";
 		nodeBT* root = treeFromString(str, 0, str.length() - 1);
@@ -206,7 +206,7 @@ class construct_binary_tree_from_string_using_bracket_presentation
 	}
 
 	
-	int main2()
+	int main15()
 	{
 		string s = "4(2(3)(1))(6(5))";
 		// cin>>s;

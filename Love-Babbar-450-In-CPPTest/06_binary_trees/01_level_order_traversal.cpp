@@ -14,25 +14,46 @@
 #include <unordered_map>
 #include <queue>
 #include <stack>
-
+//#ifndef AAA_HEADER
+#define AAA_HEADER
 using namespace std;
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
+/* A binary tree nodeBT has data,
+pointer to left child
+and a pointer to right child */
+//#pragma once
+class nodeBT
+{
+public:
+    int data;
+    nodeBT* left, * right;
+    int c = 0;
+    int hd;
+    nodeBT() {}
+    nodeBT(int data)
+    {
+        nodeBT* nodeBT{};
+        nodeBT->data = data;
+        nodeBT->left = NULL;
+        nodeBT->right = NULL;
+    }
+};
 namespace LoveBabbar450InCPPTest
 {
-    TEST_CLASS(BTSort)
-    {
-    public:
+    //TEST_CLASS(BTSort)
+    //{
+    //public:
 
-        TEST_METHOD(Test)
-        {
-            std::string charM = "harhs";
-            int age = 14;
-            age = 55;
-            std::string lastName = "<<charM <<singh";
+    //    TEST_METHOD(Test)
+    //    {
+    //        std::string charM = "harhs";
+    //        int age = 14;
+    //        age = 55;
+    //        std::string lastName = "<<charM <<singh";
 
-        }
-    };
+    //    }
+    //};
 }
 
 
@@ -51,25 +72,6 @@ namespace LoveBabbar450InCPPTest
 // Recursive CPP program for level
 // order traversal of Binary Tree
 
-/* A binary tree nodeBT has data,
-pointer to left child
-and a pointer to right child */
-class nodeBT
-{
-public:
-    int data;
-    nodeBT* left, * right;
-    int c = 0;
-    int hd;
-    nodeBT() {}
-    nodeBT(int data) 
-    {
-        nodeBT* nodeBT;
-        nodeBT->data = data;
-        nodeBT->left = NULL;
-        nodeBT->right = NULL;
-    }
-};
 
 class level_order_traversal
 {
@@ -160,6 +162,7 @@ public:
 
         return(nodeBT);
     }
+
     static void preorder(nodeBT* root)
     {
         if (root == NULL)
@@ -204,7 +207,7 @@ public:
     //    }
     //}
     /* Driver code*/
-    int main()
+/*    int main()
     {
         nodeBT* root = newNode(1);
         root->left = newNode(2);
@@ -214,9 +217,9 @@ public:
 
         cout << "Level Order traversal of binary tree is \n";
         printLevelOrder(root);
-
         return 0;
-    }
+      
+    } */ 
 };
 
 

@@ -109,7 +109,7 @@ class top_view_of_tree
     }
 
     // Driver Program to test above functions
-    int main()
+    int main11()
     {
         /* Create following Binary Tree
                 1

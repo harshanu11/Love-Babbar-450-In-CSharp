@@ -80,7 +80,7 @@ class inorder_traversal_recursion_itertion
     //    inorder(root->right);
     //}
 
-    int main()
+    int main3()
     {
         /* Construct the following tree
                    1
@@ -150,7 +150,7 @@ class inorder_traversal_recursion_itertion
     //    inorder(root->right);
     //}
 
-    int main1()
+    int main2()
     {
         /* Construct the following tree
                    1

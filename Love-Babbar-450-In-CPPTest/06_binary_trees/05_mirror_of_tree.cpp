@@ -89,24 +89,24 @@ class mirror_of_tree
     }
 
     // Driver Code
-    int main()
-    {
+    //int main()
+    //{
 
-        nodeBT* tree = createNode(5);
-        tree->left = createNode(3);
-        tree->right = createNode(6);
-        tree->left->left = createNode(2);
-        tree->left->right = createNode(4);
-        printf("Inorder of original tree: ");
-        //inorder(tree);
+    //    nodeBT* tree = createNode(5);
+    //    tree->left = createNode(3);
+    //    tree->right = createNode(6);
+    //    tree->left->left = createNode(2);
+    //    tree->left->right = createNode(4);
+    //    printf("Inorder of original tree: ");
+    //    //inorder(tree);
 
-        // Function call
-        mirrorTree(tree);
+    //    // Function call
+    //    mirrorTree(tree);
 
-        printf("\nInorder of Miror tree: ");
-        //inorder(tree);
-        return 0;
-    }
+    //    printf("\nInorder of Miror tree: ");
+    //    //inorder(tree);
+    //    return 0;
+    //}
 
 
 

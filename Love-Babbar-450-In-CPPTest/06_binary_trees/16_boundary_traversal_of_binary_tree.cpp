@@ -138,7 +138,7 @@ class boundary_traversal_of_binary_tree
     //}
 
     // Driver program to test above functions
-    int main()
+    int main13()
     {
         // Let us construct the tree given in the above diagram
         nodeBT* root = level_order_traversal::newNode(20);

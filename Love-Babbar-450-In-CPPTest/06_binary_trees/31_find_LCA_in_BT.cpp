@@ -103,7 +103,7 @@ class find_LCA_in_BT
     }
 
     // Driver program to test above functions
-    int main()
+    int main24()
     {
         // Let us create the Binary Tree shown in above diagram.
         nodeBT* root = newNode(1);

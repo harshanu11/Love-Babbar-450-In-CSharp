@@ -142,7 +142,7 @@ class convert_binary_trees_into_doubly_linklist
     }
 
     /* Driver code*/
-    int main()
+    int main16()
     {
         // Let us create the tree shown in above diagram
         nodeBT* root = newNode(10);
@@ -180,12 +180,12 @@ class convert_binary_trees_into_doubly_linklist
 
     /* A binary tree nodeBT has data,
     and left and right pointers */
-    class nodeBT {
-    public:
-        int data;
-        nodeBT* left;
-        nodeBT* right;
-    };
+    //class nodeBT {
+    //public:
+    //    int data;
+    //    nodeBT* left;
+    //    nodeBT* right;
+    //};
 
     /* This is the core function to convert
     Tree to list.*/
@@ -218,7 +218,7 @@ class convert_binary_trees_into_doubly_linklist
 
     // The main function that first calls
     // bintree2listUtil()
-    nodeBT* bintree2list(nodeBT* root)
+    nodeBT* bintree2list2(nodeBT* root)
     {
         // Base case
         if (root == NULL)
@@ -243,16 +243,16 @@ class convert_binary_trees_into_doubly_linklist
     }
 
     /* Function to print nodes in a given doubly linked list */
-    void printList(nodeBT* nodeBT)
-    {
-        while (nodeBT != NULL) {
-            cout << nodeBT->data << " ";
-            nodeBT = nodeBT->right;
-        }
-    }
+    //void printList(nodeBT* nodeBT)
+    //{
+    //    while (nodeBT != NULL) {
+    //        cout << nodeBT->data << " ";
+    //        nodeBT = nodeBT->right;
+    //    }
+    //}
 
     /* Driver code*/
-    int main1()
+    int main17()
     {
         // Let us create the tree shown in above diagram
         nodeBT* root = newNode(10);

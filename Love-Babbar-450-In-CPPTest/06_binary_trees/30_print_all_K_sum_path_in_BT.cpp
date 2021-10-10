@@ -103,7 +103,7 @@ class print_all_K_sum_path_in_BT
     }
 
     // Driver code
-    int main()
+    int main23()
     {
         Node* root = new Node(1);
         root->left = new Node(3);

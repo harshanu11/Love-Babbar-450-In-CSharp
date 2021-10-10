@@ -99,7 +99,7 @@ class argest_subtree_sum_in_tree
     }
 
     // Driver function
-    int main()
+    int main20()
     {
         /*
                 1

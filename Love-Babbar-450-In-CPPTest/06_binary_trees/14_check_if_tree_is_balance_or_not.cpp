@@ -170,7 +170,7 @@ class check_if_tree_is_balance_or_not
         else return isLeftBalanced && isRightBalanced;
     }
 
-    int main(nodeBT* root) {
+    int main13(nodeBT* root) {
         return isBalanced(root, 0);
     }
 

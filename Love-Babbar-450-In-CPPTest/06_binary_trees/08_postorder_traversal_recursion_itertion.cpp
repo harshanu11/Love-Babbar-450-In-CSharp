@@ -74,7 +74,7 @@ class postorder_traversal_recursion_itertion {
     }
 
 
-    int main()
+    int main6()
     {
         /* Construct the following tree
                    1
@@ -164,7 +164,7 @@ class postorder_traversal_recursion_itertion {
     }
 
 
-    int main1()
+    int main7()
     {
         /* Construct the following tree
                    1

@@ -202,7 +202,7 @@ class zigzag_traversal_of_binary_tree
     }
 
 
-    int main()
+    int main12()
     {
         // Tree:
       //          1
