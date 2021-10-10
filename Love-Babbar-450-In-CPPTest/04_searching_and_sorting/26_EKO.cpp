@@ -104,7 +104,7 @@ void solveKEO() {
     TC: O(N logN)
     SC: O(N)
 */
-void solve2() {
+void solve3() {
     long long n, m;
     cin >> n >> m;
 

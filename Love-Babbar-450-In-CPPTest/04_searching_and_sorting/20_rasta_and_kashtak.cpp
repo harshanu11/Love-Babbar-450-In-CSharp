@@ -39,7 +39,7 @@ long long get2(long a, long b, long c)
 
 vector<long long> have;
 
-bool solve(int X)
+bool solve1(int X)
 {
     have.clear();
     for (int i = 0;i + X <= n1;i++)
@@ -104,7 +104,7 @@ namespace LoveBabbar450InCPPTest
             {
                 int mid = l + r + 1;
                 mid /= 2;
-                if (solve(mid))l = mid;
+                if (solve1(mid))l = mid;
                 else
                     r = mid - 1;
             }

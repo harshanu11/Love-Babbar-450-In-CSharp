@@ -34,6 +34,9 @@
     <Filter Include="Source Files\07_binary_search_trees">
       <UniqueIdentifier>{c85157a6-343f-4115-9b9f-915cd80797e4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\08_greedy">
+      <UniqueIdentifier>{fb7b9940-5094-40fd-9c23-9d7ffa5b5ebc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Love-Babbar-450-In-CPPTest.cpp">
@@ -695,6 +698,111 @@
     </ClCompile>
     <ClCompile Include="07_binary_search_trees\08_construct_BST_from_preorder_traversal.cpp">
       <Filter>Source Files\07_binary_search_trees</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\07_maximum_trains_for_which_stoppage_can_be_provided.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\08_minimum_platform_problem.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\09_buy_maximum_stock_if_can_be_bought_on_ith_day.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\10_max_min_amount_to_buy_all_candy.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\11_min_cash_flow_in_friends_who_has_borrowed_money.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\12_min_cost_to_cut_board_into_square.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\13_check_if_its_possible_to_survive_on_island.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\14_find_maximum_meetings_in_one_room.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\15_maximum_product_subset_of_an_array.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\16_maximize_array_sum_after_k_negations.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\17_maximize_sum_of_arr_i_into_i.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\18_maximum_sum_of_absolute_difference_of_an_array.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\19_maximum_sum_of_consecutive_difference_in_circular_array.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\20_min_sum_of_absolute_difference_in_pair_of_2_arrays.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\21_shortest_job_first_SJF.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\22_least_recently_used_LRU_page_replacement.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\23_smallest_subset_with_sum_greater_than_all_other_element.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\24_chocolate_distribution_problem.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\25_DEFKIN_defence_of_kingdom.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\26_die_hard.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\27_GERGOVIA_wine_trading_in_gergovia.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\28_picking_up_chicks.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\29_CHOCOLA_choclate.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\30_ARRANGE_arranging_amplifiers.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\31_K_centers_problem.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\32_minimum_cost_of_ropes.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\33_find_smallest_no_given_total_no_of_digits_and_sum_of_digits.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\34_rearrange_characters_in_string_such_that_no_2_adjacent_are_same.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\35_find_maximum_sum_possible_equal_sum_of_three_stacks.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\01_activity_selection_problem.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\02_job_sequencing_problem.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\03_huffman_coding.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\04_water_connection_problem.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\05_fractional_knapsack_problem.cpp">
+      <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="08_greedy\06_find_minimum_no_of_coins.cpp">
+      <Filter>Source Files\08_greedy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

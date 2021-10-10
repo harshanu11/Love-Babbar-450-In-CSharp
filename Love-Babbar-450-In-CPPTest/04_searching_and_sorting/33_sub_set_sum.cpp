@@ -24,7 +24,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 */
 using namespace std;
 
-void solve(long long* a, vector<long long>& v, long long start, long long end) {
+void solve4(long long* a, vector<long long>& v, long long start, long long end) {
     long long n = end - start + 1;
 
     for (long long i = 0;i < (1 << n);i++) {
@@ -57,8 +57,8 @@ namespace LoveBabbar450InCPPTest
             long long count = 0;
 
             vector<long long> v1, v2;
-            solve(arr, v1, 0, n / 2 - 1);
-            solve(arr, v2, n / 2, n - 1);
+            solve4(arr, v1, 0, n / 2 - 1);
+            solve4(arr, v2, n / 2, n - 1);
 
             sort(v2.begin(), v2.end());
 

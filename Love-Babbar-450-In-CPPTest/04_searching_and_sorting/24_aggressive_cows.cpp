@@ -50,7 +50,7 @@ bool check(vector<ll>& arr, ll n, ll diff, ll cows) {
     return curr_cows == cows;
 }
 
-void solve() {
+void solve2() {
     int stalls_cnt, cows;
     cin >> stalls_cnt >> cows;
 
@@ -90,18 +90,18 @@ void solve() {
 
 namespace LoveBabbar450InCPPTest
 {
-    TEST_CLASS(SearchSort)
-    {
-    public:
+    //TEST_CLASS(SearchSort)
+    //{
+    //public:
 
-        TEST_METHOD(find1Test)
-        {
-            int t;
-            cin >> t;
-            while (t--) {
-                solve();
-            }
+    //    TEST_METHOD(find1Test)
+    //    {
+    //        int t;
+    //        cin >> t;
+    //        while (t--) {
+    //            solve();
+    //        }
 
-        }
-    };
+    //    }
+    //};
 }
