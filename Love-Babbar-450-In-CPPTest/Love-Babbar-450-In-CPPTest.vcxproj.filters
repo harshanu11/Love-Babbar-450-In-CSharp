@@ -46,6 +46,12 @@
     <Filter Include="Source Files\11_heap">
       <UniqueIdentifier>{9f6ceb25-0114-490c-8ec7-07a65556046d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\12_graph">
+      <UniqueIdentifier>{23bb3251-784b-4ee4-9281-76026d031955}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\13_trie">
+      <UniqueIdentifier>{8705db35-4f2a-45e1-8499-599c9c9791f5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Love-Babbar-450-In-CPPTest.cpp">
@@ -1040,6 +1046,150 @@
     </ClCompile>
     <ClCompile Include="11_heap\06_merge_k_sorted_array.cpp">
       <Filter>Source Files\11_heap</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\10_making_wired_connections.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\11_word_ladder.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\12_dijkstra_algo.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\13_implement_topological_sort.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\14_Minimum_time_taken_by_each_job_to_be_completed_given_by_a_Directed_Acyclic_Graph.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\15_Find_whether_it_is_possible_to_finish_all_tasks_or_not_from_given_dependencies.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\16_find_no_of_islands.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\17_given_sorted_alien_dictionary_find_the_order_of_character.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\18_implement_kruskals_algorithm.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\19_implement_prims_algorithm.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\20_total_no_of_spanning_tree_in_graph.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\21_implement_bellman_ford_algorithm.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\22_implement_floyd_warshalls_algorithm.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\23_travelling_salesman_problem.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\24_graph_coloring_problem.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\25_snake_and_ladders_problem.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\26_find_bridge_in_graph_(cut_edge).cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\27_kosaraju_algo_count_strongly_connected_components.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\28_check_if_graph_is_bipartite_or_not.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\29_detect_negative_cycle_in_graph.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\30_longest_path_in_directed_acyclic_graph.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\31_journey_to_the_moon.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\32_cheapest_flights_within_K_stops.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\33_oliver_and_the_game.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\34_waterJug_problem_using_BFS.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\36_Find_if_there_is_a_path_of_more_than_k_length_from_a_source.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\37_M_coloring_problem.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\38_Minimum_edges_to_reverse_to_make_path_from_a_source_to_a_destination.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\39_paths_to_travel_each_node_using_each_edge_seven_bridge.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\40_vertex_cover_problem.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\41_chinese_postman_or_route_inspection.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\42_no_of_triangle_in_directed_or_undirected_graphs.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\43_Minimize_Cash_Flow_among_a_given_set_of_friends_who_have_borrowed_money_from_each_other.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\44_two_clique_problem.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\extra_01_shortest_path_in_undirected_graph_with_unit_weight.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\extra_02_shortest_path_in_DAG_with_weight.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\extra_03_disjoint_set_union_by_rank_and_path_compression.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\extra_04_articulation_point_(cut_vertex).cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\00_graph.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\01_create_and_print_graph.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\02_implement_BFS_algorithm.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\03_implement_DFS_algorithm.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\04_detect_cycle_in_directed_graph_using_DFS_BFS.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\05_detect_cycle_in_undirected_graph_using_DFS_BFS.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\06_search_in_maze.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\07_minimum_step_by_knight.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\08_flood_fill_algo.cpp">
+      <Filter>Source Files\12_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="12_graph\09_clone_a_graph.cpp">
+      <Filter>Source Files\12_graph</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
