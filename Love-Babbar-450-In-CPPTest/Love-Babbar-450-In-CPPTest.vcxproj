@@ -410,6 +410,26 @@
     <ClCompile Include="08_greedy\33_find_smallest_no_given_total_no_of_digits_and_sum_of_digits.cpp" />
     <ClCompile Include="08_greedy\34_rearrange_characters_in_string_such_that_no_2_adjacent_are_same.cpp" />
     <ClCompile Include="08_greedy\35_find_maximum_sum_possible_equal_sum_of_three_stacks.cpp" />
+    <ClCompile Include="09_backtracking\00_intro.cpp" />
+    <ClCompile Include="09_backtracking\01_rat_in_maze.cpp" />
+    <ClCompile Include="09_backtracking\02_print_all_solution_in_N_queen_problem.cpp" />
+    <ClCompile Include="09_backtracking\03_word_break_problem_using_backtracking.cpp" />
+    <ClCompile Include="09_backtracking\04_remove_invalid_paranthesis.cpp" />
+    <ClCompile Include="09_backtracking\05_sudoku_solver.cpp" />
+    <ClCompile Include="09_backtracking\06_M_coloring_problem.cpp" />
+    <ClCompile Include="09_backtracking\07_print_all_palindromic_partitions_of_string.cpp" />
+    <ClCompile Include="09_backtracking\08_subset_sum_problem.cpp" />
+    <ClCompile Include="09_backtracking\09_knights_tour_problem.cpp" />
+    <ClCompile Include="09_backtracking\10_tug_of_war.cpp" />
+    <ClCompile Include="09_backtracking\11_find_shortest_safe_route_in_path_with_landmines.cpp" />
+    <ClCompile Include="09_backtracking\12_combinational_sum.cpp" />
+    <ClCompile Include="09_backtracking\13_maximum_no_possible_by_doing_atmost_k_swaps.cpp" />
+    <ClCompile Include="09_backtracking\14_print_all_permutations_of_string.cpp" />
+    <ClCompile Include="09_backtracking\15_find_if_there_is_path_of_more_than_k_length_from_source.cpp" />
+    <ClCompile Include="09_backtracking\16_longest_possible_route_in_matrix_with_hurdles.cpp" />
+    <ClCompile Include="09_backtracking\17_print_all_possible_path_from_top_left_to_bottom_right_in_MN_matrix.cpp" />
+    <ClCompile Include="09_backtracking\18_partition_of_set_into_K_subset_with_equal_sum.cpp" />
+    <ClCompile Include="09_backtracking\19_kth_permutation_sequence_of_first_N_natural_no.cpp" />
     <ClCompile Include="Love-Babbar-450-In-CPPTest.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

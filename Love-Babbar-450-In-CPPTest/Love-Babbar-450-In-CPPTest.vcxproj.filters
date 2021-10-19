@@ -37,6 +37,9 @@
     <Filter Include="Source Files\08_greedy">
       <UniqueIdentifier>{fb7b9940-5094-40fd-9c23-9d7ffa5b5ebc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\09_backtracking">
+      <UniqueIdentifier>{061fad8d-6bf1-4b7b-ba6a-a78f07b7e747}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Love-Babbar-450-In-CPPTest.cpp">
@@ -803,6 +806,66 @@
     </ClCompile>
     <ClCompile Include="08_greedy\06_find_minimum_no_of_coins.cpp">
       <Filter>Source Files\08_greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="09_backtracking\02_print_all_solution_in_N_queen_problem.cpp">
+      <Filter>Source Files\09_backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="09_backtracking\03_word_break_problem_using_backtracking.cpp">
+      <Filter>Source Files\09_backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="09_backtracking\04_remove_invalid_paranthesis.cpp">
+      <Filter>Source Files\09_backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="09_backtracking\05_sudoku_solver.cpp">
+      <Filter>Source Files\09_backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="09_backtracking\06_M_coloring_problem.cpp">
+      <Filter>Source Files\09_backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="09_backtracking\07_print_all_palindromic_partitions_of_string.cpp">
+      <Filter>Source Files\09_backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="09_backtracking\08_subset_sum_problem.cpp">
+      <Filter>Source Files\09_backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="09_backtracking\09_knights_tour_problem.cpp">
+      <Filter>Source Files\09_backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="09_backtracking\10_tug_of_war.cpp">
+      <Filter>Source Files\09_backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="09_backtracking\11_find_shortest_safe_route_in_path_with_landmines.cpp">
+      <Filter>Source Files\09_backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="09_backtracking\12_combinational_sum.cpp">
+      <Filter>Source Files\09_backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="09_backtracking\13_maximum_no_possible_by_doing_atmost_k_swaps.cpp">
+      <Filter>Source Files\09_backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="09_backtracking\14_print_all_permutations_of_string.cpp">
+      <Filter>Source Files\09_backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="09_backtracking\15_find_if_there_is_path_of_more_than_k_length_from_source.cpp">
+      <Filter>Source Files\09_backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="09_backtracking\16_longest_possible_route_in_matrix_with_hurdles.cpp">
+      <Filter>Source Files\09_backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="09_backtracking\17_print_all_possible_path_from_top_left_to_bottom_right_in_MN_matrix.cpp">
+      <Filter>Source Files\09_backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="09_backtracking\18_partition_of_set_into_K_subset_with_equal_sum.cpp">
+      <Filter>Source Files\09_backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="09_backtracking\19_kth_permutation_sequence_of_first_N_natural_no.cpp">
+      <Filter>Source Files\09_backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="09_backtracking\00_intro.cpp">
+      <Filter>Source Files\09_backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="09_backtracking\01_rat_in_maze.cpp">
+      <Filter>Source Files\09_backtracking</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
