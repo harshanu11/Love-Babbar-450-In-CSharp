@@ -43,6 +43,9 @@
     <Filter Include="Source Files\10_stack_and_queues">
       <UniqueIdentifier>{9e644799-df26-42ba-b263-a1eb13f92d46}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\11_heap">
+      <UniqueIdentifier>{9f6ceb25-0114-490c-8ec7-07a65556046d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Love-Babbar-450-In-CPPTest.cpp">
@@ -983,6 +986,60 @@
     </ClCompile>
     <ClCompile Include="10_stack_and_queues\06_check_expression_has_balanced_paranthesis_or_not.cpp">
       <Filter>Source Files\10_stack_and_queues</Filter>
+    </ClCompile>
+    <ClCompile Include="11_heap\07_merge_two_binary_maxheaps.cpp">
+      <Filter>Source Files\11_heap</Filter>
+    </ClCompile>
+    <ClCompile Include="11_heap\08_kth_largest_sum_continuous_subarrays.cpp">
+      <Filter>Source Files\11_heap</Filter>
+    </ClCompile>
+    <ClCompile Include="11_heap\09_reorganize_strings.cpp">
+      <Filter>Source Files\11_heap</Filter>
+    </ClCompile>
+    <ClCompile Include="11_heap\10_merge_K_sorted_linklist.cpp">
+      <Filter>Source Files\11_heap</Filter>
+    </ClCompile>
+    <ClCompile Include="11_heap\11_smallest_range_in_k_list.cpp">
+      <Filter>Source Files\11_heap</Filter>
+    </ClCompile>
+    <ClCompile Include="11_heap\12_median_in_stream_of_integers.cpp">
+      <Filter>Source Files\11_heap</Filter>
+    </ClCompile>
+    <ClCompile Include="11_heap\13_check_if_binary_trees_is_heap_or_not.cpp">
+      <Filter>Source Files\11_heap</Filter>
+    </ClCompile>
+    <ClCompile Include="11_heap\14_connect_N_ropes_with_minimum_cost.cpp">
+      <Filter>Source Files\11_heap</Filter>
+    </ClCompile>
+    <ClCompile Include="11_heap\15_convert_BST_to_minHeap.cpp">
+      <Filter>Source Files\11_heap</Filter>
+    </ClCompile>
+    <ClCompile Include="11_heap\16_convert_minHeap_to_maxHeap.cpp">
+      <Filter>Source Files\11_heap</Filter>
+    </ClCompile>
+    <ClCompile Include="11_heap\17_rearrange_characters_in_strings_such_that_no_2_adjacent_are_same.cpp">
+      <Filter>Source Files\11_heap</Filter>
+    </ClCompile>
+    <ClCompile Include="11_heap\18_min_sum_of_2_no_formed_from_digits_of_an_array.cpp">
+      <Filter>Source Files\11_heap</Filter>
+    </ClCompile>
+    <ClCompile Include="11_heap\01_maxheap_minheap_using_array_and_recursion.cpp">
+      <Filter>Source Files\11_heap</Filter>
+    </ClCompile>
+    <ClCompile Include="11_heap\02_sort_array_using_heap_HEAPSORT.cpp">
+      <Filter>Source Files\11_heap</Filter>
+    </ClCompile>
+    <ClCompile Include="11_heap\03_maximum_of_all_subarray_of_size_K.cpp">
+      <Filter>Source Files\11_heap</Filter>
+    </ClCompile>
+    <ClCompile Include="11_heap\04_k_largest_ele_in_array.cpp">
+      <Filter>Source Files\11_heap</Filter>
+    </ClCompile>
+    <ClCompile Include="11_heap\05_kth_smallest_and_kth_largest_in_unsorted_array.cpp">
+      <Filter>Source Files\11_heap</Filter>
+    </ClCompile>
+    <ClCompile Include="11_heap\06_merge_k_sorted_array.cpp">
+      <Filter>Source Files\11_heap</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

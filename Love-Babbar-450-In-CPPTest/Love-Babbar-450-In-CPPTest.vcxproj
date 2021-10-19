@@ -468,6 +468,24 @@
     <ClCompile Include="10_stack_and_queues\36_Minimum_sum_of_squares_of_character_counts_in_given_string_after_removing_k_characters.cpp" />
     <ClCompile Include="10_stack_and_queues\37_Queue_based_approach_or_first_non_repeating_character_in_stream.cpp" />
     <ClCompile Include="10_stack_and_queues\38_next_smaller_element.cpp" />
+    <ClCompile Include="11_heap\01_maxheap_minheap_using_array_and_recursion.cpp" />
+    <ClCompile Include="11_heap\02_sort_array_using_heap_HEAPSORT.cpp" />
+    <ClCompile Include="11_heap\03_maximum_of_all_subarray_of_size_K.cpp" />
+    <ClCompile Include="11_heap\04_k_largest_ele_in_array.cpp" />
+    <ClCompile Include="11_heap\05_kth_smallest_and_kth_largest_in_unsorted_array.cpp" />
+    <ClCompile Include="11_heap\06_merge_k_sorted_array.cpp" />
+    <ClCompile Include="11_heap\07_merge_two_binary_maxheaps.cpp" />
+    <ClCompile Include="11_heap\08_kth_largest_sum_continuous_subarrays.cpp" />
+    <ClCompile Include="11_heap\09_reorganize_strings.cpp" />
+    <ClCompile Include="11_heap\10_merge_K_sorted_linklist.cpp" />
+    <ClCompile Include="11_heap\11_smallest_range_in_k_list.cpp" />
+    <ClCompile Include="11_heap\12_median_in_stream_of_integers.cpp" />
+    <ClCompile Include="11_heap\13_check_if_binary_trees_is_heap_or_not.cpp" />
+    <ClCompile Include="11_heap\14_connect_N_ropes_with_minimum_cost.cpp" />
+    <ClCompile Include="11_heap\15_convert_BST_to_minHeap.cpp" />
+    <ClCompile Include="11_heap\16_convert_minHeap_to_maxHeap.cpp" />
+    <ClCompile Include="11_heap\17_rearrange_characters_in_strings_such_that_no_2_adjacent_are_same.cpp" />
+    <ClCompile Include="11_heap\18_min_sum_of_2_no_formed_from_digits_of_an_array.cpp" />
     <ClCompile Include="Love-Babbar-450-In-CPPTest.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
