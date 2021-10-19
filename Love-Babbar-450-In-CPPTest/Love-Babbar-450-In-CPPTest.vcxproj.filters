@@ -52,6 +52,9 @@
     <Filter Include="Source Files\13_trie">
       <UniqueIdentifier>{8705db35-4f2a-45e1-8499-599c9c9791f5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\14_DP">
+      <UniqueIdentifier>{17ae886f-c0fa-400c-a904-dab940a1a4c2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Love-Babbar-450-In-CPPTest.cpp">
@@ -1229,6 +1232,183 @@
     </ClCompile>
     <ClCompile Include="13_trie\05_implement_phone_directory.cpp">
       <Filter>Source Files\13_trie</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\07_Minimum_number_of_deletion_in_a_string_to_make_it_a_palindrome.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\08_longest_repeated_subsequence.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\09_binomial_cofficient.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\10_permutation_coefficient_problem.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\11_egg_dropping_problem.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\12_nth_catalan_no.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\13_edit_distance.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\14_friend_pairing_problem.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\15_gold_mine.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\16_maximize_cut_segment.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\17_painting_the_fence.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\18_assembly_line_scheduling.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\19_LCS_space_optimized.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\20_LCS_of_3_string.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\21_max_sum_increasing_subsequence.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\22_count_all_subsequence_product_less_than_k.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\23_longest_subsequence_adj_diff_1.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\24_max_sum_no_two_ele_are_adjacent.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\25_max_sum_no_three_are_consequetive.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\26_min_cost_to_fill_in_given_weights.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\27_min_jump_to_reach_end.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\28_max_length_chain_of_pairs.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\29_max_path_sum_in_matrix.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\30_max_diff_0_and_1.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\31_print_longest_palindromic_substring.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\32_partition_problem.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\33_unbound_knapsack.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\34_count_no_of_ways_to_reach_given_score.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\35_kadanes_algo_OR_largest_sum_contigous_array.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\36_smallest_sum_contiguous_subarray.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\37_longest_alternating_subsequence.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\38_interleaved_string.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\39_max_profit_buy_sell_share.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\40_max_sum_rectangle_2d_matrix.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\41_largest_area_rectangle_with_equal_1_and_0.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\42_boolean_paranthization_problem.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\43_mobile_numeric_keypad_problem.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\44_optimal_strategy_for_game.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\45_palindrom_partition_problem.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\46_all_count_palindromic_subsequence.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\48_weighted_job_scheduling.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\49_count_derangements.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\50_coin_game_winner_three_choice.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\51_max_sum_of_pair_with_specific_diff.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\52_Maximum_size_square_sub-matrix_with_all_1.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\53_min_removal_to_make_max_min_diff_k.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\54_count_balance_binary_tree.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\55_word_break_problem.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\56_largest_independent_set_problem.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\57_optimal_binary_search_tree.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\58_word_wrap.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\59_largest_rectangular_sum_matrix_0.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\60_matrix_chain_multiplication.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\01_0-1_knapsack.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\02_equal_subset-sum.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\03_coin_change.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\04_LC_subsequences.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\05_LC_substring.cpp">
+      <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="14_DP\06_Longest_Palindromic_Subsequence.cpp">
+      <Filter>Source Files\14_DP</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
