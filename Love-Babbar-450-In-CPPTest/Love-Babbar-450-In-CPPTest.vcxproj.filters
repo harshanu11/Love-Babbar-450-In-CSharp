@@ -55,6 +55,9 @@
     <Filter Include="Source Files\14_DP">
       <UniqueIdentifier>{17ae886f-c0fa-400c-a904-dab940a1a4c2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\15_bit-manipulation">
+      <UniqueIdentifier>{21f0b4fd-3190-44a1-a065-d9c7af368fb7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Love-Babbar-450-In-CPPTest.cpp">
@@ -1409,6 +1412,36 @@
     </ClCompile>
     <ClCompile Include="14_DP\06_Longest_Palindromic_Subsequence.cpp">
       <Filter>Source Files\14_DP</Filter>
+    </ClCompile>
+    <ClCompile Include="15_bit-manipulation\03_bits_flipped.cpp">
+      <Filter>Source Files\15_bit-manipulation</Filter>
+    </ClCompile>
+    <ClCompile Include="15_bit-manipulation\04_total_set_bits_from_1_to_n.cpp">
+      <Filter>Source Files\15_bit-manipulation</Filter>
+    </ClCompile>
+    <ClCompile Include="15_bit-manipulation\05_no_is_power_of_2.cpp">
+      <Filter>Source Files\15_bit-manipulation</Filter>
+    </ClCompile>
+    <ClCompile Include="15_bit-manipulation\06_find_pos_of_set_bit.cpp">
+      <Filter>Source Files\15_bit-manipulation</Filter>
+    </ClCompile>
+    <ClCompile Include="15_bit-manipulation\07_copy_set_bit_in_range.cpp">
+      <Filter>Source Files\15_bit-manipulation</Filter>
+    </ClCompile>
+    <ClCompile Include="15_bit-manipulation\08_without_div_mul_mod.cpp">
+      <Filter>Source Files\15_bit-manipulation</Filter>
+    </ClCompile>
+    <ClCompile Include="15_bit-manipulation\09_square_of_no_without_mul_pow_divide.cpp">
+      <Filter>Source Files\15_bit-manipulation</Filter>
+    </ClCompile>
+    <ClCompile Include="15_bit-manipulation\10_power_set.cpp">
+      <Filter>Source Files\15_bit-manipulation</Filter>
+    </ClCompile>
+    <ClCompile Include="15_bit-manipulation\01_count_set_bits_in_num.cpp">
+      <Filter>Source Files\15_bit-manipulation</Filter>
+    </ClCompile>
+    <ClCompile Include="15_bit-manipulation\02_non_repeating_elements.cpp">
+      <Filter>Source Files\15_bit-manipulation</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

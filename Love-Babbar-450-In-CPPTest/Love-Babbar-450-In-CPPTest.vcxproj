@@ -606,6 +606,16 @@
     <ClCompile Include="14_DP\58_word_wrap.cpp" />
     <ClCompile Include="14_DP\59_largest_rectangular_sum_matrix_0.cpp" />
     <ClCompile Include="14_DP\60_matrix_chain_multiplication.cpp" />
+    <ClCompile Include="15_bit-manipulation\01_count_set_bits_in_num.cpp" />
+    <ClCompile Include="15_bit-manipulation\02_non_repeating_elements.cpp" />
+    <ClCompile Include="15_bit-manipulation\03_bits_flipped.cpp" />
+    <ClCompile Include="15_bit-manipulation\04_total_set_bits_from_1_to_n.cpp" />
+    <ClCompile Include="15_bit-manipulation\05_no_is_power_of_2.cpp" />
+    <ClCompile Include="15_bit-manipulation\06_find_pos_of_set_bit.cpp" />
+    <ClCompile Include="15_bit-manipulation\07_copy_set_bit_in_range.cpp" />
+    <ClCompile Include="15_bit-manipulation\08_without_div_mul_mod.cpp" />
+    <ClCompile Include="15_bit-manipulation\09_square_of_no_without_mul_pow_divide.cpp" />
+    <ClCompile Include="15_bit-manipulation\10_power_set.cpp" />
     <ClCompile Include="Love-Babbar-450-In-CPPTest.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
