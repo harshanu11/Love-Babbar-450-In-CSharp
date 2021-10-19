@@ -1191,6 +1191,45 @@
     <ClCompile Include="12_graph\09_clone_a_graph.cpp">
       <Filter>Source Files\12_graph</Filter>
     </ClCompile>
+    <ClCompile Include="13_trie\06_print_unique_rows_in_given_boolean_matrix.cpp">
+      <Filter>Source Files\13_trie</Filter>
+    </ClCompile>
+    <ClCompile Include="13_trie\extra_01_count_prefix_of_string.cpp">
+      <Filter>Source Files\13_trie</Filter>
+    </ClCompile>
+    <ClCompile Include="13_trie\extra_02_autocomplete.cpp">
+      <Filter>Source Files\13_trie</Filter>
+    </ClCompile>
+    <ClCompile Include="13_trie\extra_03_add_and_search.cpp">
+      <Filter>Source Files\13_trie</Filter>
+    </ClCompile>
+    <ClCompile Include="13_trie\extra_04_longest_duplicate_sub_string.cpp">
+      <Filter>Source Files\13_trie</Filter>
+    </ClCompile>
+    <ClCompile Include="13_trie\extra_05_suffix_trie.cpp">
+      <Filter>Source Files\13_trie</Filter>
+    </ClCompile>
+    <ClCompile Include="13_trie\extra_06_cute_cat.cpp">
+      <Filter>Source Files\13_trie</Filter>
+    </ClCompile>
+    <ClCompile Include="13_trie\extra_07_biggest_xor.cpp">
+      <Filter>Source Files\13_trie</Filter>
+    </ClCompile>
+    <ClCompile Include="13_trie\01_construct_trie_from_scratch.cpp">
+      <Filter>Source Files\13_trie</Filter>
+    </ClCompile>
+    <ClCompile Include="13_trie\02_Find_shortest_unique_prefix_for_every_word_in_a_given_list.cpp">
+      <Filter>Source Files\13_trie</Filter>
+    </ClCompile>
+    <ClCompile Include="13_trie\03_word_break_problem.cpp">
+      <Filter>Source Files\13_trie</Filter>
+    </ClCompile>
+    <ClCompile Include="13_trie\04_given_sequence_of_words_print_all_anagrams_together.cpp">
+      <Filter>Source Files\13_trie</Filter>
+    </ClCompile>
+    <ClCompile Include="13_trie\05_implement_phone_directory.cpp">
+      <Filter>Source Files\13_trie</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
