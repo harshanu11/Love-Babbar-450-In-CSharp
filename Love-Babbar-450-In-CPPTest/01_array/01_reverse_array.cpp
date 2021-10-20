@@ -5,6 +5,18 @@
 */
 //#include "pch.h"
 #include "CppUnitTest.h"
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <map>
+#include <unordered_set>
+#include <set>
+#include <unordered_map>
+#include <queue>
+#include <stack>
+
+using namespace std;
+using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
