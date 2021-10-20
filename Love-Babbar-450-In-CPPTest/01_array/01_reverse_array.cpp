@@ -25,7 +25,7 @@ namespace LoveBabbar450InCPPTest
 	{
 	public:
 
-		TEST_METHOD(RevrseTest)
+		TEST_METHOD(RevrseArrayTest)
 		{
 			int arr[] = { 1000, 11, 445, 1, 330, 3000 };
 			rvereseArrayRecur(arr, 0, 5);
@@ -68,11 +68,11 @@ namespace LoveBabbar450InCPPTest
 		// TC: O(N)
 		void rvereseArrayBit(int arr[], int start, int end)
 		{
-			for (int a = 0; a < (start+end) / 2; a++)
+			for (int a = 0; a < (start + end) / 2; a++)
 			{
 				arr[a] = arr[a] ^ arr[end - a];
 				arr[end - a] = arr[a] ^ arr[end - a];
-				arr[a] = arr[a] ^ arr[end  - a];
+				arr[a] = arr[a] ^ arr[end - a];
 			}
 		}
 	};
