@@ -642,9 +642,6 @@
     <ClCompile Include="06_binary_trees\35_trees_isomorphism_problem.cpp">
       <Filter>Source Files\06_binary_trees</Filter>
     </ClCompile>
-    <ClCompile Include="06_binary_trees\01_level_order_traversal.cpp">
-      <Filter>Source Files\06_binary_trees</Filter>
-    </ClCompile>
     <ClCompile Include="06_binary_trees\02_reverse_level_order_traversal.cpp">
       <Filter>Source Files\06_binary_trees</Filter>
     </ClCompile>
@@ -1442,6 +1439,9 @@
     </ClCompile>
     <ClCompile Include="15_bit-manipulation\02_non_repeating_elements.cpp">
       <Filter>Source Files\15_bit-manipulation</Filter>
+    </ClCompile>
+    <ClCompile Include="06_binary_trees\01_level_order_traversal.cpp">
+      <Filter>Source Files\06_binary_trees</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

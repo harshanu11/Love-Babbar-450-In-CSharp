@@ -40,15 +40,15 @@ namespace LoveBabbar450InCPPTest
 		{
 			/* Start with the empty list */
 			LinkedList ll;
-			ll.push(20);
-			ll.push(4);
-			ll.push(15);
-			ll.push(85);
-			ll.reverse();
+			ll.pushLL(20);
+			ll.pushLL(4);
+			ll.pushLL(15);
+			ll.pushLL(85);
+			ll.reverseLL();
 			nodeLL head = NULL;
 			//nodeLL* para = ;
-			reverse2(ll.head);
-			reverse3(&ll.head);
+			reverseLL2(ll.head);
+			reverseLL3(&ll.head);
 			reverseLLusingStack(&ll.head);
 			ll_reverseWithoutCount(ll.head);
 		}
@@ -64,14 +64,14 @@ namespace LoveBabbar450InCPPTest
 			Space Complexity: O(1)
 		*/
 
-		nodeLL* reverse2(nodeLL* head)
+		nodeLL* reverseLL2(nodeLL* head)
 		{
 			if (head == NULL || head->next == NULL)
 				return head;
 
 			/* reverse the rest list and put
 			the first element at the end */
-			nodeLL* rest = reverse2(head->next);
+			nodeLL* rest = reverseLL2(head->next);
 			head->next->next = head;
 
 			/* tricky step -- see the diagram */
@@ -92,7 +92,7 @@ namespace LoveBabbar450InCPPTest
 			  LinkedList() { head = NULL; }
 
 			  /* Function to reverse the linked list */
-			  void reverse()
+			  void reverseLL()
 			  {
 				  // Initialize current, previous and
 				  // next pointers
@@ -114,7 +114,7 @@ namespace LoveBabbar450InCPPTest
 			  }
 
 			  /* Function to print linked list */
-			  void print()
+			  void printLL()
 			  {
 				  struct nodeLL* temp = head;
 				  while (temp != NULL) {
@@ -123,7 +123,7 @@ namespace LoveBabbar450InCPPTest
 				  }
 			  }
 
-			  void push(int data)
+			  void pushLL(int data)
 			  {
 				  nodeLL* temp = new nodeLL(data);
 				  temp->next = head;
@@ -159,7 +159,7 @@ namespace LoveBabbar450InCPPTest
 
 		// This function mainly calls reverseUtil()
 		// with prev as NULL
-		void reverse3(nodeLL** head)
+		void reverseLL3(nodeLL** head)
 		{
 			if (!head)
 				return;
