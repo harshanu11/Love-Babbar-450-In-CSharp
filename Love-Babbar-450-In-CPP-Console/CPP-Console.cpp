@@ -185,7 +185,12 @@ void ArrayDemoLB()
 {
 	int basic[3] = { 1,2,3 };
 	array<int, 4> a = { 1,2,3,4 };// stl 
-
+	#define R 4
+	#define C 4
+	int maze[R][C] = { {0, 0, 0, 0},
+			   {0, -1, 0, 0},
+			   {-1, 0, 0, 0},
+			   {0, 0, 0, 0} };
 	int size = a.size();
 
 	for (int i = 0; i < size; i++) {
@@ -611,21 +616,21 @@ public:
 	void work() {}
 };
 // inheheritance
-class Programmer:public Employee
+class Programmer :public Employee
 {
 public:
 	string Language;
 	Programmer(string name,
 		string company,
-		int age) :Employee( name,company,age){
-	
+		int age) :Employee(name, company, age) {
+
 	}
 	void work() {}
 
 };
 void OopEx()
 {
-	Employee employee1= Employee("dfsdf", "dfsdf",5);
+	Employee employee1 = Employee("dfsdf", "dfsdf", 5);
 	employee1.Name = "dfsdf";
 	employee1.Company = "dfsdf";
 	employee1.Age = 5;
@@ -636,7 +641,7 @@ void OopEx()
 	//employee2.Age = 5;
 	employee1.setKey("23242");
 	employee1.getKey();
-	Programmer prog = Programmer(" "," ",55);
+	Programmer prog = Programmer(" ", " ", 55);
 	Employee* ee = &prog;
 
 	ee->work();

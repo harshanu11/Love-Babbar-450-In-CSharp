@@ -1,72 +1,98 @@
-///*
-//    link(java): https://www.tutorialspoint.com/javaexamples/data_stack.htm
-//
-//    link(cpp): https://www.geeksforgeeks.org/stack-data-structure-introduction-program/
-//*/
-//
-//
-//// ----------------------------------------------------------------------------------------------------------------------- //
-//#include<bits/stdc++.h>
-//using namespace std;
-//
-//#define MAX 1000
-//
-//class MyStack {
-//    int top;
-//
-//    public:
-//    stack() { top = -1; }
-//    int arr[MAX];
-//
-//
-//    // method to push the ele. in stack
-//    void push(int x) {
-//
-//        // if the current is array is full, then increase the size and assign new address of increased 
-//        // array in new_arr.
-//        if (top >= MAX - 1) {
-//            MAX += MAX;
-//            int new_arr[MAX];
-//            for (int i = 0;i <= top;i++) {
-//                new_arr[i] = arr[i];
-//            }
-//            delete(arr);
-//            arr = new_arr;
-//        }
-//
-//        arr[++top] = x;
-//    }
-//
-//    // method to pop ele.
-//    int pop() {
-//        // if top is less than 0. means stack is empty.
-//        if (top < 0) {
-//            cout << "stack underflow" << endl;
-//            return 0;
-//        }
-//
-//        int x = arr[top--];
-//        return x;
-//    }
-//
-//    // method to return top of the stack.
-//    int top() {
-//        if (top < 0) {
-//            cout << "Stack is Empty";
-//            return 0;
-//        }
-//        else {
-//            return a[top];
-//        }
-//    }
-//
-//    // method to check if the stack is empty
-//    bool isEmpty() {
-//        return top < 0;
-//    }
-//
-//    // method to get size of the stack.
-//    int size() {
-//        return top + 1;
-//    }
-//}
+/*
+    link(java): https://www.tutorialspoint.com/javaexamples/data_stack.htm
+
+    link(cpp): https://www.geeksforgeeks.org/stack-data-structure-introduction-program/
+*/
+
+#include "CppUnitTest.h"
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <map>
+#include <unordered_set>
+#include <set>
+#include <unordered_map>
+#include <queue>
+#include <stack>
+// ----------------------------------------------------------------------------------------------------------------------- //
+using namespace std;
+#define MAXStack 1000
+class StackNode {
+    
+
+public:
+    int top;
+    int a[MAXStack]; // Maximum size of Stack
+    StackNode() { top = -1; }
+
+    bool push(int x)
+    {
+        if (top >= (MAXStack - 1)) {
+            cout << "Stack Overflow";
+            return false;
+        }
+        else {
+            a[++top] = x;
+            cout << x << " pushed into stack\n";
+            return true;
+        }
+    }
+
+    int pop()
+    {
+        if (top < 0) {
+            cout << "Stack Underflow";
+            return 0;
+        }
+        else {
+            int x = a[top--];
+            return x;
+        }
+    }
+    int peek()
+    {
+        if (top < 0) {
+            cout << "Stack is Empty";
+            return 0;
+        }
+        else {
+            int x = a[top];
+            return x;
+        }
+    }
+
+    bool isEmpty()
+    {
+        return (top < 0);
+    }
+};
+
+TEST_CLASS(StackQueue)
+{
+public:
+    class StackNode s;
+
+
+    TEST_METHOD(StackQueueTest)
+    {
+        s =  StackNode();
+        
+        s.push(10);
+        s.push(20);
+        s.push(30);
+        cout << s.pop() << " Popped from stack\n";
+        //print all elements in stack :
+        cout << "Elements present in stack : ";
+        while (!s.isEmpty())
+        {
+            // print top element in stack
+            cout << s.peek() << " ";
+            // remove top element in stack
+            s.pop();
+        }
+
+    }
+
+   
+};
+
