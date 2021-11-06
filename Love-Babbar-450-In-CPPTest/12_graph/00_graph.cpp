@@ -1,6 +1,6 @@
 /*
     link: https://youtu.be/LCrovIMurxY?list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw
-    link: https://youtu.be/I6v0itcISSY?list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw
+    link: https://youtu.be/I6v0itcISSY?list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw 
 
     graph is data-structure with 2 component: vertex and edge
 
