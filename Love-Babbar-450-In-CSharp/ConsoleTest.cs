@@ -13,11 +13,11 @@ namespace ConsoleTest
         public void reverse_arrayTest()
         {
             //var nums = new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
-            var nums = new int[] { -2 ,-2};
+            var nums = new int[] { -2, -2 };
             AllContigusSubArray(nums);
-            AllPossibleSubArray(nums);
             AllPossibleSubArrayRec(new int[] { 1, 2, 3 }, 0, 0);
         }
+        List<string> vs1 = new List<string>();
         void AllPossibleSubArrayRec(int[] arr,
                         int start, int end)
         {
@@ -35,12 +35,15 @@ namespace ConsoleTest
             // increment the starting point
             else
             {
+                string str = "[";
                 Debug.Write("[");
                 for (int i = start; i < end; i++)
                 {
+                    str += arr[i] + ", ";
                     Debug.Write(arr[i] + ", ");
+                    vs1.Add(str);
                 }
-
+                str = "]";
                 Debug.WriteLine(arr[end] + "]");
                 AllPossibleSubArrayRec(arr, start + 1, end);
             }
@@ -59,46 +62,6 @@ namespace ConsoleTest
                 vs.Add(s);
             }
         }
-        //public void AllPossibleSubArrayRec(int[] nums, int start, int end)
-        //{
-
-        //    if (end == nums.Length)
-        //        return;
-        //    if (start > end)
-        //        AllPossibleSubArrayRec(nums, 0, end + 1);
-
-        //    // Print the subarray and
-        //    // increment the starting point
-        //    else
-        //    {
-        //        Debug.Write("[");
-        //        for (int i = start; i < end; i++)
-        //        {
-        //            Debug.Write(nums[i] + ", ");
-        //        }
-
-        //        Debug.WriteLine(nums[end] + "]");
-        //        AllPossibleSubArrayRec(nums, start + 1, end);
-        //    }
-        //    return;
-        //}
-        public void AllPossibleSubArray(int[] nums)
-        {
-            List<string> vs = new List<string>();
-            for (int i = 0; i < nums.Length; i++)
-            {
-                for (int j = i; j < nums.Length; j++)
-                {
-                    string s = "";
-                    for (int k = i; k < nums.Length; k++)
-                    {
-                        s += "," + nums[j];
-                    }
-                    vs.Add(s);
-                }
-            }
-        }
-
     }
 
 }

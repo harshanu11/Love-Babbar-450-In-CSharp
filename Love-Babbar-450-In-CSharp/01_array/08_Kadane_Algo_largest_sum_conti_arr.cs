@@ -12,7 +12,7 @@ namespace _01_array
             var nums = new int[] { -2, -2 };
             var ans = ContiguousMaxSubArray1N2Complexity(nums);
             ans = ContiguousMaxSubArrayKadaneAlgo_nComplexity(nums);
-            ans = maxSubarraySumDp(nums, nums.Length);
+            ans = ContiguousmaxSubarraySumDp(nums, nums.Length);
         }
         /*
 			link: https://practice.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1
@@ -58,7 +58,7 @@ namespace _01_array
             return max;
         }
         // ----------------------------------------------------------------------------------------------------------------------- //
-        private int maxSubarraySumDp(int[] arr, int n)
+        private int ContiguousmaxSubarraySumDp(int[] arr, int n)
         {
             int[] dp = new int[n];
 
@@ -70,6 +70,18 @@ namespace _01_array
                 omax = Math.Max(dp[i], omax);
             }
             return omax;
+        }
+        public int ContiguousMaxSubArrayKadan_mostOptimize(int[] nums)
+        {
+            if (nums.Length == 0) return int.MinValue;
+            int currSum = nums[0], maxSum = nums[0];
+
+            for (int i = 1; i < nums.Length; i++)
+            {
+                currSum = Math.Max(nums[i], currSum + nums[i]);
+                maxSum = Math.Max(maxSum, currSum);
+            }
+            return maxSum;
         }
     }
 }
