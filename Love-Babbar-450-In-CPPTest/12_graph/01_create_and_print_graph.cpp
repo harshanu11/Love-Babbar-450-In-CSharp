@@ -55,6 +55,7 @@ namespace LoveBabbar450InCPPTest
             cin >> u >> v;
             adj[u][v] = 1;
             adj[v][u] = 1;
+            return 0;
         }
     }
 
@@ -85,6 +86,7 @@ namespace LoveBabbar450InCPPTest
 
             // for weighted graph use: adj[u].push_back({v, wt});
             //                         adj[v].push_back({u, wt});
+            return 0;
         }
     }
 }

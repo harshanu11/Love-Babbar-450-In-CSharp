@@ -1,17 +1,62 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace _01_array
 {
     public class _08_largest_sum_conti_arr
     {
-        [Fact] public void Test() { }
+        [Fact]
+        public void Test()
+        {
+            //var nums = new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
+            var nums = new int[] { -2, -2 };
+            var ans = ContiguousMaxSubArray1N2Complexity(nums);
+            ans = ContiguousMaxSubArrayKadaneAlgo_nComplexity(nums);
+            ans = maxSubarraySumDp(nums, nums.Length);
+        }
         /*
 			link: https://practice.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1
-			kadane's algorithm
+			kadane's algorithm is find sum of Contiguous array
         */
+        public int ContiguousMaxSubArray1N2Complexity(int[] nums)
+        {
+            int max = int.MinValue;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                int current = 0;
+                for (int j = i; j < nums.Length; j++)
+                {
+                    current = current + nums[j];
+                    if (current > max)
+                    {
+                        max = current;
+                    }
+                }
+            }
+            return max;
+        }
+        public int ContiguousMaxSubArrayKadaneAlgo_nComplexity(int[] nums)
+        {
+            int max = int.MinValue;
+            int current = 0;
+            if (nums.Length == 1)
+            {
+                return nums[0];
+            }
+            for (int i = 0; i < nums.Length; i++)
+            {
+                current = current + nums[i];
+                if (current > max)
+                {
+                    max = current;
+                }
+                if (current < 0)
+                {
+                    current = 0;
+                }
+            }
+            return max;
+        }
         // ----------------------------------------------------------------------------------------------------------------------- //
         private int maxSubarraySumDp(int[] arr, int n)
         {
@@ -26,53 +71,5 @@ namespace _01_array
             }
             return omax;
         }
-        public long maxSubarraySum(int[] arr, int n)
-        {
-            long maxh = 0, maxf = int.MinValue;
-
-            //Iterating over the array.
-            for (int i = 0; i < n; i++)
-            {
-                //Updating max sum till current index.
-                maxh += arr[i];
-                //Storing max sum so far by choosing maximum between max 
-                //sum so far and max till current index.
-                maxf = Math.Max(maxh, maxf);
-
-                //If max sum at current index is negative, we do not need to add
-                //it to result so we update it to zero.
-                if (maxh < 0)
-                    maxh = 0;
-
-            }
-            //returning the result.
-            return maxf;
-
-        }
-
     }
-
-
-
 }
-/*
-    link: https://practice.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1
-
-    kadane's algorithm
-*/
-
-
-//// ----------------------------------------------------------------------------------------------------------------------- //
-//int maxSubarraySum(int arr[], int n)
-//{
-//    int dp[n];
-
-//    dp[0] = max(0, arr[0]);
-//    int omax = dp[0];
-//    for (int i = 1; i < n; i++)
-//    {
-//        dp[i] = max(dp[i - 1] + arr[i], arr[i]);
-//        omax = max(dp[i], omax);
-//    }
-//    return omax;
-//}
