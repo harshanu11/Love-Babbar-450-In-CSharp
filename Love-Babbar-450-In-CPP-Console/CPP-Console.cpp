@@ -13,11 +13,25 @@
 using namespace std;
 void SayHi(string name)
 {
-	cout << "\nhello user" << name;
+	cout << "\n hello user" << name<< '\n' << endl;
 }
 int GiveCube(int num)
 {
 	return  num * num * num;
+}
+void BitWiseOperator() 
+{
+	int a = 4;
+	int b = 6;
+	cout << " a&b " << (a & b) << endl;
+	cout << " a|b " << (a | b) << endl;
+	cout << " ~a " << ~a << endl;
+	cout << " a^b " << (a ^ b) << endl;
+
+	cout << (17 >> 1) << endl;
+	cout << (17 >> 2) << endl;
+	cout << (19 << 1) << endl;
+	cout << (21 << 2) << endl;
 }
 void ConditionFunction()
 {
@@ -112,6 +126,7 @@ class CppBasic
 		char alphabat = 'A';
 #pragma region Number
 		int age = 23;
+		unsigned  int a = 33;
 		float profit = 22.3;
 		double  gpa = 4.5;
 		cout << 10 % 3;
@@ -649,7 +664,9 @@ void OopEx()
 int main()
 {
 	//SPairDemo();
+	string a = "11", b = "1";
 
+	for (int i = 0; i < a.size(); i++) {}
 	return 0;
 }
 
