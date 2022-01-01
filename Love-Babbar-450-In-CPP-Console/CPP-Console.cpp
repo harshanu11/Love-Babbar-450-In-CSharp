@@ -13,7 +13,70 @@
 using namespace std;
 void SayHi(string name)
 {
+	int a;
 	cout << "\n hello user" << name<< '\n' << endl;
+	//cin >> a;
+	cout << "namaste duniya\t" << a << "\t" << endl;
+}
+void DataTypeAndVariable() 
+{
+	// data type 
+	bool isMail = true;
+	char alphabat = 'A';
+	//cin.get() give char vale
+#pragma region Number
+	int age = 23;
+	int b = sizeof(age);
+	unsigned  int a = 33;
+	float profit = 22.3;
+	double  gpa = 4.5;
+	cout << 10 % 3;
+	age++;
+	++age;
+	cout << 15.5 - 5;
+	cout << pow(2, 5);//32 2^5
+	cout << sqrt(2.5);//
+	cout << round(4.5);//
+	cout << ceil(4.5);//
+	cout << fmax(4.5, 8);//
+	cout << fmin(4.5, 8);//
+
+#pragma endregion
+#pragma region String Fn 
+	std::string strUsingNameSpace = "the way to add namespace";
+	strUsingNameSpace.length();
+	char dsf = strUsingNameSpace[2];
+	strUsingNameSpace.find('d');
+	strUsingNameSpace.find("sfsf");
+	strUsingNameSpace.find("sfsf", 5);// look from index 5
+	strUsingNameSpace.substr(8, 5);// start , till length
+#pragma endregionint a = 5;
+}
+void PrintPattern() 
+{
+		//D
+		//CD
+		//BCD
+		//ABCD
+
+	int row = 4;
+	int col = 4;
+	int i = 1;
+	int k = 4;
+	while (i <= row)
+	{
+		int j = 1;
+		char c = 'A' + row - i;
+		while (j <= i)
+		{
+			cout << c;
+			c++;
+			j++;
+		}
+		cout << "\n";
+		k--;
+		i++;
+	}
 }
 int GiveCube(int num)
 {
@@ -23,6 +86,8 @@ void BitWiseOperator()
 {
 	int a = 4;
 	int b = 6;
+	//int a = 55;
+	// !a == 0  or one
 	cout << " a&b " << (a & b) << endl;
 	cout << " a|b " << (a | b) << endl;
 	cout << " ~a " << ~a << endl;
@@ -592,6 +657,27 @@ void AlgoDemoLB()
 		cout << i << " ";
 	}
 
+}
+void decToBin() 
+{
+	int n;
+	cin >> n;
+
+
+	int ans = 0;
+	int i = 0;
+	while (n != 0) {
+
+		int bit = n & 1;
+
+		ans = (bit * pow(10, i)) + ans;
+
+		n = n >> 1;
+		i++;
+
+	}
+
+	cout << " Answer is " << ans << endl;
 }
 //oop 
 class AbstractEmployee
