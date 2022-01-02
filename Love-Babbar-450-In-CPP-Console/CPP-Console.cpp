@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream>// input output 
 #include<array> // for array
 #include <vector>
 #include<deque>
@@ -86,17 +86,18 @@ void BitWiseOperator()
 {
 	int a = 4;
 	int b = 6;
+	auto c = ~a;
 	//int a = 55;
 	// !a == 0  or one
 	cout << " a&b " << (a & b) << endl;
 	cout << " a|b " << (a | b) << endl;
-	cout << " ~a " << ~a << endl;
+	cout << " ~a " << ~a << endl;// tows compliment
 	cout << " a^b " << (a ^ b) << endl;
 
-	cout << (17 >> 1) << endl;
-	cout << (17 >> 2) << endl;
-	cout << (19 << 1) << endl;
-	cout << (21 << 2) << endl;
+	cout << (17 >> 1) << endl;// devide by 2
+	cout << (17 >> 2) << endl;// devide by 2
+	cout << (19 << 1) << endl; // multiply by 2
+	cout << (21 << 2) << endl; // multiply by 2
 }
 void ConditionFunction()
 {
@@ -124,6 +125,28 @@ void ConditionFunction()
 }
 void LoopCondition()
 {
+	int i = 7;
+
+	cout << (++i) << endl;
+	// 8 
+	cout << (i++) << endl;
+	// 8 , i = 9
+	cout << (i--) << endl;
+	//9 , i = 8 
+	cout << (--i) << endl;
+	int n;
+	for (; ; ) {
+		if (i <= n) {
+			cout << i << endl;
+		}
+		else {
+			break;
+		}
+		i++;
+	}
+	for (int a = 0, b = 1, c = 2; a >= 0 && b >= 1 && c >= 2; a--, b--, c--) {
+		cout << a << " " << b << " " << c << endl;
+	}
 	int index = 0;
 	while (index < 10)
 	{
@@ -139,6 +162,49 @@ void LoopCondition()
 		{
 
 		}
+	}
+
+}
+void forFib() 
+{
+
+	int n = 10;
+
+	int a = 0;
+	int b = 1;
+	cout << a << " " << b << " ";
+	for (int i = 1; i <= n; i++) {
+
+		int nextNumber = a + b;
+		cout << nextNumber << " ";
+
+		a = b;
+		b = nextNumber;
+	}
+}
+void forPrime() {
+	int n;
+	cout << " enter the value of n" << endl;
+	cin >> n;
+
+	bool isPrime = 1;
+
+	for (int i = 2; i < n; i++) {
+
+		//rem = 0, Not a Prime
+		if (n % i == 0) {
+			//cout<<" Not a Prime Number" << endl;
+			isPrime = 0;
+			break;
+		}
+	}
+
+	if (isPrime == 0) {
+		cout << " Not a Prime Number" << endl;
+	}
+	else
+	{
+		cout << "is a Prime Number " << endl;
 	}
 
 }
