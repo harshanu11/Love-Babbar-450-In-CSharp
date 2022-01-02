@@ -14,11 +14,11 @@ using namespace std;
 void SayHi(string name)
 {
 	int a;
-	cout << "\n hello user" << name<< '\n' << endl;
+	cout << "\n hello user" << name << '\n' << endl;
 	//cin >> a;
 	cout << "namaste duniya\t" << a << "\t" << endl;
 }
-void DataTypeAndVariable() 
+void DataTypeAndVariable()
 {
 	// data type 
 	bool isMail = true;
@@ -52,12 +52,12 @@ void DataTypeAndVariable()
 	strUsingNameSpace.substr(8, 5);// start , till length
 #pragma endregionint a = 5;
 }
-void PrintPattern() 
+void PrintPattern()
 {
-		//D
-		//CD
-		//BCD
-		//ABCD
+	//D
+	//CD
+	//BCD
+	//ABCD
 
 	int row = 4;
 	int col = 4;
@@ -82,7 +82,7 @@ int GiveCube(int num)
 {
 	return  num * num * num;
 }
-void BitWiseOperator() 
+void BitWiseOperator()
 {
 	int a = 4;
 	int b = 6;
@@ -98,6 +98,39 @@ void BitWiseOperator()
 	cout << (17 >> 2) << endl;// devide by 2
 	cout << (19 << 1) << endl; // multiply by 2
 	cout << (21 << 2) << endl; // multiply by 2
+}
+void DecToBin()
+{
+	int number = 5;
+	int i = 0;
+	int ans = 0;
+	while (number != 0)
+	{
+		int bit = number & 1;
+		ans = pow(10, i) * bit + ans;
+		i++;
+		number = number >> 1;
+	}
+	//ans = ~ans;
+	//ans = ans + 1;
+	//cout << ans;
+
+	cout << ans;
+}
+void BinToDec() 
+{
+	int number = 110;
+	int ans = 0;
+	int i = 0;
+	while (number != 0)
+	{
+		int digit = number % 10;
+		if (digit == 1)
+			ans = pow(2, i) + ans;
+		number = number / 10;
+		i++;
+	}
+	cout << ans;
 }
 void ConditionFunction()
 {
@@ -165,7 +198,7 @@ void LoopCondition()
 	}
 
 }
-void forFib() 
+void forFib()
 {
 
 	int n = 10;
@@ -331,8 +364,8 @@ void ArrayDemoLB()
 {
 	int basic[3] = { 1,2,3 };
 	array<int, 4> a = { 1,2,3,4 };// stl 
-	#define R 4
-	#define C 4
+#define R 4
+#define C 4
 	int maze[R][C] = { {0, 0, 0, 0},
 			   {0, -1, 0, 0},
 			   {-1, 0, 0, 0},
@@ -724,7 +757,7 @@ void AlgoDemoLB()
 	}
 
 }
-void decToBin() 
+void decToBin()
 {
 	int n;
 	cin >> n;
