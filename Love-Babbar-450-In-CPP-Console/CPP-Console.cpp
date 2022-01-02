@@ -1,4 +1,5 @@
 #include <iostream>// input output 
+#include <limits.h> // for int_max
 #include<array> // for array
 #include <vector>
 #include<deque>
@@ -26,6 +27,7 @@ void DataTypeAndVariable()
 	//cin.get() give char vale
 #pragma region Number
 	int age = 23;
+	auto max = INT_MAX;
 	int b = sizeof(age);
 	unsigned  int a = 33;
 	float profit = 22.3;
@@ -117,7 +119,7 @@ void DecToBin()
 
 	cout << ans;
 }
-void BinToDec() 
+void BinToDec()
 {
 	int number = 110;
 	int ans = 0;
@@ -130,6 +132,42 @@ void BinToDec()
 		number = number / 10;
 		i++;
 	}
+	cout << ans;
+}
+void ReverseInt() 
+{
+	int x = 1288888999;
+	int ans = 0;
+	int i = 0;
+	while (x != 0)
+	{
+		int digit = x % 10;
+		//cout << digit  << endl;
+		if (ans > INT_MAX / 10 || ans < INT_MIN / 10)
+		{
+			//cout << 0; 
+			//return 0;
+		}
+
+		ans = digit + ans * 10;
+		cout << ans << endl;
+		i++;
+		x = x / 10;
+	}
+	cout << ans;
+}
+void makOfNo() 
+{
+	int  n = 5;
+	int m = n;
+	int mask = 0;
+	while (m != 0)
+	{
+		mask = (mask << 1) | 1;
+		m = m >> 1;
+	}
+	int ans = ~n;
+	ans = ans & mask;
 	cout << ans;
 }
 void ConditionFunction()
