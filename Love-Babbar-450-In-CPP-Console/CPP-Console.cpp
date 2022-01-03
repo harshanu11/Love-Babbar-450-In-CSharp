@@ -12,6 +12,9 @@
 #include <set>
 #include <map>
 using namespace std;
+
+
+#pragma region Phase one basic loop function array string math 
 void SayHi(string name)
 {
 	int a;
@@ -134,7 +137,7 @@ void BinToDec()
 	}
 	cout << ans;
 }
-void ReverseInt() 
+void ReverseInt()
 {
 	int x = 1288888999;
 	int ans = 0;
@@ -156,7 +159,7 @@ void ReverseInt()
 	}
 	cout << ans;
 }
-void makOfNo() 
+void makOfNo()
 {
 	int  n = 5;
 	int m = n;
@@ -307,7 +310,7 @@ void LoopCondition()
 	}
 
 }
-int pow(int a,int b) 
+int pow(int a, int b)
 {
 	int ans = 0;
 	for (int i = 0; i < b; i++)
@@ -333,9 +336,7 @@ int nCr(int n, int r)
 }
 void forFib()
 {
-
 	int n = 10;
-
 	int a = 0;
 	int b = 1;
 	cout << a << " " << b << " ";
@@ -374,6 +375,29 @@ void forPrime() {
 	}
 
 }
+void ArrayDemoLB()
+{
+	int basic[3] = { 1,2,3 };
+	array<int, 4> a = { 1,2,3,4 };// stl 
+#define R 4
+#define C 4
+	int maze[R][C] = { {0, 0, 0, 0},
+			   {0, -1, 0, 0},
+			   {-1, 0, 0, 0},
+			   {0, 0, 0, 0} };
+	int size = a.size();
+
+	for (int i = 0; i < size; i++) {
+		cout << a[i] << endl;
+	}
+	cout << "Element at 2nd Index-> " << a.at(2) << endl; //3
+	cout << "Empty or not-> " << a.empty() << endl;// false
+	cout << "First Element-> " << a.front() << endl;//1
+	cout << "last Element-> " << a.back() << endl;//4
+};
+#pragma endregion
+
+
 class Book
 {
 private:string rating;
@@ -493,26 +517,7 @@ bool DecOrder(int a, int b)
 	return a > b;
 }
 
-void ArrayDemoLB()
-{
-	int basic[3] = { 1,2,3 };
-	array<int, 4> a = { 1,2,3,4 };// stl 
-#define R 4
-#define C 4
-	int maze[R][C] = { {0, 0, 0, 0},
-			   {0, -1, 0, 0},
-			   {-1, 0, 0, 0},
-			   {0, 0, 0, 0} };
-	int size = a.size();
 
-	for (int i = 0; i < size; i++) {
-		cout << a[i] << endl;
-	}
-	cout << "Element at 2nd Index-> " << a.at(2) << endl; //3
-	cout << "Empty or not-> " << a.empty() << endl;// false
-	cout << "First Element-> " << a.front() << endl;//1
-	cout << "last Element-> " << a.back() << endl;//4
-};
 void VectorDemoLB()
 {
 	// dynamic arry
@@ -890,27 +895,7 @@ void AlgoDemoLB()
 	}
 
 }
-void decToBin()
-{
-	int n;
-	cin >> n;
 
-
-	int ans = 0;
-	int i = 0;
-	while (n != 0) {
-
-		int bit = n & 1;
-
-		ans = (bit * pow(10, i)) + ans;
-
-		n = n >> 1;
-		i++;
-
-	}
-
-	cout << " Answer is " << ans << endl;
-}
 //oop 
 class AbstractEmployee
 {
