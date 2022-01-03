@@ -217,6 +217,53 @@ void ConditionFunction()
 	default:
 		break;
 	}
+	char ch = '1';
+	int num = 1;
+
+	cout << endl;
+	switch (2 * num) {
+
+	case 2: cout << "First" << endl;
+		cout << " First again " << endl;
+		break;
+
+	case '1': switch (num) {
+	case 1: cout << " Value of num is " << num << endl;
+		break;
+	}
+			break;
+
+	default: cout << " It is default case" << endl;
+
+	}
+
+	cout << endl;
+}
+void rupees1330problemsolve() {
+
+	int input = 0;
+	int temp = 0;
+	cin >> input;
+	int x = 0, y = 0, z = 0, v = 0;
+	switch (1) {
+	case 1: x += input / 100;
+		cout << "100 rupees notes: " << x << endl;
+		temp = input - (x * 100);
+
+	case 2: y += temp / 50;
+		cout << "50 rupees notes: " << y << endl;
+		temp = temp - (y * 50);
+
+	case 3: z += temp / 20;
+		cout << "20 rupees notes: " << z << endl;
+		temp = temp - (z * 20);
+
+	case 4: v += temp / 1;
+		cout << "1 rupee notes: " << v;
+		temp = temp - (v * 1);
+		break;
+	}
+	return;
 }
 void LoopCondition()
 {
