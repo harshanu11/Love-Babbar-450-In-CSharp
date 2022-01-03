@@ -307,6 +307,30 @@ void LoopCondition()
 	}
 
 }
+int pow(int a,int b) 
+{
+	int ans = 0;
+	for (int i = 0; i < b; i++)
+	{
+		ans = ans * a;
+	}
+	return ans;
+}
+int fact(int n)
+{
+	int fact = 1;
+	for (int i = 0; i < n; i++)
+	{
+		fact *= (i + 1);
+	}
+	return fact;
+}
+int nCr(int n, int r)
+{
+	int ans = 0;
+	ans = fact(n) / (fact(r) * fact(n - r));
+	return ans;
+}
 void forFib()
 {
 
