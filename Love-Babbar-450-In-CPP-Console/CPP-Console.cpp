@@ -17,7 +17,7 @@ using namespace std;
 #pragma region Phase one basic loop function array string math 
 void SayHi(string name)
 {
-	int a;
+	int a =0;
 	cout << "\n hello user" << name << '\n' << endl;
 	//cin >> a;
 	cout << "namaste duniya\t" << a << "\t" << endl;
@@ -185,7 +185,6 @@ bool twoPow() {
 	}
 	return false;
 
-	int temp = 1;
 	for (int i = 0; i < 31; i++)
 	{
 		if (temp == n) return true;
@@ -271,7 +270,7 @@ void rupees1330problemsolve() {
 void LoopCondition()
 {
 	int i = 7;
-
+	int n = 0;
 	cout << (++i) << endl;
 	// 8 
 	cout << (i++) << endl;
@@ -279,7 +278,6 @@ void LoopCondition()
 	cout << (i--) << endl;
 	//9 , i = 8 
 	cout << (--i) << endl;
-	int n;
 	for (; ; ) {
 		if (i <= n) {
 			cout << i << endl;
@@ -377,15 +375,20 @@ void forPrime() {
 }
 void ArrayDemoLB()
 {
+	int dost[10];
+	int sizeDost = sizeof(dost)/ sizeof(int);// not always correct
 	int basic[3] = { 1,2,3 };
 	array<int, 4> a = { 1,2,3,4 };// stl 
+	int size = a.size();
+	// dynamic array 
+	int* result = new int[size];
+	int* arr2 = new int[size];
 #define R 4
 #define C 4
 	int maze[R][C] = { {0, 0, 0, 0},
 			   {0, -1, 0, 0},
 			   {-1, 0, 0, 0},
 			   {0, 0, 0, 0} };
-	int size = a.size();
 
 	for (int i = 0; i < size; i++) {
 		cout << a[i] << endl;
@@ -395,6 +398,58 @@ void ArrayDemoLB()
 	cout << "First Element-> " << a.front() << endl;//1
 	cout << "last Element-> " << a.back() << endl;//4
 };
+int getMin(int num[], int n) {
+
+	int mini = INT_MAX;
+
+	for (int i = 0; i < n; i++) {
+
+		mini = min(mini, num[i]);
+
+		//if(num[i] < min){
+		//    min = num[i];
+		//}
+	}
+
+	//returning min value
+	return mini;
+}
+int getMax(int num[], int n) {
+
+	int maxi = INT_MIN;
+
+	for (int i = 0; i < n; i++) {
+
+		maxi = max(maxi, num[i]);
+
+		// if(num[i] > max){
+		  //   max = num[i];
+		// }
+	}
+
+	//returning max value
+	return maxi;
+}
+bool linearSearch(int arr[], int size, int key) {
+
+	for (int i = 0; i < size; i++) {
+
+		if (arr[i] == key) {
+			return 1;
+		}
+
+	}
+	return 0;
+}
+void swapAlternate(int arr[], int size) {
+
+	for (int i = 0; i < size; i += 2) {
+		if (i + 1 < size) {
+			swap(arr[i], arr[i + 1]);
+		}
+	}
+
+}
 #pragma endregion
 
 
@@ -964,12 +1019,59 @@ void OopEx()
 
 	ee->work();
 }
+
+int count(int arr[], int size, int num)
+{
+	int count = 0;
+	for (int i = 0; i < size; i++)
+	{
+		if (num == arr[i]) {
+			arr[i] = INT_MIN;
+			count++;
+		}
+	}
+	return count;
+}
+
+bool checkUniqueCount(int arr[], int size=0)
+{
+	int* result = new int[size];
+	int* arr2 = new int[size];
+	int k = 0;
+	for (int i = 0; i < size; i++)
+	{
+		arr2[i] = arr[i];
+	}
+	for (int i = 0; i < size; i++)
+	{
+		int c = count(arr2, size, arr[i]);
+		// cout << c;
+		if (c!=0)
+		{
+			result[k] = c;
+			cout << result[i] << endl;
+			k++;
+		}
+	}
+	for (int i = 0; i < k; i++)
+	{
+		for (int j = 0; j < k; j++)
+		{
+			if (i != j && result[i] == result[j])
+			{
+				return false;
+			}
+		}
+	}
+	return true;
+}
+
 int main()
 {
 	//SPairDemo();
-	string a = "11", b = "1";
-
-	for (int i = 0; i < a.size(); i++) {}
+	int size = 6;
+	int arr[6] = { 1,2,2,1,1,3 };
+	cout << checkUniqueCount(arr, 6);
 	return 0;
 }
 
