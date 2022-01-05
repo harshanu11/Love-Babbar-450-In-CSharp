@@ -17,45 +17,183 @@ using namespace std;
 #pragma region Phase one basic loop function array string math 
 void SayHi(string name)
 {
-	int a =0;
-	cout << "\n hello user" << name << '\n' << endl;
+	int a = 0;
+	string user;
+	cin >> user;
+	// "\n"  for next line '\t' tab
+	cout << "\n hello user" << name << user << '\n' << endl;
 	//cin >> a;
 	cout << "namaste duniya\t" << a << "\t" << endl;
 }
-void DataTypeAndVariable()
+void boolFn()
 {
-	// data type 
 	bool isMail = true;
-	char alphabat = 'A';
-	//cin.get() give char vale
-#pragma region Number
+}
+void numberFn()
+{
+#define R 4 // define local var
+#define C 4
 	int age = 23;
-	auto max = INT_MAX;
+	auto max = INT_MAX;//#include <limits.h> // for int_max
 	int b = sizeof(age);
-	unsigned  int a = 33;
+	unsigned  int a = 33;// only positive no
 	float profit = 22.3;
 	double  gpa = 4.5;
 	cout << 10 % 3;
 	age++;
 	++age;
 	cout << 15.5 - 5;
-	cout << pow(2, 5);//32 2^5
-	cout << sqrt(2.5);//
-	cout << round(4.5);//
-	cout << ceil(4.5);//
-	cout << fmax(4.5, 8);//
-	cout << fmin(4.5, 8);//
+}
+void BitWiseOperator()
+{
+	int a = 4;
+	int b = 6;
+	auto c = ~a;// to get once compliment
+	//int a = 55;
+	// !a == 0  or one
+	cout << " a&b " << (a & b) << endl;
+	cout << " a|b " << (a | b) << endl;
+	cout << " ~a " << ~a << endl;// once compliment
+	cout << " a^b " << (a ^ b) << endl;
 
-#pragma endregion
-#pragma region String Fn 
-	std::string strUsingNameSpace = "the way to add namespace";
+	cout << (17 >> 1) << endl;// devide by 2 once 
+	cout << (17 >> 2) << endl;// devide by 2 twise
+	cout << (19 << 1) << endl; // multiply by 2
+	cout << (21 << 2) << endl; // multiply by 2
+}
+void stringFn()
+{
+	char alphabat = 'A';
+	char c = 'A' + 1;// B  
+	cin.get();//give char vale
+	// "\n"  for next line '\t' tab
+
+
+	string strUsingNameSpace = "the way to add namespace";
 	strUsingNameSpace.length();
 	char dsf = strUsingNameSpace[2];
 	strUsingNameSpace.find('d');
 	strUsingNameSpace.find("sfsf");
 	strUsingNameSpace.find("sfsf", 5);// look from index 5
 	strUsingNameSpace.substr(8, 5);// start , till length
-#pragma endregionint a = 5;
+}
+void stlFn()
+{
+	cout << pow(2, 5);//32 2^5
+	cout << sqrt(2.5);//
+	cout << round(4.5);//
+	cout << ceil(4.5);//
+	cout << fmax(4.5, 8);//
+	cout << fmin(4.5, 8);//
+	min(3, 3);
+	max(3, 3)
+}
+void ConditionFunction()
+{
+	int age = 0;
+	if (true)
+	{
+
+	}
+	else if (true)
+	{
+
+	}
+	else
+	{
+
+	}
+	switch (age)
+	{
+	case 10:
+		cout << "44";
+		break;
+	default:
+		break;
+	}
+	char ch = '1';
+	int num = 1;
+
+	cout << endl;
+	switch (2 * num) {
+
+	case 2: cout << "First" << endl;
+		cout << " First again " << endl;
+		break;
+
+	case '1': switch (num) {
+	case 1: cout << " Value of num is " << num << endl;
+		break;
+	}
+			break;
+
+	default: cout << " It is default case" << endl;
+
+	}
+	int input = 0;
+	int temp = 0;
+	cin >> input;
+	int x = 0, y = 0, z = 0, v = 0;
+	switch (1) {
+	case 1: x += input / 100;
+		cout << "100 rupees notes: " << x << endl;
+		temp = input - (x * 100);
+
+	case 2: y += temp / 50;
+		cout << "50 rupees notes: " << y << endl;
+		temp = temp - (y * 50);
+
+	case 3: z += temp / 20;
+		cout << "20 rupees notes: " << z << endl;
+		temp = temp - (z * 20);
+
+	case 4: v += temp / 1;
+		cout << "1 rupee notes: " << v;
+		temp = temp - (v * 1);
+		break;
+	}
+	cout << endl;
+}
+void LoopCondition()
+{
+	int i = 7;
+	int n = 0;
+	cout << (++i) << endl;
+	// 8 
+	cout << (i++) << endl;
+	// 8 , i = 9
+	cout << (i--) << endl;
+	//9 , i = 8 
+	cout << (--i) << endl;
+	for (; ; ) {
+		if (i <= n) {
+			cout << i << endl;
+		}
+		else {
+			break;
+		}
+		i++;
+	}
+	for (int a = 0, b = 1, c = 2; a >= 0 && b >= 1 && c >= 2; a--, b--, c--) {
+		cout << a << " " << b << " " << c << endl;
+	}
+	int index = 0;
+	while (index < 10)
+	{
+		index++;
+	}
+	do
+	{
+
+	} while (index < 10);
+	for (size_t i = 0; i < index; i++)
+	{
+		for (size_t j = 0; j < 50; j++)
+		{
+
+		}
+	}
+
 }
 void PrintPattern()
 {
@@ -82,27 +220,6 @@ void PrintPattern()
 		k--;
 		i++;
 	}
-}
-int GiveCube(int num)
-{
-	return  num * num * num;
-}
-void BitWiseOperator()
-{
-	int a = 4;
-	int b = 6;
-	auto c = ~a;
-	//int a = 55;
-	// !a == 0  or one
-	cout << " a&b " << (a & b) << endl;
-	cout << " a|b " << (a | b) << endl;
-	cout << " ~a " << ~a << endl;// tows compliment
-	cout << " a^b " << (a ^ b) << endl;
-
-	cout << (17 >> 1) << endl;// devide by 2
-	cout << (17 >> 2) << endl;// devide by 2
-	cout << (19 << 1) << endl; // multiply by 2
-	cout << (21 << 2) << endl; // multiply by 2
 }
 void DecToBin()
 {
@@ -196,51 +313,6 @@ bool twoPow() {
 	}
 	return false;
 }
-void ConditionFunction()
-{
-	int age = 0;
-	if (true)
-	{
-
-	}
-	else if (true)
-	{
-
-	}
-	else
-	{
-
-	}
-	switch (age)
-	{
-	case 10:
-		cout << "44";
-		break;
-	default:
-		break;
-	}
-	char ch = '1';
-	int num = 1;
-
-	cout << endl;
-	switch (2 * num) {
-
-	case 2: cout << "First" << endl;
-		cout << " First again " << endl;
-		break;
-
-	case '1': switch (num) {
-	case 1: cout << " Value of num is " << num << endl;
-		break;
-	}
-			break;
-
-	default: cout << " It is default case" << endl;
-
-	}
-
-	cout << endl;
-}
 void rupees1330problemsolve() {
 
 	int input = 0;
@@ -266,47 +338,6 @@ void rupees1330problemsolve() {
 		break;
 	}
 	return;
-}
-void LoopCondition()
-{
-	int i = 7;
-	int n = 0;
-	cout << (++i) << endl;
-	// 8 
-	cout << (i++) << endl;
-	// 8 , i = 9
-	cout << (i--) << endl;
-	//9 , i = 8 
-	cout << (--i) << endl;
-	for (; ; ) {
-		if (i <= n) {
-			cout << i << endl;
-		}
-		else {
-			break;
-		}
-		i++;
-	}
-	for (int a = 0, b = 1, c = 2; a >= 0 && b >= 1 && c >= 2; a--, b--, c--) {
-		cout << a << " " << b << " " << c << endl;
-	}
-	int index = 0;
-	while (index < 10)
-	{
-		index++;
-	}
-	do
-	{
-
-	} while (index < 10);
-	for (size_t i = 0; i < index; i++)
-	{
-		for (size_t j = 0; j < 50; j++)
-		{
-
-		}
-	}
-
 }
 int pow(int a, int b)
 {
@@ -373,10 +404,12 @@ void forPrime() {
 	}
 
 }
+
+
 void ArrayDemoLB()
 {
 	int dost[10];
-	int sizeDost = sizeof(dost)/ sizeof(int);// not always correct
+	int sizeDost = sizeof(dost) / sizeof(int);// not always correct
 	int basic[3] = { 1,2,3 };
 	array<int, 4> a = { 1,2,3,4 };// stl 
 	int size = a.size();
@@ -521,6 +554,10 @@ public:string title;
 };
 class CppBasic
 {
+	int GiveCube(int num)
+	{
+		return  num * num * num;
+	}
 	void comm()
 	{
 		// data type 
@@ -1059,7 +1096,7 @@ int count(int arr[], int size, int num)
 	return count;
 }
 
-bool checkUniqueCount(int arr[], int size=0)
+bool checkUniqueCount(int arr[], int size = 0)
 {
 	int* result = new int[size];
 	int* arr2 = new int[size];
@@ -1072,7 +1109,7 @@ bool checkUniqueCount(int arr[], int size=0)
 	{
 		int c = count(arr2, size, arr[i]);
 		// cout << c;
-		if (c!=0)
+		if (c != 0)
 		{
 			result[k] = c;
 			cout << result[i] << endl;
