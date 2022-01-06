@@ -204,6 +204,19 @@ void loopCondition()
 
 		}
 	}
+	vector<int> v;
+	v.pop_back();// remove last
+
+	cout << "after pop" << endl;
+	for (int i : v) {
+		cout << i << " ";
+	}
+	set<int> s;
+	s.insert(5);// o(logn)
+	set<int>::iterator itr = s.find(5);
+	for (auto it = itr; it != s.end(); it++) {
+		cout << *it << " ";
+	}cout << endl;
 
 }
 void printPattern()
@@ -422,7 +435,7 @@ void arrayDemoLB()
 	int dost[10];
 	int sizeDost = sizeof(dost) / sizeof(int);// not always correct
 	int basic[3] = { 1,2,3 };
-	array<int, 4> a = { 1,2,3,4 };// stl 
+	array<int, 4> a = { 1,2,3,4 };//  this stl array so need namespace
 	int size = a.size();
 	// dynamic array 
 	int* result = new int[size];
@@ -442,10 +455,10 @@ void arrayDemoLB()
 	for (int i = 0; i < size; i++) {
 		cout << a[i] << endl;
 	}
-	cout << "Element at 2nd Index-> " << a.at(2) << endl; //3
-	cout << "Empty or not-> " << a.empty() << endl;// false
-	cout << "First Element-> " << a.front() << endl;//1
-	cout << "last Element-> " << a.back() << endl;//4
+	cout << "Element at 2nd Index-> " << a.at(2) << endl; //3 o(1)
+	cout << "Empty or not-> " << a.empty() << endl;// false o(1)
+	cout << "First Element-> " << a.front() << endl;//1 o(1)
+	cout << "last Element-> " << a.back() << endl;//4 o(1)
 };
 int getMin(int num[], int n) {
 
@@ -652,12 +665,12 @@ bool decOrder(int a, int b)
 }
 
 
-void vectorDemoLB()
+void vectorDemo1()
 {
 	// dynamic arry
 	vector<int> v;
 	vector<int> a(5, 1);// creat size 5 and set all as 1
-	vector<int> last(a);// move all  a in last 
+	vector<int> last(a);// move all a vector in last vector
 
 	cout << "print last" << endl;
 	for (int i : last) {
@@ -668,18 +681,22 @@ void vectorDemoLB()
 	v.push_back(1);
 	cout << "Capacity-> " << v.capacity() << endl;
 	v.push_back(2);
-	cout << "Capacity-> " << v.capacity() << endl;
+	cout << "Capacity-> " << v.capacity() << endl;// double the size bcz half if full
 	v.push_back(3);
 	cout << "Capacity-> " << v.capacity() << endl;
 	cout << "Size-> " << v.size() << endl;
 	cout << "Elemetn at 2nd Index" << v.at(2) << endl;
+
 	cout << "front " << v.front() << endl;
 	cout << "back " << v.back() << endl;
+
 	cout << "before pop" << endl;
 	for (int i : v) {
 		cout << i << " ";
 	}cout << endl;
+
 	v.pop_back();// remove last
+
 	cout << "after pop" << endl;
 	for (int i : v) {
 		cout << i << " ";
@@ -688,7 +705,7 @@ void vectorDemoLB()
 	v.clear();
 	cout << "after clear size " << v.size() << endl;
 }
-void vectorDemo()
+void vectorDemo2()
 {
 	vector<int> A = { 11,2,3,14 };
 	cout << A[1] << endl;
@@ -742,6 +759,8 @@ void vectorDemo()
 void deequeDemoLB()
 {
 	//push pop at both end double ended queue
+	// created by many static fixed size array
+	// its dynamic
 	deque<int> d;
 
 	d.push_back(1);
@@ -765,13 +784,15 @@ void deequeDemoLB()
 	}
 
 }
-void listDemoLB()
+void listDemoLB_usedByDD_LL()
 {
+	// doubly ll using
 	// list is created via using doubly ll 
 	// erasse o(n)
 	// add o(1)
 	list<int> l;
-	list<int> n(5, 100);
+	list<int> copy(l);// copy list
+	list<int> n(5, 100);// add five element with 100 as value
 
 	cout << "Printing n" << endl;
 	for (int i : n) {
@@ -784,7 +805,7 @@ void listDemoLB()
 		cout << i << " ";
 	}
 	cout << endl;
-	l.erase(l.begin());
+	l.erase(l.begin());// it ll delete index
 	cout << "after erase" << endl;
 	for (int i : l) {
 		cout << i << " ";
@@ -819,6 +840,7 @@ void queueDemoLB()
 }
 void priorityQueue_MaxHeapDemoLB()
 {
+	// first element always gratest
 	//max heap
 	priority_queue<int> maxi;
 
@@ -829,7 +851,7 @@ void priorityQueue_MaxHeapDemoLB()
 	maxi.push(3);
 	maxi.push(2);
 	maxi.push(0);
-	cout << "size-> " << maxi.size() << endl;
+	cout << "size-> " << maxi.size() << endl; //3210
 	int n = maxi.size();
 	for (int i = 0; i < n; i++) {
 		cout << maxi.top() << " ";
@@ -846,12 +868,55 @@ void priorityQueue_MaxHeapDemoLB()
 	for (int i = 0; i < m; i++) {
 		cout << mini.top() << " ";
 		mini.pop();
-	}cout << endl;
+	}cout << endl;//012345
 
 	cout << "khaali h kya bhai  ?? -> " << mini.empty() << endl;
 }
-void setDemo()
+void setDemo1()
 {
+	// always store unique without err
+	// implemented by bst
+	// return sorted way 
+	// unique no duplicate
+	// use bst
+	// unorderset is faster
+	set<int> s;
+	s.insert(5);// o(logn)
+	s.insert(5);
+	s.insert(5);
+	s.insert(1);
+	s.insert(6);
+	s.insert(6);
+	s.insert(0);
+	s.insert(0);
+	s.insert(0);
+
+	for (auto i : s) {
+		cout << i << endl;
+	}cout << endl;
+	s.erase(s.begin());
+	set<int>::iterator it = s.begin();
+	it++;
+
+	s.erase(it);
+
+	for (auto i : s) {
+		cout << i << endl;
+	}
+	cout << endl;
+	cout << "-5 is present or not -> " << s.count(-5) << endl;
+
+	set<int>::iterator itr = s.find(5);
+
+	for (auto it = itr; it != s.end(); it++) {
+		cout << *it << " ";
+	}cout << endl;
+
+}
+void setDemo2()
+{
+
+
 	set<int> S;// 
 	S.insert(1);// log n time
 	S.insert(2);
@@ -883,47 +948,11 @@ void setDemo()
 	}
 	S.erase(14);// llog n
 }
-void setDemoLB()
+void mapDemo1()
 {
-	// unique no duplicate
-	// use bst
-	// unorderset is faster
-	set<int> s;
-
-	s.insert(5);
-	s.insert(5);
-	s.insert(5);
-	s.insert(1);
-	s.insert(6);
-	s.insert(6);
-	s.insert(0);
-	s.insert(0);
-	s.insert(0);
-
-	for (auto i : s) {
-		cout << i << endl;
-	}cout << endl;
-
-	set<int>::iterator it = s.begin();
-	it++;
-
-	s.erase(it);
-
-	for (auto i : s) {
-		cout << i << endl;
-	}
-	cout << endl;
-	cout << "-5 is present or not -> " << s.count(-5) << endl;
-
-	set<int>::iterator itr = s.find(5);
-
-	for (auto it = itr; it != s.end(); it++) {
-		cout << *it << " ";
-	}cout << endl;
-
-}
-void mapDemoLB()
-{
+	// key val
+	// non sorted
+	// searhc o log n 
 	map<int, string> m;
 
 	m[1] = "babbar";
@@ -952,7 +981,7 @@ void mapDemoLB()
 	}
 
 }
-void mapDemo()
+void mapDemo2()
 {
 	// find delete  in log(n)
 	map<int, int>  A;
@@ -1022,7 +1051,7 @@ void algoDemoLB()
 	for (int i : v) {
 		cout << i << " ";
 	}
-	sort(v.begin(), v.end());
+	sort(v.begin(), v.end());// intro sort // quick heap and insertion sort 
 	cout << "after sorting" << endl;
 	for (int i : v) {
 		cout << i << " ";
