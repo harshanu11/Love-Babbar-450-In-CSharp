@@ -15,7 +15,7 @@ using namespace std;
 
 
 #pragma region Phase one basic loop function array string math 
-void SayHi(string name)
+void sayHi(string name)
 {
 	int a = 0;
 	string user;
@@ -54,7 +54,7 @@ void numberFn()
 	++age;
 	cout << 15.5 - 5;
 }
-void BitWiseOperator()
+void bitWiseOperator()
 {
 	int a = 4;
 	int b = 6;
@@ -99,7 +99,7 @@ void stlFn()
 	min(3, 3);
 	max(3, 3);
 }
-void ConditionFunction()
+void conditionFunction()
 {
 	int age = 0;
 	if (true)
@@ -165,7 +165,7 @@ void ConditionFunction()
 	}
 	cout << endl;
 }
-void LoopCondition()
+void loopCondition()
 {
 	int i = 7;
 	int n = 0;
@@ -206,7 +206,7 @@ void LoopCondition()
 	}
 
 }
-void PrintPattern()
+void printPattern()
 {
 	//D
 	//CD
@@ -232,7 +232,7 @@ void PrintPattern()
 		i++;
 	}
 }
-void DecToBin()
+void decToBin()
 {
 	int number = 5;
 	int i = 0;
@@ -250,7 +250,7 @@ void DecToBin()
 
 	cout << ans;
 }
-void BinToDec()
+void binToDec()
 {
 	int number = 110;
 	int ans = 0;
@@ -265,7 +265,7 @@ void BinToDec()
 	}
 	cout << ans;
 }
-void ReverseInt()
+void reverseInt()
 {
 	int x = 1288888999;
 	int ans = 0;
@@ -417,7 +417,7 @@ void forPrime() {
 }
 
 
-void ArrayDemoLB()
+void arrayDemoLB()
 {
 	int dost[10];
 	int sizeDost = sizeof(dost) / sizeof(int);// not always correct
@@ -642,17 +642,17 @@ class CppBasic
 		b.auther = "me bitch";
 #pragma endregion
 
-		SayHi("mu new funciton ");
+		sayHi("mu new funciton ");
 		cout << GiveCube(3);
 	}
 };
-bool DecOrder(int a, int b)
+bool decOrder(int a, int b)
 {
 	return a > b;
 }
 
 
-void VectorDemoLB()
+void vectorDemoLB()
 {
 	// dynamic arry
 	vector<int> v;
@@ -688,7 +688,7 @@ void VectorDemoLB()
 	v.clear();
 	cout << "after clear size " << v.size() << endl;
 }
-void VectorDemo()
+void vectorDemo()
 {
 	vector<int> A = { 11,2,3,14 };
 	cout << A[1] << endl;
@@ -713,7 +713,7 @@ void VectorDemo()
 	cout << it2 - it << endl;
 
 	// comparator fn 
-	sort(A.begin(), A.end(), DecOrder);
+	sort(A.begin(), A.end(), decOrder);
 	vector<int> ::iterator it3;//
 	// itration
 	for (it3 = A.begin(); it3 != A.end(); it3++)
@@ -739,7 +739,7 @@ void VectorDemo()
 	//-------------------
 
 }
-void DeequeDemoLB()
+void deequeDemoLB()
 {
 	//push pop at both end double ended queue
 	deque<int> d;
@@ -765,7 +765,7 @@ void DeequeDemoLB()
 	}
 
 }
-void ListDemoLB()
+void listDemoLB()
 {
 	// list is created via using doubly ll 
 	// erasse o(n)
@@ -792,7 +792,7 @@ void ListDemoLB()
 
 	cout << "size of list" << l.size() << endl;
 }
-void StackDemoLB()
+void stackDemoLB()
 {
 	stack<string> s;
 	s.push("love");
@@ -804,7 +804,7 @@ void StackDemoLB()
 	cout << "size of stack" << s.size() << endl;
 	cout << "Empty or not " << s.empty() << endl;
 }
-void QueueDemoLB()
+void queueDemoLB()
 {
 	// complexity on
 	queue<string> q;
@@ -817,7 +817,7 @@ void QueueDemoLB()
 	cout << "First Element " << q.front() << endl;
 	cout << "Size after pop" << q.size() << endl;
 }
-void PriorityQueue_MaxHeapDemoLB()
+void priorityQueue_MaxHeapDemoLB()
 {
 	//max heap
 	priority_queue<int> maxi;
@@ -850,7 +850,7 @@ void PriorityQueue_MaxHeapDemoLB()
 
 	cout << "khaali h kya bhai  ?? -> " << mini.empty() << endl;
 }
-void SetDemo()
+void setDemo()
 {
 	set<int> S;// 
 	S.insert(1);// log n time
@@ -883,7 +883,7 @@ void SetDemo()
 	}
 	S.erase(14);// llog n
 }
-void SetDemoLB()
+void setDemoLB()
 {
 	// unique no duplicate
 	// use bst
@@ -922,7 +922,7 @@ void SetDemoLB()
 	}cout << endl;
 
 }
-void MapDemoLB()
+void mapDemoLB()
 {
 	map<int, string> m;
 
@@ -952,7 +952,7 @@ void MapDemoLB()
 	}
 
 }
-void MapDemo()
+void mapDemo()
 {
 	// find delete  in log(n)
 	map<int, int>  A;
@@ -969,7 +969,7 @@ void MapDemo()
 	}
 	cout << cnt['a'] << " " << cnt['z'] << endl;
 }
-void PairDemo()
+void pairDemo()
 {
 	set<pair<int, int>> S;
 	//{a, b}and {c,d}
@@ -998,7 +998,7 @@ void PairDemo()
 	}
 
 }
-void AlgoDemoLB()
+void algoDemoLB()
 {
 	vector<int> v;
 	v.push_back(1);
@@ -1080,7 +1080,7 @@ public:
 	void work() {}
 
 };
-void OopEx()
+void oopEx()
 {
 	Employee employee1 = Employee("dfsdf", "dfsdf", 5);
 	employee1.Name = "dfsdf";
