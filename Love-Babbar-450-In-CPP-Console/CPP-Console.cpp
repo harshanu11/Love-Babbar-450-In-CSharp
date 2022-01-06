@@ -31,11 +31,21 @@ void boolFn()
 }
 void numberFn()
 {
+
 #define R 4 // define local var
 #define C 4
 	int age = 23;
+	cout << "\n ref memory address pointer of age:" << &age;
+	int* page = &age; // creting pointer variable to share it
+	// dereference of pointer
+	cout << *page;
+
+	//Programmer prog = Programmer(" ", " ", 55);
+	//Employee* ee = &prog;
+	//ee->work();
+
 	auto max = INT_MAX;//#include <limits.h> // for int_max
-	int b = sizeof(age);
+	int b = sizeof(age);// give size in byte
 	unsigned  int a = 33;// only positive no
 	float profit = 22.3;
 	double  gpa = 4.5;
@@ -51,6 +61,7 @@ void BitWiseOperator()
 	auto c = ~a;// to get once compliment
 	//int a = 55;
 	// !a == 0  or one
+	cout << (a & 1);// return false bcz last digit is 0
 	cout << " a&b " << (a & b) << endl;
 	cout << " a|b " << (a | b) << endl;
 	cout << " ~a " << ~a << endl;// once compliment
@@ -65,7 +76,7 @@ void stringFn()
 {
 	char alphabat = 'A';
 	char c = 'A' + 1;// B  
-	cin.get();//give char vale
+	cin.get();//give char vale invluding space
 	// "\n"  for next line '\t' tab
 
 
@@ -86,7 +97,7 @@ void stlFn()
 	cout << fmax(4.5, 8);//
 	cout << fmin(4.5, 8);//
 	min(3, 3);
-	max(3, 3)
+	max(3, 3);
 }
 void ConditionFunction()
 {
@@ -416,6 +427,11 @@ void ArrayDemoLB()
 	// dynamic array 
 	int* result = new int[size];
 	int* arr2 = new int[size];
+
+	//Programmer prog = Programmer(" ", " ", 55);
+	//Employee* ee = &prog;
+	//ee->work();
+
 #define R 4
 #define C 4
 	int maze[R][C] = { {0, 0, 0, 0},
@@ -581,7 +597,7 @@ class CppBasic
 
 #pragma endregion
 #pragma region String Fn 
-		std::string strUsingNameSpace = "the way to add namespace";
+		string strUsingNameSpace = "the way to add namespace";
 		strUsingNameSpace.length();
 		char dsf = strUsingNameSpace[2];
 		strUsingNameSpace.find('d');
