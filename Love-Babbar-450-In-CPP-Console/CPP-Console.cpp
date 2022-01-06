@@ -96,6 +96,9 @@ void stlFn()
 	cout << ceil(4.5);//
 	cout << fmax(4.5, 8);//
 	cout << fmin(4.5, 8);//
+	int a = 3;
+	int b = 5;
+	swap(a, b);
 	min(3, 3);
 	max(3, 3);
 }
@@ -460,6 +463,12 @@ void arrayDemoLB()
 	cout << "First Element-> " << a.front() << endl;//1 o(1)
 	cout << "last Element-> " << a.back() << endl;//4 o(1)
 };
+void swapAlternateNo()
+{
+	// 12785
+	// convert to 
+	//21975
+}
 int getMin(int num[], int n) {
 
 	int mini = INT_MAX;
