@@ -65,7 +65,7 @@ void bitWiseOperator()
 	cout << " a&b " << (a & b) << endl;
 	cout << " a|b " << (a | b) << endl;
 	cout << " ~a " << ~a << endl;// once compliment
-	cout << " a^b " << (a ^ b) << endl;
+	cout << " a^b " << (a ^ b) << endl;//r(a^a=0
 
 	cout << (17 >> 1) << endl;// devide by 2 once 
 	cout << (17 >> 2) << endl;// devide by 2 twise
@@ -468,6 +468,44 @@ void swapAlternateNo()
 	// 12785
 	// convert to 
 	//21975
+}
+bool uniqueOccurrences() {
+	vector<int> arr = { -3,0,1,-3,1,1,1,-3,10,0 };
+	vector<int> c(2000, 0);
+	vector<int> co(2000, 0);
+	int i = 0;
+	while (i < arr.size())
+	{
+		if (c[arr[i]] >= 0)
+		{
+			c[arr[i]]++;
+		}
+		else
+		{
+			cout << arr[i];
+			c[arr[i] * -2]++;
+		}
+		i++;
+	}
+	i = 0;
+	while (i < c.size())
+	{
+		if (c[i] >= 1)
+		{
+			co[c[i]]++;
+		}
+		i++;
+	}
+	i = 0;
+	while (i < c.size())
+	{
+		if (co[i] > 1)
+		{
+			return false;
+		}
+		i++;
+	}
+	return true;
 }
 int getMin(int num[], int n) {
 
@@ -1185,6 +1223,7 @@ bool checkUniqueCount(int arr[], int size = 0)
 
 int main()
 {
+	uniqueOccurrences();
 	//SPairDemo();
 	int size = 6;
 	int arr[6] = { 1,2,2,1,1,3 };
