@@ -11,6 +11,7 @@
 #include<algorithm>; // for sort
 #include <set>
 #include <map>
+#include <unordered_map>
 using namespace std;
 
 
@@ -90,6 +91,9 @@ void stringFn()
 }
 void stlFn()
 {
+	vector<int> vect1{ 1, 2, 3, 4 };
+	// Declaring new vector
+	vector<int> vect2;
 	cout << pow(2, 5);//32 2^5
 	cout << sqrt(2.5);//
 	cout << round(4.5);//
@@ -101,6 +105,7 @@ void stlFn()
 	swap(a, b);
 	min(3, 3);
 	max(3, 3);
+	copy(vect1.begin(), vect1.end(), back_inserter(vect2));
 }
 void conditionFunction()
 {
@@ -1000,12 +1005,15 @@ void mapDemo1()
 	// key val
 	// non sorted
 	// searhc o log n 
+	//increasing  order
 	map<int, string> m;
-
 	m[1] = "babbar";
 	m[13] = "kumar";
 	m[2] = "love";
 
+
+	unordered_map<int, string> umap;
+	umap[0] = "umap";
 	m.insert({ 5,"bheem" });
 
 	cout << "before erase" << endl;
