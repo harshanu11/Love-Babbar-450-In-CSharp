@@ -22,9 +22,9 @@ void printArr(int arr[], int s)
 		cout << arr[i] << " ";
 	}
 }
-void printArr(vector<int> arr, int s)
+void printArr(vector<int> arr, int s=0)
 {
-	for (int i = 0; i < s; i++)
+	for (int i = 0; i < arr.size(); i++)
 	{
 		cout << arr[i] << " ";
 	}
@@ -680,6 +680,40 @@ int binarySearch(int arr[], int size, int key) {
 
 	return -1;
 }
+
+vector<int> quickSort(vector<int> nums, int target)
+{
+	vector<int> ans;
+	int step = 0;
+	for (int i = 0; i < nums.size(); i++)
+	{
+		cout << "step=" << step << endl;
+		int select = i;
+		cout << "select = " << select << endl;
+		int nastedStep = 0;
+		for (int j = i + 1; j < nums.size(); j++)
+		{
+			cout << "Nested step=" << nastedStep << endl;
+			if (nums[select] > nums[j])
+			{
+				cout << "new selected item/index =" << nums[select] << "/" << select << "new/index=" << nums[j] << "/" << j << endl;
+				select = j;
+				cout << "   new select is now =" << j << endl;
+			}
+			nastedStep++;
+		}
+		cout << "time to swap nums[i] " << nums[i] << "to " << nums[select] << endl;
+		printArr(nums);
+		swap(nums[i], nums[select]);
+		printArr(nums);
+
+
+		step++;
+	}
+	printArr(nums);
+	return ans;
+}
+
 #pragma endregion
 
 
@@ -1132,6 +1166,7 @@ void mapDemo1()
 	mp.insert({ 1, 40 });
 	mp.insert({ 3, 20 });
 	mp.insert({ 4, 50 });
+	mp.insert({ 5, 50 });
 
 	cout << "Elements from position of 3 in the map are : \n";
 	cout << "KEY\tELEMENT\n";
@@ -1339,25 +1374,7 @@ bool checkUniqueCount(int arr[], int size = 0)
 
 int main()
 {
-	map<int, int> mp;
-	// Insert elements in random order
-	mp.insert({ 2, 30 });
-	mp.insert({ 1, 40 });
-	mp.insert({ 3, 20 });
-	mp.insert({ 4, 50 });
-
-	cout << "Elements from position of 3 in the map are : \n";
-	cout << "KEY\tELEMENT\n";
-	auto data = mp.find(-6);
-	auto data1 = mp.find(1);
-	auto data2 = mp.find(40);
-
-	// find() function finds the position
-	// at which 3 is present
-	for (auto itr = mp.find(3); itr != mp.end(); itr++) {
-
-		cout << itr->first << '\t' << itr->second << '\n';
-	}
+	mapDemo1();
 	return 0;
 }
 
