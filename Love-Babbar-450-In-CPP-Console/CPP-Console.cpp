@@ -713,7 +713,27 @@ vector<int> quickSort(vector<int> nums, int target)
 	printArr(nums);
 	return ans;
 }
-
+vector<int> bubbleSort(vector<int> nums, int target)
+{
+	vector<int> ans;
+	int step = 1;
+	for (int i = 1; i < nums.size(); i++)
+	{
+		cout << "step=" << step << endl;
+		for (int j = 0; j < nums.size() - i; j++)
+		{
+			if (nums[j] > nums[j + 1])
+			{
+				printArr(nums);
+				swap(nums[j], nums[j + 1]);
+				printArr(nums);
+			}
+		}
+		step++;
+	}
+	printArr(nums);
+	return ans;
+}
 #pragma endregion
 
 
