@@ -113,6 +113,7 @@ void sayHi(string name)
 	cin >> user;
 	// "\n"  for next line '\t' tab
 	cout << "\n hello user" << name << user << '\n' << endl;
+	cout << "\0 null char " << name << user << '\n' << endl;
 	//cin >> a;
 	cout << "namaste duniya\t" << a << "\t" << endl;
 }
@@ -170,7 +171,8 @@ void stringFn()
 	cin.get();//give char vale invluding space
 	// "\n"  for next line '\t' tab
 
-
+	auto alphanumeric  = isalnum('c');
+	auto lower = tolower('A');
 	string strUsingNameSpace = "the way to add namespace";
 	strUsingNameSpace.length();
 	char dsf = strUsingNameSpace[2];
@@ -1153,6 +1155,7 @@ void mapDemo1()
 	map<int, string> m;
 	m[1] = "babbar";
 	m[13] = "kumar";
+	m[13] = "kumar1";
 	m[2] = "love";
 
 
@@ -1165,7 +1168,7 @@ void mapDemo1()
 		cout << i.first << " " << i.second << endl;
 	}
 
-	cout << "finding -13 -> " << m.count(-13) << endl;
+	cout << "finding -13 -> " << m.count(13) << endl;
 
 	// m.erase(13);
 	cout << "after erase" << endl;
@@ -1185,6 +1188,7 @@ void mapDemo1()
 	mp.insert({ 2, 30 });
 	mp.insert({ 1, 40 });
 	mp.insert({ 3, 20 });
+	mp.insert({ 3, 2 });
 	mp.insert({ 4, 50 });
 	mp.insert({ 5, 50 });
 
@@ -1394,7 +1398,6 @@ bool checkUniqueCount(int arr[], int size = 0)
 
 int main()
 {
-	mapDemo1();
 	return 0;
 }
 
