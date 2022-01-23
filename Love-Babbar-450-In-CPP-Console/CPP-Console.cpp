@@ -177,18 +177,17 @@ void stringFn()
 	char str4[40];
 	char str5[] = "GfG";
 
+	string str;
+	str = to_string('5');
+	str = to_string(5);
 	string str("This is an example sentence.");
 	cout << str << '\n';
-	// "This is an example sentence."
-	str.erase(10, 8);                        //            ^^^^^^^^
+	str.erase(10, 8);                        //            ^^^^^^^^m
 	cout << str << '\n';
-	// "This is an sentence."
 	str.erase(str.begin() + 9);               //           ^
 	cout << str << '\n';
-	// "This is a sentence."
 	str.erase(str.begin() + 5, str.end() - 9);  //       ^^^^^
 	cout << str << '\n';
-	// "This sentence."
 
 	string str("There are two needles in this haystack with needles.");
 	string str2("needle");
@@ -1211,7 +1210,7 @@ void mapDemo1()
 	unordered_map<int, string> umap;
 	umap[0] = "umap";
 	m.insert({ 5,"bheem" });
-
+	m.erase(4);
 	cout << "before erase" << endl;
 	for (auto i : m) {
 		cout << i.first << " " << i.second << endl;
