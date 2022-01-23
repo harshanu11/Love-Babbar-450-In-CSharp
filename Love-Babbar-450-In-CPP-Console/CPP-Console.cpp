@@ -170,7 +170,40 @@ void stringFn()
 	char c = 'A' + 1;// B  
 	cin.get();//give char vale invluding space
 	// "\n"  for next line '\t' tab
+	auto comp = strcmp("dsfs", "dd");// not 0
+	char str1[] = "Hello Geeks!";
+	char str2[] = "GeeksforGeeks";
+	char str3[40];
+	char str4[40];
+	char str5[] = "GfG";
 
+	string str("This is an example sentence.");
+	cout << str << '\n';
+	// "This is an example sentence."
+	str.erase(10, 8);                        //            ^^^^^^^^
+	cout << str << '\n';
+	// "This is an sentence."
+	str.erase(str.begin() + 9);               //           ^
+	cout << str << '\n';
+	// "This is a sentence."
+	str.erase(str.begin() + 5, str.end() - 9);  //       ^^^^^
+	cout << str << '\n';
+	// "This sentence."
+
+	string str("There are two needles in this haystack with needles.");
+	string str2("needle");
+
+	// different member versions of find in the same order as above:
+	size_t found = str.find(str2);
+	if (found != string::npos)
+		cout << "first 'needle' found at: " << found << '\n';
+
+	found = str.find("needles are small", found + 1, 6);
+	if (found != string::npos)
+		cout << "second 'needle' found at: " << found << '\n';
+
+	strcpy(str2, str1);
+	strcpy(str3, "Copy successful");
 	auto alphanumeric  = isalnum('c');
 	auto lower = tolower('A');
 	string strUsingNameSpace = "the way to add namespace";
@@ -180,6 +213,22 @@ void stringFn()
 	strUsingNameSpace.find("sfsf");
 	strUsingNameSpace.find("sfsf", 5);// look from index 5
 	strUsingNameSpace.substr(8, 5);// start , till length
+}
+char stringToLower(char c)
+{
+	if (c >= 'a'&& c<='z')
+	{
+		return c;
+	}
+	else if (c >= '0' && c <= '9')
+	{
+		return '0';
+	}
+	else
+	{
+		return c + ('a' - 'A');
+	}
+
 }
 void stlFn()
 {
