@@ -212,6 +212,13 @@ void stringFn()
 	strUsingNameSpace.find("sfsf");
 	strUsingNameSpace.find("sfsf", 5);// look from index 5
 	strUsingNameSpace.substr(8, 5);// start , till length
+
+	string s1 = "Example of replace";
+	string s2 = "Demonstration";
+	s1.replace(0, 7, s2);//Demonstration of replace
+	string str6("GeeksforGeeks ");
+	string str7("Hello World! ");
+	str6.append(str7, 0, 5);
 }
 char stringToLower(char c)
 {
@@ -577,7 +584,29 @@ void forPrime() {
 
 }
 
+void array2d()
+{
+	int arr[3][3];
+	//taking input -> row wise input
+	for (int row = 0; row < 3; row++) {
+		for (int col = 0; col < 3; col++) {
+			cin >> arr[row][col];
+		}
+	}
 
+
+	/*
+	//taking input -> col wise input
+		for(int col=0; col<4; col++) {
+			for(int row=0; row<3; row++) {
+				cin >> arr[row][col];
+			}
+		}
+	*/
+	int arr1[3][4]= {1,2,3,4,5,6,7,8,9,10,13,14};// column wise print
+	int arr2[3][4] = { {0,1,2,3},{0,1,2,3},{0,1,2,3} };
+	
+}
 void arrayDemoLB()
 {
 	int dost[10];
