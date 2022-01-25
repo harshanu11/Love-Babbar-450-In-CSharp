@@ -22,7 +22,7 @@ void printArr(int arr[], int s)
 		cout << arr[i] << " ";
 	}
 }
-void printArr(vector<int> arr, int s=0)
+void printArr(vector<int> arr, int s = 0)
 {
 	for (int i = 0; i < arr.size(); i++)
 	{
@@ -209,7 +209,7 @@ void stringFn()
 
 	strcpy(str2, str1);
 	strcpy(str3, "Copy successful");
-	auto alphanumeric  = isalnum('c');
+	auto alphanumeric = isalnum('c');
 	auto lower = tolower('A');
 	string strUsingNameSpace = "the way to add namespace";
 	strUsingNameSpace.length();
@@ -228,7 +228,7 @@ void stringFn()
 }
 char stringToLower(char c)
 {
-	if (c >= 'a'&& c<='z')
+	if (c >= 'a' && c <= 'z')
 	{
 		return c;
 	}
@@ -439,7 +439,7 @@ void binToDec()
 	}
 	cout << ans;
 }
-void passbyVal(int *p) 
+void passbyVal(int* p)
 {
 	cout << "memory add = " << p << endl;
 	cout << "val = " << *p << endl;
@@ -461,7 +461,7 @@ int getSum(int* arr, int n) {
 	}
 	return sum;
 }
-void referenceTyep() 
+void referenceTyep()
 {
 	int age = 31;
 	int* page = &age; // creting pointer variable to share it
@@ -481,9 +481,10 @@ void referenceTyep()
 	cout << "val of first memory address =" << *arr << endl;
 	// arr[i] = *(arr+i)
 	// i[arr] = *(i+arr)
-	cout << "val of first memory address =" << *(arr+1) << endl;// first+1 location
+	cout << "val of first memory address =" << *(arr + 1) << endl;// first+1 location
 
 	// pass by val 
+	int p = 0;
 	passbyVal(page);
 	cout << " Before " << *p << endl;//5
 	update(p);
@@ -502,6 +503,8 @@ void referenceTyep()
 	j++;
 
 	int* a = new int[88];
+
+
 
 }
 void reverseInt()
@@ -674,9 +677,9 @@ void array2d()
 			}
 		}
 	*/
-	int arr1[3][4]= {1,2,3,4,5,6,7,8,9,10,13,14};// column wise print
+	int arr1[3][4] = { 1,2,3,4,5,6,7,8,9,10,13,14 };// column wise print
 	int arr2[3][4] = { {0,1,2,3},{0,1,2,3},{0,1,2,3} };
-	
+
 }
 void arrayDemoLB()
 {
@@ -704,6 +707,24 @@ void arrayDemoLB()
 			   {0, -1, 0, 0},
 			   {-1, 0, 0, 0},
 			   {0, 0, 0, 0} };
+	// dynamic array 
+	int row;
+	cin >> row;
+
+	int col;
+	cin >> col;
+
+	//creating a 2D array
+	int** arr = new int* [row];
+	for (int i = 0; i < row; i++) {
+		arr[i] = new int[col];
+	}
+	//releasing memory
+	for (int i = 0; i < row; i++) {
+		delete[] arr[i];
+	}
+
+	delete[]arr;
 
 	for (int i = 0; i < size; i++) {
 		cout << a[i] << endl;
