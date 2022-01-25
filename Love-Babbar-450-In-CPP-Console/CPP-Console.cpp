@@ -437,6 +437,28 @@ void binToDec()
 	}
 	cout << ans;
 }
+void passbyVal(int *p) 
+{
+	cout << "memory add = " << p << endl;
+	cout << "val = " << *p << endl;
+}
+void update(int* p) {
+
+	// p = p + 1;
+	//cout << "inside "<< p <<endl;
+	*p = *p + 1;
+
+}
+int getSum(int* arr, int n) {
+
+	cout << endl << "Size : " << sizeof(arr) << endl;
+
+	int sum = 0;
+	for (int i = 0; i < n; i++) {
+		sum += arr[i];
+	}
+	return sum;
+}
 void referenceTyep() 
 {
 	int age = 31;
@@ -450,6 +472,24 @@ void referenceTyep()
 	int* ptr = &num; // 
 	cout << "ptr add " << ptr << endl;//ptr = 0x7ffe20c611a8
 	cout << "ptr add " << *ptr << endl;// 5
+
+	int arr[10];
+	cout << "reference of first element =" << arr << endl;
+	cout << "reference of first element =" << &arr[0] << endl;
+	cout << "val of first memory address =" << *arr << endl;
+	// arr[i] = *(arr+i)
+	// i[arr] = *(i+arr)
+	cout << "val of first memory address =" << *(arr+1) << endl;// first+1 location
+
+	// pass by val 
+	passbyVal(page);
+	cout << " Before " << *p << endl;//5
+	update(p);
+	cout << " After " << *p << endl;//6
+
+	int arr[6] = { 1,2,3,4,5,8 };
+
+	cout << "Sum is " << getSum(arr + 3, 3) << endl;// sendign part of array 
 }
 void reverseInt()
 {
