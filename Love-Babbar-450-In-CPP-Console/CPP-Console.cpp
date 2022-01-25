@@ -127,6 +127,8 @@ void numberFn()
 #define R 4 // define local var
 #define C 4
 	int age = 23;
+	int* p = new int;// dynamic int 
+	delete p;
 	cout << "\n ref memory address pointer of age:" << &age;
 	int* page = &age; // creting pointer variable to share it
 	// dereference of pointer
@@ -490,6 +492,17 @@ void referenceTyep()
 	int arr[6] = { 1,2,3,4,5,8 };
 
 	cout << "Sum is " << getSum(arr + 3, 3) << endl;// sendign part of array 
+
+	// reference variable
+	int i = 0;
+	int& j = i;
+	cout << i << endl;
+	i++;
+	cout << i << endl;
+	j++;
+
+	int* a = new int[88];
+
 }
 void reverseInt()
 {
@@ -667,9 +680,14 @@ void array2d()
 }
 void arrayDemoLB()
 {
+	int size = 10;
+	// static arr
 	int dost[10];
 	int sizeDost = sizeof(dost) / sizeof(int);// not always correct
 	int basic[3] = { 1,2,3 };
+	delete basic;
+	// dynamic array size
+	int* aa = new int[size];// using heap
 	array<int, 4> a = { 1,2,3,4 };//  this stl array so need namespace
 	int size = a.size();
 	// dynamic array 
