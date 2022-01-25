@@ -145,6 +145,10 @@ void numberFn()
 	age++;
 	++age;
 	cout << 15.5 - 5;
+
+	// type caste 
+	int res = 1;
+	res = 1LL * res * (4);
 }
 void bitWiseOperator()
 {
@@ -432,6 +436,20 @@ void binToDec()
 		i++;
 	}
 	cout << ans;
+}
+void referenceTyep() 
+{
+	int age = 31;
+	int* page = &age; // creting pointer variable to share it
+	// dereference of pointer
+	cout << *page;
+	int num = 5;
+	// & is address operator
+	cout << "ref add" << &num << endl;//0x7ffe20c611a8 address in hexa decimal
+	// pointer save address
+	int* ptr = &num; // 
+	cout << "ptr add " << ptr << endl;//ptr = 0x7ffe20c611a8
+	cout << "ptr add " << *ptr << endl;// 5
 }
 void reverseInt()
 {
