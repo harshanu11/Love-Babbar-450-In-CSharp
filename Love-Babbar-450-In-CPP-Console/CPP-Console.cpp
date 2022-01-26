@@ -867,7 +867,27 @@ int binarySearch(int arr[], int size, int key) {
 
 	return -1;
 }
+bool binarySearchRecur(int* arr, int s, int e, int k) {
 
+	//base case
+
+	//element not found
+	if (s > e)
+		return false;
+
+	int mid = s + (e - s) / 2;
+
+	//element found
+	if (arr[mid] == k)
+		return true;
+
+	if (arr[mid] < k) {
+		return binarySearchRecur(arr, mid + 1, e, k);
+	}
+	else {
+		return binarySearchRecur(arr, s, mid - 1, k);
+	}
+}
 vector<int> quickSort(vector<int> nums, int target)
 {
 	vector<int> ans;
