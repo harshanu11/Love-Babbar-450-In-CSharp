@@ -186,7 +186,7 @@ void stringFn()
 	string str;
 	str = to_string('5');
 	str = to_string(5);
-	string str("This is an example sentence.");
+	//string str4("This is an example sentence.");
 	cout << str << '\n';
 	str.erase(10, 8);                        //            ^^^^^^^^m
 	cout << str << '\n';
@@ -195,8 +195,8 @@ void stringFn()
 	str.erase(str.begin() + 5, str.end() - 9);  //       ^^^^^
 	cout << str << '\n';
 
-	string str("There are two needles in this haystack with needles.");
-	string str2("needle");
+	//string str5("There are two needles in this haystack with needles.");
+	string str22("needle");
 
 	// different member versions of find in the same order as above:
 	size_t found = str.find(str2);
@@ -207,8 +207,8 @@ void stringFn()
 	if (found != string::npos)
 		cout << "second 'needle' found at: " << found << '\n';
 
-	strcpy(str2, str1);
-	strcpy(str3, "Copy successful");
+	//strcpy(str2, str1);
+	//strcpy(str3, "Copy successful");
 	auto alphanumeric = isalnum('c');
 	auto lower = tolower('A');
 	string strUsingNameSpace = "the way to add namespace";
@@ -484,13 +484,13 @@ void referenceTyep()
 	cout << "val of first memory address =" << *(arr + 1) << endl;// first+1 location
 
 	// pass by val 
-	int p = 0;
+	int *p = 0;
 	passbyVal(page);
 	cout << " Before " << *p << endl;//5
 	update(p);
 	cout << " After " << *p << endl;//6
 
-	int arr[6] = { 1,2,3,4,5,8 };
+	int arr2[6] = { 1,2,3,4,5,8 };
 
 	cout << "Sum is " << getSum(arr + 3, 3) << endl;// sendign part of array 
 
@@ -506,6 +506,17 @@ void referenceTyep()
 
 
 
+}
+int  recurReverseNum(int n)
+{
+	if (n % 10 == 0) {
+		return n;
+	}
+	int p = n % 10;
+	int pp = n / 10;
+	recurReverseNum(pp);
+	cout << " num=" << p << endl;
+	return pp;
 }
 void reverseInt()
 {
@@ -692,7 +703,7 @@ void arrayDemoLB()
 	// dynamic array size
 	int* aa = new int[size];// using heap
 	array<int, 4> a = { 1,2,3,4 };//  this stl array so need namespace
-	int size = a.size();
+	size = a.size();
 	// dynamic array 
 	int* result = new int[size];
 	int* arr2 = new int[size];
