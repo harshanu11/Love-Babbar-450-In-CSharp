@@ -1142,6 +1142,7 @@ void vectorDemo1()
 
 	cout << "Capacity-> " << v.capacity() << endl;//0
 	v.push_back(1);
+	v.pop_back();
 	cout << "Capacity-> " << v.capacity() << endl;
 	v.push_back(2);
 	cout << "Capacity-> " << v.capacity() << endl;// double the size bcz half if full
