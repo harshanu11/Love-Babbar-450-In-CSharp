@@ -985,6 +985,8 @@ void merge(int* arr, int s, int e)
 	{
 		arr[mainIndex++] = second[index2++];
 	}
+	delete[]first;
+	delete[]second;
 }
 void mergeSort(int* arr, int s, int e)
 {
@@ -1424,6 +1426,8 @@ void mapDemo1()
 
 	unordered_map<int, string> umap;
 	umap[0] = "umap";
+	auto b = umap.find(1);
+	b->first;
 	m.insert({ 5,"bheem" });
 	m.erase(4);
 	cout << "before erase" << endl;
@@ -1440,7 +1444,7 @@ void mapDemo1()
 	}cout << endl << endl;
 
 	auto it = m.find(5);
-
+	
 	for (auto i = it; i != m.end(); i++) {
 		cout << (*i).first << endl;
 	}
@@ -1658,7 +1662,6 @@ bool checkUniqueCount(int arr[], int size = 0)
 	}
 	return true;
 }
-
 int main()
 {
 	return 0;
