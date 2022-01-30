@@ -1663,8 +1663,142 @@ bool checkUniqueCount(int arr[], int size = 0)
 	}
 	return true;
 }
+class NodeSingle
+{
+public:
+	int data;
+	NodeSingle* next;
+	NodeSingle(int data)
+	{
+		this->data = data;
+		this->next = NULL;
+	}
+	//destructor
+	~NodeSingle() {
+		int value = this->data;
+		//memory free
+		if (this->next != NULL) {
+			delete next;
+			this->next = NULL;
+		}
+		cout << " memory is free for node with data " << value << endl;
+	}
+};
+void printLL(NodeSingle*& head) {
+	NodeSingle* temp = head;
+
+	while (temp != NULL) {
+		cout << temp->data << " ";
+		temp = temp->next;
+	}
+	cout << endl;
+}
+void deleteNode(int position, NodeSingle*& head) {
+
+	//deleting first or start node
+	if (position == 1) {
+		NodeSingle* temp = head;
+		head = head->next;
+		//memory free start ndoe
+		temp->next = NULL;
+		delete temp;
+	}
+	else
+	{
+		//deleting any middle node or last node
+		NodeSingle* curr = head;
+		NodeSingle* prev = NULL;
+
+		int cnt = 1;
+		while (cnt < position) {
+			prev = curr;
+			curr = curr->next;
+			cnt++;
+		}
+
+		prev->next = curr->next;
+		curr->next = NULL;
+		delete curr;
+
+	}
+}
+void insertAtHead(NodeSingle*& head, int d) {
+
+	// new node create
+	NodeSingle* temp = new NodeSingle(d);
+	temp->next = head;
+	head = temp;
+}
+void insertAtTail(NodeSingle*& tail, int d) {
+	// new node create
+	NodeSingle* temp = new NodeSingle(d);
+	tail->next = temp;
+	tail = temp;
+}
+void insertAtPosition(NodeSingle*& tail, NodeSingle*& head, int position, int d) {
+
+
+	//insert at Start
+	if (position == 1) {
+		insertAtHead(head, d);
+		return;
+	}
+
+	NodeSingle* temp = head;
+	int cnt = 1;
+
+	while (cnt < position - 1) {
+		temp = temp->next;
+		cnt++;
+	}
+
+	//inserting at Last Position
+	if (temp->next == NULL) {
+		insertAtTail(tail, d);
+		return;
+	}
+
+	//creating a node for d
+	NodeSingle* nodeToInsert = new NodeSingle(d);
+
+	nodeToInsert->next = temp->next;
+
+	temp->next = nodeToInsert;
+}
+void LL() 
+{
+	// run time dynamic ds , no memory waste
+	//no shift needed in case beech men push karne pe 
+	// type = single,double,circular,circular double ll
+	NodeSingle* node0 = new NodeSingle(5);
+	cout << node0->data << " " << node0->next << endl;//10 0x0
+
+	 //created a new node
+	NodeSingle* node1 = new NodeSingle(10);
+	//cout << node1 -> data << endl;
+   // cout << node1 -> next << endl;
+
+	//head pointed to node1
+	NodeSingle* head = node1;
+	NodeSingle* tail = node1;
+	printLL(head);
+
+	insertAtHead(head, 12);
+
+	printLL(head);
+
+	insertAtTail(tail, 22);
+
+	printLL(head);
+	insertAtPosition(tail, head, 4, 23);
+	printLL(head);
+
+	deleteNode(4, head);
+	printLL(head);
+}
 int main()
 {
+	LL();
 	return 0;
 }
 
