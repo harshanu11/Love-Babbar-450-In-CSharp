@@ -1796,9 +1796,152 @@ void LL()
 	deleteNode(4, head);
 	printLL(head);
 }
+class NodeDouble
+{
+public:
+	int data;
+	NodeDouble* prev;
+	NodeDouble* next;
+	NodeDouble(int data)
+	{
+		this->data = data;
+		this->prev = NULL;
+		this->next = NULL;
+	}
+	//destructor
+	~NodeDouble() {
+		int val = this->data;
+		if (next != NULL) {
+			delete next;
+			next = NULL;
+		}
+		cout << "memory free for node with data " << val << endl;
+	}
+};
+void printDLL(NodeDouble* head) {
+	NodeDouble* temp = head;
+
+	while (temp != NULL) {
+		cout << temp->data << " ";
+		temp = temp->next;
+	}
+	cout << endl;
+}
+//gives length of Linked List
+int getLength(NodeDouble* head) {
+	int len = 0;
+	NodeDouble* temp = head;
+
+	while (temp != NULL) {
+		len++;
+		temp = temp->next;
+	}
+
+	return len;
+}
+void insertAtHead(NodeDouble*& tail, NodeDouble*& head, int d) {
+
+	//empty list
+	if (head == NULL) {
+		NodeDouble* temp = new NodeDouble(d);
+		head = temp;
+		tail = temp;
+	}
+	else {
+		NodeDouble* temp = new NodeDouble(d);
+		temp->next = head;
+		head->prev = temp;
+		head = temp;
+	}
+
+}
+void insertAtTail(NodeDouble*& tail, NodeDouble*& head, int d) {
+	if (tail == NULL) {
+		NodeDouble* temp = new NodeDouble(d);
+		tail = temp;
+		head = temp;
+	}
+	else {
+		NodeDouble* temp = new NodeDouble(d);
+		tail->next = temp;
+		temp->prev = tail;
+		tail = temp;
+	}
+
+}
+void insertAtPosition(NodeDouble*& tail, NodeDouble*& head, int position, int d) {
+
+	//insert at Start
+	if (position == 1) {
+		insertAtHead(tail, head, d);
+		return;
+	}
+
+	NodeDouble* temp = head;
+	int cnt = 1;
+
+	while (cnt < position - 1) {
+		temp = temp->next;
+		cnt++;
+	}
+
+	//inserting at Last Position
+	if (temp->next == NULL) {
+		insertAtTail(tail, head, d);
+		return;
+	}
+
+	//creating a node for d
+	NodeDouble* nodeToInsert = new NodeDouble(d);
+
+	nodeToInsert->next = temp->next;
+	temp->next->prev = nodeToInsert;
+	temp->next = nodeToInsert;
+	nodeToInsert->prev = temp;
+}
+
+void deleteNode(int position, NodeDouble*& head) {
+
+	//deleting first or start node
+	if (position == 1) {
+		NodeDouble* temp = head;
+		temp->next->prev = NULL;
+		head = temp->next;
+		temp->next = NULL;
+		delete temp;
+	}
+	else
+	{
+		//deleting any middle node or last node
+		NodeDouble* curr = head;
+		NodeDouble* prev = NULL;
+
+		int cnt = 1;
+		while (cnt < position) {
+			prev = curr;
+			curr = curr->next;
+			cnt++;
+		}
+
+		curr->prev = NULL;
+		prev->next = curr->next;
+		curr->next = NULL;
+
+		delete curr;
+
+	}
+}
+void LLDouble()
+{
+	NodeDouble* node1 = new NodeDouble(10);
+	NodeDouble* head = node1;
+	printDLL(head);
+	getLength(head);
+	insertAtHead(head,11);
+}
 int main()
 {
-	LL();
+	LLDouble();
 	return 0;
 }
 
