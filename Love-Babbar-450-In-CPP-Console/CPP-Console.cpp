@@ -1933,15 +1933,148 @@ void deleteNode(int position, NodeDouble*& head) {
 }
 void LLDouble()
 {
+	NodeDouble* head = NULL;
+	NodeDouble* tail = NULL;
 	NodeDouble* node1 = new NodeDouble(10);
 	NodeDouble* head = node1;
 	printDLL(head);
 	getLength(head);
-	insertAtHead(head,11);
+	insertAtHead(tail, head, 11);
+
+}
+class NodeCircular {
+public:
+	int data;
+	NodeCircular* next;
+
+	//constrcutor
+	NodeCircular(int d) {
+		this->data = d;
+		this->next = NULL;
+	}
+
+	~NodeCircular() {
+		int value = this->data;
+		if (this->next != NULL) {
+			delete next;
+			next = NULL;
+		}
+		cout << " memory is free for node with data " << value << endl;
+	}
+
+};
+void insertNodeCircular(NodeCircular*& tail, int element, int d) {
+
+
+	//empty list
+	if (tail == NULL) {
+		NodeCircular* newNode = new NodeCircular(d);
+		tail = newNode;
+		newNode->next = newNode;
+	}
+	else {
+		//non-empty list
+		//assuming that the element is present in the list
+
+		NodeCircular* curr = tail;
+
+		while (curr->data != element) {
+			curr = curr->next;
+		}
+
+		//element found -> curr is representing element wala node
+		NodeCircular* temp = new NodeCircular(d);
+		temp->next = curr->next;
+		curr->next = temp;
+
+	}
+
+}
+
+void printCircular(NodeCircular* tail) {
+
+	NodeCircular* temp = tail;
+
+	//empty list
+	if (tail == NULL) {
+		cout << "List is Empty " << endl;
+		return;
+	}
+
+	do {
+		cout << tail->data << " ";
+		tail = tail->next;
+	} while (tail != temp);
+
+	cout << endl;
+}
+
+void deleteNodeCircular(NodeCircular*& tail, int value) {
+
+	//empty list
+	if (tail == NULL) {
+		cout << " List is empty, please check again" << endl;
+		return;
+	}
+	else {
+		//non-empty
+
+		//assuming that "value" is present in the Linked List
+		NodeCircular* prev = tail;
+		NodeCircular* curr = prev->next;
+
+		while (curr->data != value) {
+			prev = curr;
+			curr = curr->next;
+		}
+
+		prev->next = curr->next;
+
+		//1 NodeCircular Linked List
+		if (curr == prev) {
+			tail = NULL;
+		}
+
+		//>=2 NodeCircular linked list
+		else if (tail == curr) {
+			tail = prev;
+		}
+
+		curr->next = NULL;
+		delete curr;
+
+	}
+
+}
+
+void llCircular()
+{
+	NodeCircular* tail = NULL;
+
+	insertNodeCircular(tail, 5, 3);
+	printCircular(tail);
+
+	insertNodeCircular(tail, 3, 5);
+	printCircular(tail);
+	/*
+		insertNodeCircular(tail, 5, 7);
+		printCircular(tail);
+		insertNodeCircular(tail, 7, 9);
+		printCircular(tail);
+		insertNodeCircular(tail, 5, 6);
+		printCircular(tail);
+
+		insertNodeCircular(tail, 9, 10);
+		printCircular(tail);
+		insertNodeCircular(tail, 3, 4);
+		printCircular(tail);
+		*/
+
+	deleteNodeCircular(tail, 5);
+	printCircular(tail);
 }
 int main()
 {
-	LLDouble();
 	return 0;
 }
 
