@@ -1933,7 +1933,7 @@ void deleteNode(int position, NodeDouble*& head) {
 }
 void LLDouble()
 {
-	NodeDouble* head = NULL;
+	//NodeDouble* head = NULL;
 	NodeDouble* tail = NULL;
 	NodeDouble* node1 = new NodeDouble(10);
 	NodeDouble* head = node1;
