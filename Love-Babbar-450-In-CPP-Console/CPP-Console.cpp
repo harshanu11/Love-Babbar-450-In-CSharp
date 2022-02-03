@@ -484,7 +484,7 @@ void referenceTyep()
 	cout << "val of first memory address =" << *(arr + 1) << endl;// first+1 location
 
 	// pass by val 
-	int *p = 0;
+	int* p = 0;
 	passbyVal(page);
 	cout << " Before " << *p << endl;//5
 	update(p);
@@ -506,6 +506,14 @@ void referenceTyep()
 
 
 
+}
+int recurtion(int n)
+{
+	if (n == 0) return 1;
+	cout << "head val =" << n << endl;
+	int val = n * recurtion(n - 1);
+	cout << "tail val =" << n << endl;
+	return val;
 }
 int  recurReverseNum(int n)
 {
@@ -1445,7 +1453,7 @@ void mapDemo1()
 	}cout << endl << endl;
 
 	auto it = m.find(5);
-	
+
 	for (auto i = it; i != m.end(); i++) {
 		cout << (*i).first << endl;
 	}
@@ -1765,7 +1773,7 @@ void insertAtPosition(NodeSingle*& tail, NodeSingle*& head, int position, int d)
 
 	temp->next = nodeToInsert;
 }
-void LL() 
+void LL()
 {
 	// run time dynamic ds , no memory waste
 	//no shift needed in case beech men push karne pe 
