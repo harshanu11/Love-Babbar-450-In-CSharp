@@ -1363,6 +1363,12 @@ void setDemo1()
 	s.insert(0);
 	s.insert(0);
 
+	auto pos = s.find(5);
+	if (pos != s.end())
+	{
+		// found val
+	}
+
 	for (auto i : s) {
 		cout << i << endl;
 	}cout << endl;
@@ -1379,6 +1385,7 @@ void setDemo1()
 	cout << "-5 is present or not -> " << s.count(-5) << endl;
 
 	set<int>::iterator itr = s.find(5);
+	set<int>::iterator itr1 = s.find(55);
 
 	for (auto it = itr; it != s.end(); it++) {
 		cout << *it << " ";
@@ -2133,6 +2140,7 @@ bool startsWith(string prefix, Trie* root) {
 }
 int main()
 {
+	setDemo1();
 	return 0;
 }
 
