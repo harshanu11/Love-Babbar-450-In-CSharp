@@ -1362,7 +1362,7 @@ void setDemo1()
 	s.insert(0);
 	s.insert(0);
 	s.insert(0);
-
+	auto count = s.count(0);
 	auto pos = s.find(5);
 	if (pos != s.end())
 	{
@@ -2088,25 +2088,25 @@ void llCircular()
 	deleteNodeCircular(tail, 5);
 	printCircular(tail);
 }
-class Trie {
+class NodeTrie {
 public:
 	string word;
 	bool is_word = false;
-	Trie* children[26] = { NULL };
+	NodeTrie* children[26] = { NULL };
 };
-void insertTri(string& s, Trie* root) {
-	Trie* temp = root;
+void insertTri(string& s, NodeTrie* root) {
+	NodeTrie* temp = root;
 	for (auto& i : s) {
 		int k = i - 'a';
 		if (temp->children[k] == NULL) {
-			temp->children[k] = new Trie;
+			temp->children[k] = new NodeTrie;
 		}
 		temp = temp->children[k];
 	}
 	temp->word = s;
 	temp->is_word = true;
 }
-void dfsTri(vector<vector<char>>& board, vector<string>& res, Trie* temp, int i, int j) {
+void dfsTri(vector<vector<char>>& board, vector<string>& res, NodeTrie* temp, int i, int j) {
 
 	if (i < 0 || i >= board.size() || j < 0 || j >= board[0].size() || board[i][j] == '*' || !(temp->children[board[i][j] - 'a']))
 		return;
@@ -2130,8 +2130,8 @@ void dfsTri(vector<vector<char>>& board, vector<string>& res, Trie* temp, int i,
 
 	return;
 }
-bool startsWith(string prefix, Trie* root) {
-	Trie* cur = root;
+bool startsWith(string prefix, NodeTrie* root) {
+	NodeTrie* cur = root;
 	for (char c : prefix) {
 		if (cur->children[c - 'a'] == NULL)return false;
 		cur = cur->children[c - 'a'];
