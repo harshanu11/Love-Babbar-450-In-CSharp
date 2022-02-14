@@ -705,7 +705,7 @@ void arrayDemoLB()
 	int size = 10;
 	// static arr
 	int dost[10];
-	int sizeDost = sizeof(dost) / sizeof(int);// not always correct
+	int sizeDost = sizeof(dost) / sizeof(int);// not always correct(sizeof(dost)=40)/sizeof(int)=4
 	int basic[3] = { 1,2,3 };
 	delete basic;
 	// dynamic array size
@@ -1309,6 +1309,7 @@ void queueDemoLB()
 	q.pop();
 	cout << "First Element " << q.front() << endl;
 	cout << "Size after pop" << q.size() << endl;
+	q.empty();
 }
 void priorityQueue_MaxHeapDemoLB()
 {
@@ -1442,8 +1443,8 @@ void mapDemo1()
 
 	unordered_map<int, string> umap;
 	umap[0] = "umap";
-	auto b = umap.find(1);
-	b->first;
+	//auto b = umap.find(1);
+	//b->first;
 	m.insert({ 5,"bheem" });
 	m.erase(4);
 	cout << "before erase" << endl;
@@ -1452,6 +1453,7 @@ void mapDemo1()
 	}
 
 	cout << "finding -13 -> " << m.count(13) << endl;
+	cout << "finding -13 -> " << m.count(-13) << endl;
 
 	// m.erase(13);
 	cout << "after erase" << endl;
@@ -2140,7 +2142,7 @@ bool startsWith(string prefix, NodeTrie* root) {
 }
 int main()
 {
-	setDemo1();
+	mapDemo1();
 	return 0;
 }
 
