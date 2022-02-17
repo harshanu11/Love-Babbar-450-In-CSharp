@@ -14,7 +14,6 @@
 #include <unordered_map>
 using namespace std;
 
-#pragma region Debug section
 void printArr(int arr[], int s)
 {
 	for (int i = 0; i < s; i++)
@@ -29,82 +28,6 @@ void printArr(vector<int> arr, int s = 0)
 		cout << arr[i] << " ";
 	}
 }
-vector<int> towSum(vector<int> nums, int target)
-{
-	vector<int> ans;
-	vector<int> num0(nums);
-	sort(nums.begin(), nums.end());
-	int start = 0, end = nums.size() - 1;
-	int step = 0;
-	int arr1 = 0, arr2 = 0;
-
-	while (start <= end)
-	{
-		cout << "Step =" << step << ";s1=" << start << "/" << nums[start] << "    s2="
-			<< end << "/" << nums[end] << ";";
-		int sum = nums[start] + nums[end];
-		cout << "sum value= " << sum << ";target =" << target;
-		if (sum == target)
-		{
-			cout << endl;
-			cout << "target achieved" << ";  s1=" << start << "/" << nums[start] << "    s2="
-				<< end << "/" << nums[end] << ";" << endl << endl;
-			arr1 = nums[start];
-			arr2 = nums[end];
-			break;
-		}
-		if (sum > target)
-		{
-			end--;
-			//cout << "change end " << end << "arr =" <<nums[end];
-		}
-		else if (sum < target)
-		{
-			start++;
-			//cout << "change start " << start << "arr =" <<nums[start];
-		}
-		step++;
-		cout << endl << endl;
-	}
-	step = 0;
-	int ind1 = 0, ind2 = 0;
-	for (int i = 0; i < num0.size(); i++)
-	{
-		cout << "Step =" << step;
-		if (num0[i] == arr1)
-		{
-			ind1 = i;
-			cout << "num0[i] == arr1 =" << i;
-			cout << endl;
-			break;
-		}
-		cout << endl;
-		step++;
-	}
-	step = 0;
-	for (int i = 0; i < num0.size(); i++)
-	{
-		cout << "Step =" << step;
-		if (num0[i] == arr2 && i != ind2)
-		{
-			ind2 = i;
-			cout << "num0[i] == arr2 =" << i;
-			cout << endl;
-			break;
-		}
-		cout << endl;
-		step++;
-	}
-	ans.push_back(ind1);
-	ans.push_back(ind2);
-
-	cout << ind1 << endl;
-	cout << ind2 << endl;
-	return ans;
-}
-#pragma endregion
-
-
 #pragma region Phase one basic loop function array string math 
 void sayHi(string name)
 {
@@ -702,6 +625,9 @@ void array2d()
 }
 void arrayDemoLB()
 {
+	//fill with specific val
+	int arr[100];
+	fill_n(arr, 100, -17);
 	int size = 10;
 	// static arr
 	int dost[10];
