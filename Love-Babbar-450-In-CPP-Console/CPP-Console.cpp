@@ -98,6 +98,8 @@ void stringFn()
 	char alphabat = 'A';
 	char c = 'A' + 1;// B  
 	cin.get();//give char vale invluding space
+
+
 	// "\n"  for next line '\t' tab
 	auto comp = strcmp("dsfs", "dd");// not 0
 	char str1[] = "Hello Geeks!";
@@ -105,7 +107,7 @@ void stringFn()
 	char str3[40];
 	char str4[40];
 	char str5[] = "GfG";
-
+	cout << str1;
 	string str;
 	str = to_string('5');
 	str = to_string(5);
@@ -626,8 +628,8 @@ void array2d()
 void arrayDemoLB()
 {
 	//fill with specific val
-	int arr[100];
-	fill_n(arr, 100, -17);
+	int arr22[100];
+	fill_n(arr22, 100, -17);
 	int size = 10;
 	// static arr
 	int dost[10];
@@ -1236,6 +1238,8 @@ void queueDemoLB()
 	cout << "First Element " << q.front() << endl;
 	cout << "Size after pop" << q.size() << endl;
 	q.empty();
+	// double ended queue
+	deque<int> d;
 }
 void priorityQueue_MaxHeapDemoLB()
 {
