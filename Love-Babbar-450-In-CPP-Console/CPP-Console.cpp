@@ -1,4 +1,4 @@
-#include <iostream>// input output 
+#include <iostream>// input output string
 #include <limits.h> // for int_max
 #include<array> // for array
 #include <vector>
@@ -12,7 +12,7 @@
 #include <set>
 #include <map>
 #include <unordered_map>
-using namespace std;
+using namespace std;// cout 
 
 void printArr(int arr[], int s)
 {
