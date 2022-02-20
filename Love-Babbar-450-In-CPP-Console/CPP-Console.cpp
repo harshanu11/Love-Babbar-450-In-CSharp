@@ -1237,7 +1237,9 @@ void queueDemoLB()
 	q.pop();
 	cout << "First Element " << q.front() << endl;
 	cout << "Size after pop" << q.size() << endl;
-	q.empty();
+	if (q.empty())
+	{
+	};
 	// double ended queue
 	deque<int> d;
 }
@@ -2069,6 +2071,46 @@ bool startsWith(string prefix, NodeTrie* root) {
 		cur = cur->children[c - 'a'];
 	}
 	return true;
+}
+class NodeTree
+{
+public:
+	int data;
+	NodeTree* left;
+	NodeTree* right;
+	NodeTree(int d)
+	{
+		this->data = d;
+		this->left = NULL;
+		this->right = NULL;
+	}
+};
+NodeTree* BuildTree(NodeTree* root) {
+	cout << "Please insert data" << endl;
+	int d;
+	cin >> d;
+
+	root = new NodeTree(d);
+	if (d == -1) return  NULL;
+	cout << " insert left of " << d << endl;
+	root->left = BuildTree(root->left);
+	cout << " insert right of " << d << endl;
+	root->right = BuildTree(root->right);
+	return root;
+}
+void levelOrde(NodeTree* root)
+{
+	queue<NodeTree*> q;
+	q.push(root);
+	while (!q.empty())
+	{
+		auto temp = q.front();
+		cout << temp->data << " ";
+		q.pop();
+		if (temp->left) q.push(temp->left);
+		if (temp->right) q.push(temp->right);
+
+	}
 }
 int main()
 {
