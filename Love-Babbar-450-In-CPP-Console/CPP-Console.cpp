@@ -1213,6 +1213,48 @@ void listDemoLB_usedByDD_LL()
 
 	cout << "size of list" << l.size() << endl;
 }
+class NodeStack
+{
+public:
+	int* arr;
+	int top;
+	int size;
+	NodeStack(int s)
+	{
+		this->size = s;
+		this->arr = new int[s];
+		this->top = -1;
+	}
+	void push(int d)
+	{
+		if (size - top > 1)
+		{
+			top++;
+			arr[top] = d;
+		}
+	}
+	void pop()
+	{
+		if (top >= 0)
+		{
+			top--;
+		}
+	}
+	int peek()
+	{
+		if (top >= 0 && top < size)
+			return arr[top];
+		return 0;
+	}
+	bool isEmpty()
+	{
+		if (top == -1)
+		{
+			return true;
+		}
+		else return false;
+	}
+};
 void stackDemoLB()
 {
 	stack<string> s;
@@ -1224,6 +1266,16 @@ void stackDemoLB()
 	cout << "Top Element-> " << s.top() << endl;
 	cout << "size of stack" << s.size() << endl;
 	cout << "Empty or not " << s.empty() << endl;
+	// custom stack 
+	NodeStack* cs = new NodeStack(50);
+	cs->push(22);
+	cs->push(24);
+	cs->push(26);
+	cout << "peek=" << cs->peek() << endl;
+	cs->pop();
+	cout << "peek=" << cs->peek() << endl;
+	cs->pop(); cs->pop();
+	cout << "isEmpty=" << cs->isEmpty() << endl;
 }
 void queueDemoLB()
 {
