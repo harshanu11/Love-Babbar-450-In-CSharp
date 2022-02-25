@@ -1277,6 +1277,50 @@ void stackDemoLB()
 	cs->pop(); cs->pop();
 	cout << "isEmpty=" << cs->isEmpty() << endl;
 }
+class NodeQueue
+{
+public:
+	int* arr;
+	int front;
+	int rear;
+	int size;
+	NodeQueue(int s)
+	{
+		this->arr = new int[s];
+		this->size = s;
+		this->front = 0;
+		this->rear = 0;
+	}
+	void push(int d)
+	{
+		if (rear != size)
+		{
+			arr[rear++] = d;
+		}
+	}
+	int pop()
+	{
+		if (front == rear)return -1;
+		else
+		{
+			return arr[front++];
+			if (front == rear)
+			{
+				front = 0; rear = 0;
+			}
+		}
+	}
+	int peek()
+	{
+		if (front == rear) return -1;
+		return arr[front];
+	}
+	bool isEmpty()
+	{
+		if (front == rear) return true;
+		else return false;
+	}
+};
 void queueDemoLB()
 {
 	// complexity on
@@ -1294,6 +1338,18 @@ void queueDemoLB()
 	};
 	// double ended queue
 	deque<int> d;
+
+	// custom queue
+	NodeQueue* cq = new NodeQueue(6);
+	cq->push(5);
+	cq->push(7);
+	cq->push(9);
+	cq->push(11);
+	cout << cq->pop() << endl;
+	cout << cq->peek() << endl;
+	cout << cq->isEmpty() << endl;
+	cq->pop(); cq->pop(); cq->pop();
+	cout << cq->isEmpty() << endl;
 }
 void priorityQueue_MaxHeapDemoLB()
 {
@@ -1630,39 +1686,6 @@ int count(int arr[], int size, int num)
 		}
 	}
 	return count;
-}
-
-bool checkUniqueCount(int arr[], int size = 0)
-{
-	int* result = new int[size];
-	int* arr2 = new int[size];
-	int k = 0;
-	for (int i = 0; i < size; i++)
-	{
-		arr2[i] = arr[i];
-	}
-	for (int i = 0; i < size; i++)
-	{
-		int c = count(arr2, size, arr[i]);
-		// cout << c;
-		if (c != 0)
-		{
-			result[k] = c;
-			cout << result[i] << endl;
-			k++;
-		}
-	}
-	for (int i = 0; i < k; i++)
-	{
-		for (int j = 0; j < k; j++)
-		{
-			if (i != j && result[i] == result[j])
-			{
-				return false;
-			}
-		}
-	}
-	return true;
 }
 class NodeSingle
 {
