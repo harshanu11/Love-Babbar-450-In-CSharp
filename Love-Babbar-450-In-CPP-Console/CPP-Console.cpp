@@ -1755,9 +1755,13 @@ void insertAtHead(NodeSingle*& head, int d) {
 }
 void insertAtTail(NodeSingle*& tail, int d) {
 	// new node create
-	NodeSingle* temp = new NodeSingle(d);
-	tail->next = temp;
-	tail = temp;
+	NodeSingle* newNode = new NodeSingle(d);
+	NodeSingle* temp1 = tail;
+	while (temp1->next)
+	{
+		temp1 = temp1->next;
+	}
+	temp1->next = newNode;
 }
 void insertAtPosition(NodeSingle*& tail, NodeSingle*& head, int position, int d) {
 
@@ -2160,6 +2164,7 @@ public:
 		this->right = NULL;
 	}
 };
+////1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1 
 NodeTree* BuildTree(NodeTree* root) {
 	cout << "Please insert data" << endl;
 	int d;
