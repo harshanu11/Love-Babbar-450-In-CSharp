@@ -1708,12 +1708,10 @@ public:
 		cout << " memory is free for node with data " << value << endl;
 	}
 };
-void printLL(NodeSingle*& head) {
-	NodeSingle* temp = head;
-
-	while (temp != NULL) {
-		cout << temp->data << " ";
-		temp = temp->next;
+void printLL(NodeSingle* head) {
+	while (head != NULL) {
+		cout << head->data << " ";
+		head = head->next;
 	}
 	cout << endl;
 }
