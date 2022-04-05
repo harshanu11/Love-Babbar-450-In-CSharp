@@ -2245,23 +2245,137 @@ void deleteat(nodell*& head, int d)
 		}
 	}
 }
+string minWindow1(string s, string t) {
+	int mapt[256] = { 0 };
+	for (int k = 0; k < t.size(); k++)	{		mapt[t[k]]++;	}
+	int n = s.length();	string ans = "";	int i = 0, j = 0;	int rem = t.length();	int minStart = 0, minLen = INT_MAX;
+	while (j < s.length()) {
+		int test1 = s[j];
+		int test2 = mapt[s[j]];
+		if (mapt[s[j]] > 0)		{			rem--;		}
+		mapt[s[j]]--;
+		while (rem == 0) {
+			if (j - i+1 < minLen) {
+				minLen = j - i+1;
+				minStart = i;
+			}
+			int test1 = s[i];
+			int test2 = mapt[s[i]];
+			mapt[s[i]]++;
+			if (mapt[s[i]] > 0)
+			{
+				rem++;
+			}
+			i++;
+		}
+		j++;
+	}
+	return minLen < INT_MAX ? s.substr(minStart, minLen) : "";
+}
+string minWindow(string s, string t) {
+	vector<int> map(128, 0);
+	for (auto c : t) map[c]++;
+	int counter = t.size(), i = 0, j = 0, minLen = INT_MAX, head = 0;
+	while (j < s.size()) {
+		if (map[s[j]]-- > 0) counter--; // modify counter here 
+		j++;
+		while (counter == 0) { //valid
+			if (j - i < minLen)
+			{/* update minLen here if finding minimum*/
+				head = i;
+				minLen = j - head;
+			}
+			if (map[s[i]] == 0) counter++;  //counter++
+			map[s[i]]++;//increase begin to make it invalid/valid again
+			i++;
+		}
+	}
+	return minLen == INT_MAX ? "" : s.substr(head, minLen);
+}
+int missing(vector<int>& nums)
+{
+	int ans=0;
+	int i = 0;
+	while (i < nums.size()) {
+		if (nums[i] < nums.size() && i != nums[i]) {
 
+			swap(nums[i], nums[nums[i]]);
+		}
+		else {
+			i++;
+			//continue;
+		}
+	}
+	for (int k = 0; k < nums.size(); k++) {
+		if (k != nums[k]) {
+			ans = k;
+		}
+	}
+	return ans;
+}
+void topologicalSort()
+{
+	int vertex, edge; cin >> vertex >> edge;
+	int cnt = 0;
+	vector<vector<int>> adj(vertex);
+	vector<int> indeg(vertex, 0);
+	// edge ko input me lo
+	for (int i = 0; i < edge; i++)
+	{
+		//from u--> to v men edge 
+		int u, v; cin >> u >> v;
+		adj[u].push_back(v);
+		indeg[v]++;
+	}
+	queue<int> pq;
+	for (int i = 0; i < vertex; i++)
+	{
+		if (indeg[i] == 0)
+		{
+			pq.push(i);
+		}
+	}
+	while (!pq.empty())
+	{
+		cnt++;
+		int x = pq.front(); pq.pop();
+		cout << x << " ";
+		//x(complete)---v
+		for (int it = 0; it < adj[x].size(); it++)
+		{
+			indeg[adj[x][it]]--;
+			if (indeg[adj[x][it]] == 0)
+				pq.push(adj[x][it]);
+		}
+		// or
+		//for (auto it : adj[x])
+		//{
+		//	indeg[it]--;
+		//	if (indeg[it] == 0)
+		//		pq.push(it);
+		//}
+	}
+}
 int main()
 {
-	nodell* head = NULL;
-	//print(head);
-	head = new nodell(7);
-	//print(head);
-	insertTail(head, 7);
-	insertTail(head, 7);
-	insertTail(head, 7);
-	// insertTail(head,3);
-	// insertTail(head,4);
-	// insertTail(head,5);
-	// insertTail(head,6);
-	print(head);
-	deleteat(head, 7);
-	print(head);
+	//vector<int> nums = { -2,1,-3,4,-1,2,1,-5,4 };
+	vector<int> nums = { 1,2,4,5,1 };
+	vector<vector<int>> allSub;
+	// i is the start index
+	for (int i = 0; i < nums.size(); i++)
+	{
+		// j is the number of elements which should be printed
+		for (int j = i; j < nums.size(); j++)
+		{
+			vector<int> sub;
+			// print the array from i to j
+			for (int k = i; k <= j; k++)
+			{
+				sub.push_back(nums[k]);
+			}
+			allSub.push_back(sub);
+		}
+	}
 	return 0;
 }
 
