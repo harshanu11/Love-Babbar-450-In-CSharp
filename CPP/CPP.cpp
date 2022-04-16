@@ -891,7 +891,6 @@ void merge(int* arr, int s, int e)
 	{
 		first[i] = arr[mainIndex++];
 	}
-	mainIndex = mid + 1;
 	for (int i = 0; i < len2; i++)
 	{
 		second[i] = arr[mainIndex++];
@@ -2359,23 +2358,9 @@ void topologicalSort()
 int main()
 {
 	//vector<int> nums = { -2,1,-3,4,-1,2,1,-5,4 };
-	vector<int> nums = { 1,2,4,5,1 };
+	int nums[] = { 1,2,-1,4,5,1 };
 	vector<vector<int>> allSub;
-	// i is the start index
-	for (int i = 0; i < nums.size(); i++)
-	{
-		// j is the number of elements which should be printed
-		for (int j = i; j < nums.size(); j++)
-		{
-			vector<int> sub;
-			// print the array from i to j
-			for (int k = i; k <= j; k++)
-			{
-				sub.push_back(nums[k]);
-			}
-			allSub.push_back(sub);
-		}
-	}
+	mergeSort(nums,0,5);
 	return 0;
 }
 
